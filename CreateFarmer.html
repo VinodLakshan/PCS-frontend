@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link href="Assets/Global/img/logo/logo21.png" rel="icon">
+    <title>Farmer Management</title>
+    <link href="Assets/Global/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="Assets/Global/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="Assets/Global/css/ruang-admin.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/custom/style/style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+<div id="wrapper">
+    <!-- Sidebar start-->
+    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand-icon">
+                <img src="Assets/Global/img/logo/logo21.png">
+            </div>
+        </a>
+        <hr class="sidebar-divider my-0">
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+        </li>
+        <hr class="sidebar-divider">
+        <!-- psc sidebar modules starting -->
+        <li class="nav-item">
+            <a class="nav-link" href="UserManagement.html">
+                <i class="fas fa-user-tie"></i>
+                <span>User Management</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="FarmerManagement.html">
+                <i class="far fa-address-book"></i>
+                <span>Farmer Management</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="PurchaseManagement.html">
+                <i class="fab fa-amazon-pay"></i>
+                <span>Purchase Paddy</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="PaddyOrders.html">
+                <i class="fas fa-cash-register"></i>
+                <span>Paddy Orders</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Finance.html">
+                <i class="fas fa-dollar-sign"></i>
+                <span>Finance</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Stocks.html">
+                <i class="fas fa-spa"></i>
+                <span>Stocks</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="CustomerManagement.html">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span>Customer Management</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Reports.html">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="SellPaddy.html">
+                <i class="fas fa-file-invoice"></i>
+                <span>Sell Paddy</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="PaddyDistribution.html">
+                <i class="fas fa-truck"></i>
+                <span>Paddy Distribution</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="PaddyPriceManagement.html">
+                <i class="fas fa-funnel-dollar"></i>
+                <span>Paddy Price Management</span>
+            </a>
+        </li>
+        <hr class="sidebar-divider">
+
+        <!-- psc sidebar modules end-->
+
+    </ul>
+    <!-- Sidebar end-->
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+            <!-- TopBar Started -->
+            <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+                <button class="btn btn-link rounded-circle mr-3" id="sidebarToggleTop">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown no-arrow">
+                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                           data-toggle="dropdown" href="#"
+                           id="searchDropdown" role="button">
+                        </a>
+                    </li>
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+                    <li class="nav-item dropdown no-arrow">
+                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+                           data-toggle="dropdown" href="#"
+                           id="userDropdown" role="button">
+                            <img class="img-profile rounded-circle" src="Assets/Global/img/boy.png"
+                                 style="max-width: 60px">
+                            <span class="ml-2 d-none d-lg-inline text-white small">Rabeez Mohamed</span>
+                        </a>
+                        <div aria-labelledby="userDropdown"
+                             class="dropdown-menu dropdown-menu-right shadow animated--grow-in">
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Profile
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Settings
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Activity Log
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" data-target="#logoutModal" data-toggle="modal"
+                               href="javascript:void(0);">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Top bar End -->
+
+            <!-- Container Fluid-->
+            <div class="container-fluid" id="container-wrapper">
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Farmer Management</h1>
+                </div>
+
+
+                <!--Start here-->
+
+                <!---------  code here -------->
+
+
+                <div class="admin-content">
+                    <div class="button-group ml-4">
+                        <a href="CreateFarmer.html" class="btn bg-blue-400 border-blue-500 hover:bg-blue-500 text-white mr-2">Add Farmer</a>
+                        <a href="FarmerManagement.html" class="btn bg-blue-400 border-blue-500 hover:bg-blue-500 text-white">Manage Farmers</a>
+                    </div>
+
+                    <div class="content">
+                        <h2 class="page-title text-center text-4xl my-3">Add Farmer</h2>
+
+                        <form action="#" method="post" class="bg-white-500 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                                <div>
+                                    <label class="block text-gray-700 text-base mb-1">ID</label>
+                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="title">
+                                </div>
+
+                                <div>
+                                    <label class="block text-gray-700 text-base mb-1">Name</label>
+                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="title">
+
+                                </div>
+
+                                <div>
+                                    <label class="block text-gray-700 text-base mb-1">Telephone Number</label>
+                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" name="title">
+                                </div>
+
+                                <div>
+                                    <label class="block text-gray-700 text-base mb-1">Address</label>
+                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" name="title">
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <button type="submit" class="bg-blue-400 hover:bg-blue-500 border-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >Add Farmer</button>
+                                </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <!--End here-->
+
+
+                <!-- Logout Modal started -->
+
+                <div aria-hidden="true" aria-labelledby="exampleModalLabelLogout" class="modal fade" id="logoutModal"
+                     role="dialog"
+                     tabindex="-1">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+                                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are you sure you want to logout?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-outline-primary" data-dismiss="modal" type="button">Cancel
+                                </button>
+                                <a class="btn btn-primary" href="login.html">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Logout Modal Ended -->
+
+            </div>
+            <!---Container Fluid-->
+        </div>
+        <!-- Footer started -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+            <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - developed by
+              <b><a href="https://esoft.lk/" target="_blank">ProTeam</a></b>
+            </span>
+                </div>
+            </div>
+
+            <div class="container my-auto py-2">
+                <div class="copyright text-center my-auto">
+            <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - distributed by
+              <b><a href="https://esoft.lk/" target="_blank">Paddy Storage Cooperation</a></b>
+            </span>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer  Ended-->
+    </div>
+</div>
+
+<!-- Scroll to top -->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+<!-- JS file links -->
+
+<script src="Assets/Global/vendor/jquery/jquery.min.js"></script>
+<script src="Assets/Global/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="Assets/Global/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="Assets/Global/js/ruang-admin.min.js"></script>
+<script src="Assets/Global/vendor/chart.js/Chart.min.js"></script>
+<script src="Assets/Global/js/demo/chart-area-demo.js"></script>
+</body>
+
+</html>
