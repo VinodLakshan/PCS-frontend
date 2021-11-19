@@ -154,17 +154,97 @@
                     <h1 class="h3 mb-0 text-gray-800">Stocks</h1>
                 </div>
 
+                <!--Started Stock-->
+                <!--cards started-->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-body">
+                            <div>
+                                <h5 class="card-title" align="center">Total Current Stocks</h5>
+                            </div>
+                            <hr/>
+                            <div  style="background-color:#031a6e; height:40px; ">
+                                <H4 class="card-text" align="center" style="padding-top: 0.5rem;">7000KG</H4>
+                            </div>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-body">
+                            <div>
+                                <h5 class="card-title" align="center">Available Stock Capacity</h5>
+                            </div>
+                            <hr/>
+                            <div  style="background-color:#031a6e; height:40px; ">
+                                <H4 class="card-text" align="center" style="padding-top: 0.5rem;">3000KG</H4>
+                            </div>
 
-                <!--Start here-->
+                        </div>
+                    </div>
+                </div>
 
-                <!---------  code here -------->
+            </div>
+                <br/>
+                <hr/>
+                <!--form started-->
+                <form>
+                    <div class="form-group col-md-6">
+                        <label >Regional center </label>
+                        <select class="form-control">
+                            <option>Select Here </option>
+                            <option>Colombo</option>
+                            <option>Kandy</option>
+                            <option>Galle</option>
+                            <option>Ampara</option>
+                            <option>Matara</option>
+                            <option>Polanaruva</option>
 
-                <!--End here-->
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="ReqDate">Date</label>
+                        <input type="Date" class="form-control" id="ReqDate">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="TotalStock"> Total Stocks </label>
+                        <input type="text" class="form-control" id="TotalStock">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="AvailableCapacity">Available Capacity</label>
+                        <input type="text" class="form-control" id="AvailableCapacity">
+                    </div>
 
+                    <a  href="javascript:void(0);" data-toggle="modal" data-target="#SendStockCapacity">
+                        <button type="submit" class="btn btn-primary">Send Request</button></a>
+                </form>
 
+                <!--Ended  Stock-->
+                <!-- send Modal started -->
 
-
+                <div class="modal fade" id="SendStockCapacity" tabindex="-1" role="dialog" aria-labelledby="SendModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="SendModalLabel">REQUEST?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are you sure you want to send a request to head office?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                                <a href="Stocks.html" class="btn btn-primary">send</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Send Modal Ended -->
 
                 <!-- Logout Modal started -->
 
