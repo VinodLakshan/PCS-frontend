@@ -169,8 +169,8 @@
 
                 <div class="admin-content">
                     <div class="button-group ml-4">
-                        <a href="CreateFarmer.html" class="btn bg-blue-400 border-blue-500 hover:bg-blue-500 text-white mr-2">Add User</a>
-                        <a href="FarmerManagement.html" class="btn bg-blue-400 border-blue-500 hover:bg-blue-500 text-white">Manage User</a>
+                        <a href="CreateUser.html" class="btn bg-blue-400 border-blue-500 hover:bg-blue-500 text-white mr-2">Add User</a>
+                        <a href="UserManagement.html" class="btn bg-blue-400 border-blue-500 hover:bg-blue-500 text-white">Manage User</a>
                     </div>
 
                     <div class="content">
@@ -178,24 +178,49 @@
 
                         <form action="#" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                             <div>
-                                <label class="block text-gray-700 text-base mb-1">ID</label>
-                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="title">
+                                <label class="block text-gray-700 text-base mb-1">User ID</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="userid" placeholder="Enter UserID">
                             </div>
 
                             <div>
                                 <label class="block text-gray-700 text-base mb-1">Name</label>
-                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="title">
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="name" placeholder="Enter Name">
 
                             </div>
 
                             <div>
-                                <label class="block text-gray-700 text-base mb-1">Telephone Number</label>
-                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" name="title">
+                                <label class="block text-gray-700 text-base mb-1">Email</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="email" name="email" placeholder="Enter Email">
                             </div>
 
                             <div>
-                                <label class="block text-gray-700 text-base mb-1">Address</label>
-                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" name="title">
+                                <label class="block text-gray-700 text-base mb-1">Password</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="password" name="password" placeholder="Enter Password">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 text-base mb-1">Confirm Password</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="password" name="passwordconfig" placeholder="Confirm Password">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 text-base mb-1">Collection Center (Branch)</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" name="branch" placeholder="Regional Center">
+                            </div>
+
+                            <label class="block text-gray-700 text-base mb-1">Job Role</label>
+                            <div class="inline-block relative w-64">
+                                <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 py-2 px-3 pr-8 mb-3 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                                    <option>Manager</option>
+                                    <option>Finance Officer</option>
+                                    <option>Collection Officer</option>
+                                    <option>Store Keeper</option>
+                                    <option>Clerk</option>
+                                    <option>Paying Officer</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                </div>
                             </div>
 
                             <div class="flex items-center justify-between">
