@@ -155,15 +155,76 @@
         </div>
 
 
-
         <!--Start here-->
+
+        <div class="row">
+          <div class="col-md-6">
+              <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+
+                  <h6 class="m-0 font-weight-bold text-primary">Regional Farmer Purchase Limit</h6>
+                </div>
+                <div class="card-body">
+                  <table class="table align-items-center table-flush">
+                    <thead class="thead-light text-center">
+                    <tr>
+                      <th>Region</th>
+                      <th>Amount</th>
+                      <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody  class="text-center">
+                    <tr>
+                      <td>Kandy</td>
+                      <td>200 KG</td>
+                      <td><a href="#" class="btn btn-sm btn-success w-100">Edit</a></td>
+                    </tr>
+
+                    <tr>
+                      <td>Colombo</td>
+                      <td>500 KG</td>
+                      <td><a href="#" class="btn btn-sm btn-success w-100">Edit</a></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <div class="card-body">
+
+                <form action="#" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                  <div>
+                    <label class="block text-gray-700 text-base mb-1">Region</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 w-100 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="region" placeholder="Enter Region">
+                  </div>
+
+                  <div>
+                    <label class="block text-gray-700 text-base mb-1">Current Limit</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 w-100 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="number" name="currentlimit" placeholder="Enter Current Limit">
+
+                  </div>
+
+                  <div>
+                    <label class="block text-gray-700 text-base mb-1">New Limit</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 w-100 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="number" name="newlimit" placeholder="Enter New Limit">
+                  </div>
+
+                  <div class="flex items-center justify-between">
+                    <button type="submit" class="btn btn-sm btn-success w-100 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Change</button>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <!---------  code here -------->
 
         <!--End here-->
-
-
-
 
 
         <!-- Logout Modal started -->

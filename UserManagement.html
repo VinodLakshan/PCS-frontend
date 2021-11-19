@@ -190,7 +190,11 @@
                                 <td>Kandy</td>
                                 <td>Manager</td>
                                 <td><a href="#" class="btn btn-sm btn-success w-100">Edit</a></td>
-                                <td><a href="#" class="btn btn-sm btn-danger w-75">Delete</a></td>
+                                <td><a  href="javascript:void(0);" data-toggle="modal" data-target="#DeleteUserModal">
+                                    <button  type="submit" class="btn btn-sm btn-danger w-75">
+                                        Delete
+                                    </button>
+                                </a></td>
                             </tr>
                             <tr>
                                 <td><a href="#">U0002</a></td>
@@ -199,7 +203,11 @@
                                 <td>Kandy</td>
                                 <td>Collection Officer</td>
                                 <td><a href="#" class="btn btn-sm btn-success w-100">Edit</a></td>
-                                <td><a href="#" class="btn btn-sm btn-danger w-75">Delete</a></td>
+                                <td><a  href="javascript:void(0);" data-toggle="modal" data-target="#DeleteUserModal">
+                                    <button  type="submit" class="btn btn-sm btn-danger w-75">
+                                        Delete
+                                    </button>
+                                </a></td>
                             </tr>
                             <tr>
                                 <td><a href="#">U0003</a></td>
@@ -208,7 +216,11 @@
                                 <td>Kandy</td>
                                 <td>Paying Officer</td>
                                 <td><a href="#" class="btn btn-sm btn-success w-100">Edit</a></td>
-                                <td><a href="#" class="btn btn-sm btn-danger w-75">Delete</a></td>
+                                <td><a  href="javascript:void(0);" data-toggle="modal" data-target="#DeleteUserModal">
+                                    <button  type="submit" class="btn btn-sm btn-danger w-75">
+                                        Delete
+                                    </button>
+                                </a></td>
                             </tr>
                             <tr>
                                 <td><a href="#">U0004</a></td>
@@ -217,7 +229,11 @@
                                 <td>Kandy</td>
                                 <td>Clerk</td>
                                 <td><a href="#" class="btn btn-sm btn-success w-100">Edit</a></td>
-                                <td><a href="#" class="btn btn-sm btn-danger w-75">Delete</a></td>
+                                <td><a  href="javascript:void(0);" data-toggle="modal" data-target="#DeleteUserModal">
+                                    <button  type="submit" class="btn btn-sm btn-danger w-75">
+                                        Delete
+                                    </button>
+                                </a></td>
                             </tr>
                             <tr>
                                 <td><a href="#">U0005</a></td>
@@ -226,7 +242,11 @@
                                 <td>Kandy</td>
                                 <td>Store Keeper</td>
                                 <td><a href="#" class="btn btn-sm btn-success w-100">Edit</a></td>
-                                <td><a href="#" class="btn btn-sm btn-danger w-75">Delete</a></td>
+                                <td><a  href="javascript:void(0);" data-toggle="modal" data-target="#DeleteUserModal">
+                                    <button  type="submit" class="btn btn-sm btn-danger w-75">
+                                        Delete
+                                    </button>
+                                </a></td>
                             </tr>
                             </tbody>
                         </table>
@@ -235,9 +255,28 @@
 
                 <!--End here-->
 
-
-
-
+                <!--Delete User Modal started-->
+                <div class="modal fade" id="DeleteUserModal" tabindex="-1" role="dialog" aria-labelledby="DeleteUserModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="DeleteUserModalLabel">CONFIRM?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are you sure you want to delete this User?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                                <a href="UserManagement.html" class="btn btn-success">Delete User</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Delete User Modal ended-->
 
                 <!-- Logout Modal started -->
 
