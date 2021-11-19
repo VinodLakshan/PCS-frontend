@@ -153,18 +153,118 @@
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800">Paddy Orders</h1>
                 </div>
-
-
-
                 <!--Start here-->
+                <div>
+                    <h2><span class="badge badge-secondary" >Pending Paddy Orders</span></h2>
+                    <hr/>
+                </div>
 
-                <!---------  code here -------->
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Pay Order ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Quantity[KG]</th>
+                        <th scope="col">Unit Price[LKR]</th>
+                        <th scope="col">Total Amount</th>
+                        <th scope="col">Action</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">0001</th>
+                        <td>Mark</td>
+                        <td>2020/10/10</td>
+                        <td>50</td>
+                        <td>80.00</td>
+                        <td>4000</td>
+                        <td>
+                            <a  href="javascript:void(0);" data-toggle="modal" data-target="#PayOrderModal">
+                                <button  type="submit" class="btn btn-danger btn-sm">
+                                    Print Pay Order
+                                </button>
+                            </a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">0002</th>
+                        <td>Mark</td>
+                        <td>2020/10/10</td>
+                        <td>50</td>
+                        <td>80.00</td>
+                        <td>4000</td>
+                        <td>
+                            <a  href="javascript:void(0);" data-toggle="modal" data-target="#PayOrderModal">
+                                <button  type="submit" class="btn btn-danger btn-sm">
+                                    Print Pay Order
+                                </button>
+                            </a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">0003</th>
+                        <td>Mark</td>
+                        <td>2020/10/10</td>
+                        <td>50</td>
+                        <td>80.00</td>
+                        <td>4000</td>
+                        <td>
+                            <a  href="javascript:void(0);" data-toggle="modal" data-target="#PayOrderModal">
+                                <button  type="submit" class="btn btn-danger btn-sm">
+                                    Print Pay Order
+                                </button>
+                            </a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">0004</th>
+                        <td>Mark</td>
+                        <td>2020/10/10</td>
+                        <td>50</td>
+                        <td>80.00</td>
+                        <td>4000</td>
+                        <td>
+                            <a  href="javascript:void(0);" data-toggle="modal" data-target="#PayOrderModal">
+                                <button  type="submit" class="btn btn-danger btn-sm">
+                                    Print Pay Order
+                                </button>
+                            </a>
+                        </td>
+
+                    </tr>
+                    </tbody>
+                </table>
 
                 <!--End here-->
+                <!--Pay Order Modal started-->
 
 
-
-
+                <div class="modal fade" id="PayOrderModal" tabindex="-1" role="dialog" aria-labelledby="PayOrderModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="PayOrderModalLabel">CONFIRM?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are you sure you confirm the order?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                                <a href="PaddyOrders.html" class="btn btn-success">Print Pay Order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Pay Order Modal ended-->
 
                 <!-- Logout Modal started -->
 
