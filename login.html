@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,14 +29,16 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Employee Login</h1>
                                 </div>
-                                <form class="user" id="formLogin">
+                                <form class="user is-valid" id="formLogin">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="inputUserName" name="username" placeholder="Enter Username">
+                                        <input type="text" class="form-control" id="inputUserName" name="userName" placeholder="Enter Username" required />
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password">
+                                        <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password" required />
                                     </div>
-
+                                    <div class="alert alert-danger d-none" id="alertError" role="alert">
+                                        Username and password incorrect !
+                                    </div>
                                     <div class="form-group">
                                         <button type="button" class="btn btn-primary btn-block" id="btnLogin">Login</button>
                                     </div>
@@ -62,6 +63,7 @@
 <script src="Assets/Global/vendor/jquery-easing/jquery.easing.min.js"></script>
 <script src="Assets/Global/js/ruang-admin.min.js"></script>
 <script src="Assets/Custom/Script/Login.js"></script>
+<script src="Assets/Custom/resource/config.js"></script>
 </body>
 
 </html>
