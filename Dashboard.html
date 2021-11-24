@@ -174,7 +174,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-uppercase mb-1">Selling Price
                                                 (Today)</div>
-                                            <div class="h4 mb-0 font-weight-bold text-gray-800">LKR 40,000</div>
+                                            <div class="h4 mb-0 font-weight-bold text-gray-800">LKR <span id="SellingPrice"></span></div>
                                             <!--                                        <div class="mt-2 mb-0 text-muted text-xs">-->
                                             <!--                                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>-->
                                             <!--                                            <span>Since last month</span>-->
@@ -195,7 +195,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-uppercase mb-1">Purchase Price
                                                 (Today)</div>
-                                            <div class="h4 mb-0 font-weight-bold text-gray-800">LKR 650</div>
+                                            <div class="h4 mb-0 font-weight-bold text-gray-800">LKR <span id="PurchasePrice"></span></div>
                                             <!--                                        <div class="mt-2 mb-0 text-muted text-xs">-->
                                             <!--                                            <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 12%</span>-->
                                             <!--                                            <span>Since last years</span>-->
@@ -216,7 +216,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-uppercase mb-1">Total No Of
                                                 Farmers</div>
-                                            <div class="h4 mb-0 mr-3 font-weight-bold text-gray-800">366</div>
+                                            <div id="FarmersCount" class="h4 mb-0 mr-3 font-weight-bold text-gray-800">366</div>
                                             <!--                                        <div class="mt-2 mb-0 text-muted text-xs">-->
                                             <!--                                            <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 20.4%</span>-->
                                             <!--                                            <span>Since last month</span>-->
@@ -539,6 +539,12 @@
     <script src="Assets/Global/js/ruang-admin.min.js"></script>
     <script src="Assets/Global/vendor/chart.js/Chart.min.js"></script>
     <script src="Assets/Global/js/demo/chart-area-demo.js"></script>
+    <script src="Assets/Global/js/sweetalert_all.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="Assets/Custom/Script/Main.js"></script>
+    <script src="Assets/Custom/Script/Common.js"></script>
+    <script src="Assets/Custom/Script/Dashboard.js"></script>
 </body>
 
 </html>
