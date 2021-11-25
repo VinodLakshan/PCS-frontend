@@ -36,6 +36,7 @@ $('#btnRegister').click(function () {
             contentType: "application/json",
             success: function (response) {
                 sessionStorage.setItem("employee", JSON.stringify(response.data));
+                sessionStorage.setItem("branch", JSON.stringify(response.data.branch));
                 sessionStorage.setItem("token", response.token);
                 window.location.href = "Dashboard.html";
             },
