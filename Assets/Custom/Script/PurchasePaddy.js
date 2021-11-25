@@ -25,10 +25,13 @@ $(document).ready(function () {
 
             $.ajax({
                 type: "GET",
-                url: baseUrl + "/common/latestPaddyPrices",
+                url: baseUrl + "/paddyPrice/TodayPaddyPriceGet",
                 contentType: "application/json",
+                headers: {
+                    'Authorization': `Bearer ` + sessionStorage.getItem("token"),
+                },
                 success: function (response) {
-                    paddyPrices = response.data;
+                    paddyPrices = response;
                 },
                 error: function (error) {
                     console.log("Error loading latest Paddy prices");
