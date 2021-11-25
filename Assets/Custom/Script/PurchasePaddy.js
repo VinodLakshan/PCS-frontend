@@ -22,73 +22,7 @@ $(document).ready(function () {
         branchDetails = JSON.parse(branchDetails);
 
         if (employee.role.roleName == "Collection_Officer") {
-
-            $.ajax({
-                type: "GET",
-                url: baseUrl + "/paddyPrice/TodayPaddyPriceGet",
-                contentType: "application/json",
-                headers: {
-                    'Authorization': `Bearer ` + sessionStorage.getItem("token"),
-                },
-                success: function (response) {
-                    paddyPrices = response;
-                },
-                error: function (error) {
-                    console.log("Error loading latest Paddy prices");
-                }
-            });
-
-            $.ajax({
-                type: "GET",
-                url: baseUrl + "/branch/" + branchDetails.id,
-                contentType: "application/json",
-                success: function (response) {
-                    branchDetails = response.data;
-                    loadInfoCardDetails();
-                },
-                error: function (error) {
-                    console.log("Error loading Branch details");
-                }
-            });
-
-            $.ajax({
-                type: "GET",
-                url: baseUrl + "/farmer",
-                contentType: "application/json",
-                success: function (response) {
-                    var farmers = response.data;
-                    for (const farmer of farmers) {
-                        $('#selectFarmer').append(new Option(farmer.name + " - " + farmer.registrationNumber, JSON.stringify(farmer)));
-                    }
-                },
-                error: function (error) {
-                    console.log("Error loading Farmers");
-                }
-            });
-
-            $.ajax({
-                type: "GET",
-                url: baseUrl + "/paddy/" + branchDetails.id,
-                contentType: "application/json",
-                headers: {
-                    'Authorization': `Bearer ` + sessionStorage.getItem("token"),
-                },
-                success: function (response) {
-                    setupTableData(response.data);
-                },
-                error: function (error) {
-
-                    if (error.status == 401) {
-                        $('#userModel').modal({
-                            backdrop: 'static',
-                            keyboard: false
-                        });
-
-                    } else {
-                        console.log("Error loading Paddy Purchases");
-                    }
-                }
-            });
+            loadDetails();
 
         } else {
             $('#unauthorizedModel').modal({
@@ -105,6 +39,77 @@ $(document).ready(function () {
     }
 
 });
+
+var loadDetails = function () {
+
+    $.ajax({
+        type: "GET",
+        url: baseUrl + "/paddyPrice/TodayPaddyPriceGet",
+        contentType: "application/json",
+        headers: {
+            'Authorization': `Bearer ` + sessionStorage.getItem("token"),
+        },
+        success: function (response) {
+            paddyPrices = response;
+        },
+        error: function (error) {
+            console.log("Error loading latest Paddy prices");
+        }
+    });
+
+    $.ajax({
+        type: "GET",
+        url: baseUrl + "/branch/" + branchDetails.id,
+        contentType: "application/json",
+        success: function (response) {
+            branchDetails = response.data;
+            loadInfoCardDetails();
+        },
+        error: function (error) {
+            console.log("Error loading Branch details");
+        }
+    });
+
+    $.ajax({
+        type: "GET",
+        url: baseUrl + "/farmer",
+        contentType: "application/json",
+        success: function (response) {
+            var farmers = response.data;
+            $('#selectFarmer').find('option').not(':first').remove();
+            for (const farmer of farmers) {
+                $('#selectFarmer').append(new Option(farmer.name + " - " + farmer.registrationNumber, JSON.stringify(farmer)));
+            }
+        },
+        error: function (error) {
+            console.log("Error loading Farmers");
+        }
+    });
+
+    $.ajax({
+        type: "GET",
+        url: baseUrl + "/paddy/" + branchDetails.id,
+        contentType: "application/json",
+        headers: {
+            'Authorization': `Bearer ` + sessionStorage.getItem("token"),
+        },
+        success: function (response) {
+            setupTableData(response.data);
+        },
+        error: function (error) {
+
+            if (error.status == 401) {
+                $('#userModel').modal({
+                    backdrop: 'static',
+                    keyboard: false
+                });
+
+            } else {
+                console.log("Error loading Paddy Purchases");
+            }
+        }
+    });
+}
 
 var loadInfoCardDetails = function () {
     $('#divBuyingPrice').text(formatCurrency(paddyPrices.buyingPrice));
@@ -138,8 +143,8 @@ $('#btnConfirm').click(function () {
         data: JSON.stringify(paddyPurchase),
         success: function (response) {
 
-            location.reload();
             showGeneralModal("success", "");
+            resetForm();
         },
         error: function (error) {
 
@@ -171,19 +176,23 @@ $('#selectFarmer').change(function () {
 
         if (branchDetails.totalMonthlyPaddyLimitPerFarmer != 0) {
             farmerRemainingLimit = branchDetails.totalMonthlyPaddyLimitPerFarmer - farmersPaddyAmount;
-            if (farmerRemainingLimit >= 0) farmerRemainingLimit = farmerRemainingLimit;
+            if (farmerRemainingLimit >= 0) farmerRemainingLimit = formatCurrency(farmerRemainingLimit);
 
         } else {
             farmerRemainingLimit = "No Limit";
         }
+
+        $('#spanFarmerAvailablePaddy').text(farmerRemainingLimit);
+    } else {
+        $('#spanFarmerMonthlyPaddy').text("0.00");
+        $('#spanFarmerAvailablePaddy').text("0.00");
     }
 
     $('#inputWeight').attr({
         "max": farmerRemainingLimit
     });
 
-    $('#spanFarmerMonthlyPaddy').text(farmersPaddyAmount.toFixed(2).toLocaleString());
-    $('#spanFarmerAvailablePaddy').text(farmerRemainingLimit.toFixed(2).toLocaleString());
+    $('#spanFarmerMonthlyPaddy').text(formatCurrency(farmersPaddyAmount));
 });
 
 $('#inputWeight').change(function () {
@@ -215,7 +224,6 @@ var validateFields = function (formData) {
     }
 
     if (isAnyError) {
-        $('#errorAlert').text(errorText);
         $('#errorAlert').removeClass("d-none");
     }
     return isAnyError;
@@ -249,6 +257,19 @@ var setRequestData = function (formData) {
         paymentAmount: purchaseTotalAmount,
         paddyPriceId: paddyPrices.id
     }
+}
+
+$('#btnGeneralModalOkay').click(function () {
+    loadDetails();
+});
+
+var resetForm = function () {
+    $('#selectFarmer'). val("");
+    $('#inputWeight').val(0);
+    $('#spanTotalAmount').text("00.00");
+    $('#spanFarmerMonthlyPaddy').text("0.00");
+    $('#spanFarmerAvailablePaddy').text("0.00");
+
 }
 
 var showGeneralModal = function (type, response) {
@@ -287,6 +308,8 @@ var setupTableData = function (data) {
         tableRows.push(tableRow)
     }
 
+    $("#purchasePaddyTable tbody").empty();
+
     for (const tableRow of tableRows) {
 
         var statusClass = "badge-success";
@@ -299,9 +322,9 @@ var setupTableData = function (data) {
             "<td>" + tableRow.purchaseId + "</td>" +
             "<td>" + tableRow.farmer + "</td>" +
             "<td>" + tableRow.weight + "</td>" +
-            "<td>"+ tableRow.date +"</td>" +
-            "<td>"+ tableRow.payment +" LKR</td>" +
-            "<td><span class=\"badge "+ statusClass +" \">"+ tableRow.status +"</span></td>" +
+            "<td>" + tableRow.date + "</td>" +
+            "<td>" + tableRow.payment + " LKR</td>" +
+            "<td><span class=\"badge " + statusClass + " \">" + tableRow.status + "</span></td>" +
             "</tr>";
 
         $('#purchasePaddyTable tbody').append(tr);
@@ -321,7 +344,3 @@ var formatCurrency = function (value) {
     parts[0] = Number(parts[0]).toLocaleString();
     return parts[0] + "." + parts[1];
 }
-
-$("#generalModal").on("hidden.bs.modal", function () {
-    alert("sdasdas");
-});
