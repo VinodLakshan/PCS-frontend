@@ -1,11 +1,11 @@
 baseUrl = "http://localhost:8080/pcs";
 
 $('#btnLogin').click(function (){
-    var formdata = $('#formLogin').serializeObject();
+    var formData = $('#formLogin').serializeObject();
     $.ajax({
         type: "POST",
         url:  baseUrl + "/employee/login",
-        data: JSON.stringify(formdata),
+        data: JSON.stringify(formData),
         contentType: "application/json",
         success: function (response) {
             sessionStorage.setItem("employee", JSON.stringify(response.data));
@@ -21,3 +21,5 @@ $('#btnLogin').click(function (){
         }
     });
 });
+
+

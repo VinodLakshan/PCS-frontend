@@ -185,18 +185,21 @@
                         <div class="content">
                             <h2 class="page-title text-center text-4xl my-3">Add Farmer</h2>
 
-                            <form action="#" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                            <form action="#" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+                                  id="formCreate">
                                 <div>
                                     <label class="block text-gray-700 text-base mb-1">Farmer ID</label>
                                     <input
-                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
+                                         leading-tight focus:outline-none focus:shadow-outline"
                                         type="text" name="farmerID" placeholder="Enter ID">
                                 </div>
 
                                 <div>
                                     <label class="block text-gray-700 text-base mb-1">Name</label>
                                     <input
-                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
+                                         leading-tight focus:outline-none focus:shadow-outline"
                                         type="text" name="name" placeholder="Enter Name">
 
                                 </div>
@@ -204,20 +207,23 @@
                                 <div>
                                     <label class="block text-gray-700 text-base mb-1">Telephone Number</label>
                                     <input
-                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
+                                         leading-tight focus:outline-none focus:shadow-outline"
                                         type="text" name="telenumber" placeholder="Enter Telephone Number">
                                 </div>
 
                                 <div>
                                     <label class="block text-gray-700 text-base mb-1">Address</label>
                                     <input
-                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
+                                        leading-tight focus:outline-none focus:shadow-outline"
                                         type="text" name="address" placeholder="Enter Address">
                                 </div>
 
                                 <div class="flex items-center justify-between">
                                     <button type="submit"
-                                        class="bg-blue-400 hover:bg-blue-500 border-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Add
+                                        class="bg-blue-400 hover:bg-blue-500 border-blue-500 text-white font-bold py-2
+                                        px-4 rounded focus:outline-none focus:shadow-outline" id="addFarmer">Add
                                         Farmer</button>
                                 </div>
                             </form>
@@ -293,6 +299,12 @@
     <script src="Assets/Global/js/ruang-admin.min.js"></script>
     <script src="Assets/Global/vendor/chart.js/Chart.min.js"></script>
     <script src="Assets/Global/js/demo/chart-area-demo.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="Assets/Custom/Script/Main.js"></script>
+    <script src="Assets/Custom/Script/Common.js"></script>
+    <script src="Assets/Custom/Script/CreateFarmer.js"></script>
+
 </body>
 
 </html>
