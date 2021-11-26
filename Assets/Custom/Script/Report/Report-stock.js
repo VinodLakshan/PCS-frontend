@@ -1,10 +1,13 @@
 baseUrl = "http://localhost:8080/pcs";
 
-$(document).ready(function () { 
+var dataTableInstance;
+
+$(document).ready(function () {
 
     var employee = JSON.parse(sessionStorage.getItem("employee"));
 
     if (employee != null) {
+        dataTableInstance = $('#dataTable').DataTable();
         loadTableData();
     } else {
         $('#userModel').modal({
@@ -55,30 +58,27 @@ var createTableBody = function (data) {
     $("#dataTable tbody").empty();
 
     for (const tableRow of data) {
-        var usedStockPercentage = ((tableRow.maximumCapacity - tableRow.stock)*100/tableRow.maximumCapacity).toFixed(2);
+        var usedStockPercentage = ((tableRow.maximumCapacity - tableRow.stock) * 100 / tableRow.maximumCapacity).toFixed(2);
         var percentageClass = "percentage-green";
-        if(usedStockPercentage <= 30){
+        if (usedStockPercentage <= 30) {
             percentageClass = "percentage-green";
-        }else if(usedStockPercentage <= 60){
+        } else if (usedStockPercentage <= 60) {
             percentageClass = "percentage-blue";
-        }else if(usedStockPercentage <= 90){
+        } else if (usedStockPercentage <= 90) {
             percentageClass = "percentage-orange";
-        }else{
+        } else {
             percentageClass = "percentage-red";
         }
 
-        var tr = "" +
-            "<tr>" +
-            "<td>" + tableRow.address + "</td>" +
-            "<td>" + tableRow.monthlyExpectedStock.toFixed(2) + "Kg</td>" +
-            "<td>" + tableRow.maximumCapacity.toFixed(2) + "Kg</td>" +
-            "<td>" + tableRow.stock.toFixed(2) + "Kg</td>" +
-            "<td>" + tableRow.totalMonthlyPaddyLimitPerFarmer.toFixed(2) + "Kg</td>" +
-            "<td class=\" " + percentageClass + "\" >" + usedStockPercentage + "%</td>" +
-            "<td><a href=\"#\" class=\"btn btn-sm btn-primary\">More</a></td>" +
-            "</tr>";
-
-        $('#dataTable tbody').append(tr);
+        dataTableInstance.row.add([
+            tableRow.address,
+            tableRow.monthlyExpectedStock.toFixed(2) + 'Kg',
+            tableRow.maximumCapacity.toFixed(2) + 'Kg',
+            tableRow.stock.toFixed(2) + 'Kg',
+            tableRow.totalMonthlyPaddyLimitPerFarmer.toFixed(2) + 'Kg',
+            '<p class=\" ' + percentageClass + '\">' + usedStockPercentage + '%</p>' ,
+            '<a href=\"#\" class=\"btn btn-sm btn-primary\">More</a>'
+        ]).draw(false);
     }
 
     if (data.length == 0) {
