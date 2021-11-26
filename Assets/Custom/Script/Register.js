@@ -2,25 +2,36 @@ baseUrl = "http://localhost:8080/pcs";
 
 $(document).ready(function () {
 
-    $.ajax({
-        type: "GET",
-        url: baseUrl + "/common/rolesAndBranches",
-        async: true,
-        contentType: "application/json",
-        success: function (response) {
-            for (const role of response.roles) {
-                $('#selectRole').append(new Option(role.roleName, role.id));
-            }
-
-            for (const branch of response.branches) {
-                $('#selectBranch').append(new Option(branch.address, branch.id));
-            }
-        },
-        error: function (error) {
-            console.log("Error loading roles and branches");
-        }
-    });
+    GetRequest("common/rolesAndBranches", loadRolesAndBranchesSuccess);
+    // $.ajax({
+    //     type: "GET",
+    //     url: baseUrl + "/common/rolesAndBranches",
+    //     async: true,
+    //     contentType: "application/json",
+    //     success: function (response) {
+    //         for (const role of response.roles) {
+    //             $('#selectRole').append(new Option(role.roleName, role.id));
+    //         }
+    //
+    //         for (const branch of response.branches) {
+    //             $('#selectBranch').append(new Option(branch.address, branch.id));
+    //         }
+    //     },
+    //     error: function (error) {
+    //         console.log("Error loading roles and branches");
+    //     }
+    // });
 });
+
+function loadRolesAndBranchesSuccess(response) {
+    for (const role of response.roles) {
+        $('#selectRole').append(new Option(role.roleName, role.id));
+    }
+
+    for (const branch of response.branches) {
+        $('#selectBranch').append(new Option(branch.address, branch.id));
+    }
+}
 
 $('#btnRegister').click(function () {
     clearValidations();
@@ -29,25 +40,7 @@ $('#btnRegister').click(function () {
 
     if (!isAnyError) {
         var requestData = setRequestData(formData);
-        $.ajax({
-            type: "POST",
-            url:  baseUrl + "/employee/register",
-            data: JSON.stringify(requestData),
-            contentType: "application/json",
-            success: function (response) {
-                sessionStorage.setItem("employee", JSON.stringify(response.data));
-                sessionStorage.setItem("branch", JSON.stringify(response.data.branch));
-                sessionStorage.setItem("token", response.token);
-                window.location.href = "Dashboard.html";
-            },
-
-            error: function (response) {
-                console.log(response);
-                $('#errorAlert').text(response.responseJSON.message);
-                $('#errorAlert').removeClass("d-none");
-            }
-        });
-
+        PostRequest("employee/register", requestData, registerEmployeeSuccess);
 
     }
 });
@@ -107,16 +100,23 @@ var clearValidations = function () {
 var setRequestData = function (formData) {
 
     var employee = {
-        name : formData.name,
-        userName : formData.username,
-        password : formData.password,
-        role : {
-            id : formData.role
+        name: formData.name,
+        userName: formData.username,
+        password: formData.password,
+        role: {
+            id: formData.role
         },
-        branch : {
-            id : formData.branch
+        branch: {
+            id: formData.branch
         }
     }
 
     return employee;
+}
+
+function registerEmployeeSuccess(response) {
+    sessionStorage.setItem("employee", JSON.stringify(response.data));
+    sessionStorage.setItem("branch", JSON.stringify(response.data.branch));
+    sessionStorage.setItem("token", response.token);
+    window.location.href = "Dashboard.html";
 }
