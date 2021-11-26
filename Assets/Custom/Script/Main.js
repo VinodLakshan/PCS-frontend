@@ -1,6 +1,6 @@
 //Localhost
 let _BaseURL = "http://localhost:8080/pcs/";
-let _Token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWl0aCIsInJvbGVzIjpbIkFkbWluIl0sImV4cCI6MTYzNzg2MzIzNywiaWF0IjoxNjM3ODYxNDM3fQ.j-vKPOrqwkFGyhDoh5bcu37XUMDS54juQa20SoJaHkQ";
+let _Token = sessionStorage.getItem("token");
 
 function PostRequest(Url,Entity,SuccessFunction)
 {
