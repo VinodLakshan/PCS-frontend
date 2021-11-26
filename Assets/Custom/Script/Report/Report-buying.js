@@ -1,10 +1,13 @@
 baseUrl = "http://localhost:8080/pcs";
 
+var dataTableInstance;
+
 $(document).ready(function () {
 
     var employee = JSON.parse(sessionStorage.getItem("employee"));
 
     if (employee != null) {
+        dataTableInstance = $('#dataTable').DataTable();
         loadTableData();
     } else {
         $('#userModel').modal({
@@ -56,19 +59,16 @@ var createTableBody = function (data) {
     $("#dataTable tbody").empty();
 
     for (const tableRow of data) {
-        var tr = "" +
-            "<tr>" +
-            "<td>" + tableRow.farmer.registrationNumber + "</td>" +
-            "<td>" + tableRow.farmer.name + "</td>" +
-            "<td>" + tableRow.branch.address + "</td>" +
-            "<td>" + tableRow.date + "</td>" +
-            "<td>Rs" + tableRow.paddyPrice.buyingPrice.toFixed(2) + "</td>" +
-            "<td>" + tableRow.weight.toFixed(2) + " Kg</td>" +
-            "<td>Rs" + tableRow.payment.amount.toFixed(2) + "</td>" +
-            // "<td><a href=\"#\" class=\"btn btn-sm btn-primary\">More</a></td>" +
-            "</tr>";
-
-        $('#dataTable tbody').append(tr);
+    
+        dataTableInstance.row.add([
+            tableRow.farmer.registrationNumber,
+            tableRow.farmer.name,
+            tableRow.branch.address,
+            tableRow.date,
+            'Rs' + tableRow.paddyPrice.buyingPrice.toFixed(2),
+            tableRow.weight.toFixed(2) + 'Kg' ,
+            'Rs' + tableRow.payment.amount.toFixed(2)
+        ]).draw(false);
     }
 
     if (data.length == 0) {
