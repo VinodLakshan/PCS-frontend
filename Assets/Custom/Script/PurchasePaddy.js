@@ -18,9 +18,6 @@ $(document).ready(function () {
 
     if (employee != null) {
 
-        branchDetails = sessionStorage.getItem("branch");
-        branchDetails = JSON.parse(branchDetails);
-
         if (employee.role.roleName == "Collection_Officer") {
             loadDetails();
 
@@ -40,78 +37,39 @@ $(document).ready(function () {
 
 });
 
-var loadDetails = function () {
+function loadDetails() {
 
-    $.ajax({
-        type: "GET",
-        url: baseUrl + "/paddyPrice/TodayPaddyPriceGet",
-        contentType: "application/json",
-        headers: {
-            'Authorization': `Bearer ` + sessionStorage.getItem("token"),
-        },
-        success: function (response) {
-            paddyPrices = response;
-        },
-        error: function (error) {
-            console.log("Error loading latest Paddy prices");
-        }
-    });
+    branchDetails = sessionStorage.getItem("branch");
+    branchDetails = JSON.parse(branchDetails);
 
-    $.ajax({
-        type: "GET",
-        url: baseUrl + "/branch/" + branchDetails.id,
-        contentType: "application/json",
-        success: function (response) {
-            branchDetails = response.data;
-            loadInfoCardDetails();
-        },
-        error: function (error) {
-            console.log("Error loading Branch details");
-        }
-    });
-
-    $.ajax({
-        type: "GET",
-        url: baseUrl + "/farmer",
-        contentType: "application/json",
-        success: function (response) {
-            var farmers = response.data;
-            $('#selectFarmer').find('option').not(':first').remove();
-            for (const farmer of farmers) {
-                $('#selectFarmer').append(new Option(farmer.name + " - " + farmer.registrationNumber, JSON.stringify(farmer)));
-            }
-        },
-        error: function (error) {
-            console.log("Error loading Farmers");
-        }
-    });
-
-    $.ajax({
-        type: "GET",
-        url: baseUrl + "/paddy/" + branchDetails.id,
-        contentType: "application/json",
-        headers: {
-            'Authorization': `Bearer ` + sessionStorage.getItem("token"),
-        },
-        success: function (response) {
-            setupTableData(response.data);
-        },
-        error: function (error) {
-
-            if (error.status == 401) {
-                $('#userModel').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                });
-
-            } else {
-                console.log("Error loading Paddy Purchases");
-            }
-        }
-    });
+    GetRequest("paddyPrice/TodayPaddyPriceGet", getTodayPaddyPricesSuccess);
+    GetRequest("branch/" + branchDetails.id, getBranchDetailsSuccess);
+    GetRequest("farmer", getFarmerDetailsSuccess);
+    GetRequest("paddy/" + branchDetails.id, getPaddyPurchasesForBranchSuccess);
 }
 
-var loadInfoCardDetails = function () {
+function getTodayPaddyPricesSuccess(response) {
+    paddyPrices = response;
+}
+
+function getBranchDetailsSuccess(response) {
+    branchDetails = response.data;
+    loadInfoCardDetails();
+}
+
+function getFarmerDetailsSuccess(response) {
+    var farmers = response.data;
+    $('#selectFarmer').find('option').not(':first').remove();
+    for (const farmer of farmers) {
+        $('#selectFarmer').append(new Option(farmer.name + " - " + farmer.registrationNumber, JSON.stringify(farmer)));
+    }
+}
+
+function getPaddyPurchasesForBranchSuccess(response) {
+    setupTableData(response.data);
+}
+
+function loadInfoCardDetails() {
     $('#divBuyingPrice').text(formatCurrency(paddyPrices.buyingPrice));
     $('#divMaximumCapacity').text(branchDetails.maximumCapacity.toLocaleString());
     $('#divCurrentStock').text(branchDetails.stock.toLocaleString());
@@ -132,40 +90,46 @@ $('#btnPurchase').click(function () {
 $('#btnConfirm').click(function () {
     $('#confirmationModel').modal('hide');
 
-    $.ajax({
-        type: "POST",
-        url: baseUrl + "/paddy",
-        async: true,
-        contentType: "application/json",
-        headers: {
-            'Authorization': `Bearer ` + sessionStorage.getItem("token"),
-        },
-        data: JSON.stringify(paddyPurchase),
-        success: function (response) {
-
-            showGeneralModal("success", "");
-            resetForm();
-        },
-        error: function (error) {
-
-            if (error.status == 401) {
-                $('#userModel').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                })
-
-            } else if (error.status == 403) {
-                $('#unauthorizedModel').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                });
-
-            } else {
-                showGeneralModal("error", error);
-            }
-        }
-    });
+    PostRequest("paddy", paddyPurchase, makePaddyPurchaseSuccess);
+    // $.ajax({
+    //     type: "POST",
+    //     url: baseUrl + "/paddy",
+    //     async: true,
+    //     contentType: "application/json",
+    //     headers: {
+    //         'Authorization': `Bearer ` + sessionStorage.getItem("token"),
+    //     },
+    //     data: JSON.stringify(paddyPurchase),
+    //     success: function (response) {
+    //
+    //         showGeneralModal("success", "");
+    //         resetForm();
+    //     },
+    //     error: function (error) {
+    //
+    //         if (error.status == 401) {
+    //             $('#userModel').modal({
+    //                 backdrop: 'static',
+    //                 keyboard: false
+    //             })
+    //
+    //         } else if (error.status == 403) {
+    //             $('#unauthorizedModel').modal({
+    //                 backdrop: 'static',
+    //                 keyboard: false
+    //             });
+    //
+    //         } else {
+    //             showGeneralModal("error", error);
+    //         }
+    //     }
+    // });
 });
+
+function makePaddyPurchaseSuccess(response) {
+    showGeneralModal("success", "");
+    resetForm();
+}
 
 $('#selectFarmer').change(function () {
 
@@ -205,7 +169,7 @@ $('#btnLogout').click(function () {
     sessionStorage.clear();
 });
 
-var validateFields = function (formData) {
+function validateFields(formData) {
 
     var errorText = "";
     var isAnyError = false;
@@ -224,18 +188,19 @@ var validateFields = function (formData) {
     }
 
     if (isAnyError) {
+        $('#errorAlert').text(errorText);
         $('#errorAlert').removeClass("d-none");
     }
     return isAnyError;
 }
 
-var setError = function (element) {
+function setError(element) {
     $("#" + element).addClass("border-danger");
     $("#" + element).focus();
     return true;
 }
 
-var clearValidations = function () {
+function clearValidations() {
 
     $('#selectFarmer').removeClass("border-danger");
     $('#inputWeight').removeClass("border-danger");
@@ -243,7 +208,7 @@ var clearValidations = function () {
     $('#errorAlert').addClass("d-none");
 }
 
-var setRequestData = function (formData) {
+function setRequestData(formData) {
 
     var curDate = new Date();
     var curDate = curDate.getDate() + '-' + (curDate.getMonth() + 1) + '-' + curDate.getFullYear();
@@ -263,8 +228,8 @@ $('#btnGeneralModalOkay').click(function () {
     loadDetails();
 });
 
-var resetForm = function () {
-    $('#selectFarmer'). val("");
+function resetForm() {
+    $('#selectFarmer').val("");
     $('#inputWeight').val(0);
     $('#spanTotalAmount').text("00.00");
     $('#spanFarmerMonthlyPaddy').text("0.00");
@@ -272,7 +237,7 @@ var resetForm = function () {
 
 }
 
-var showGeneralModal = function (type, response) {
+function showGeneralModal(type, response) {
 
     if (type == "error") {
 
@@ -290,7 +255,7 @@ var showGeneralModal = function (type, response) {
     $('#generalModal').modal('show');
 }
 
-var setupTableData = function (data) {
+function setupTableData(data) {
 
     var tableRows = [];
 
@@ -338,7 +303,7 @@ var setupTableData = function (data) {
     }
 }
 
-var formatCurrency = function (value) {
+function formatCurrency(value) {
     value = value.toFixed(2);
     var parts = value.split(".");
     parts[0] = Number(parts[0]).toLocaleString();
