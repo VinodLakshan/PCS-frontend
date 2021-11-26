@@ -7,6 +7,7 @@ $(document).ready(function () {
     var employee = JSON.parse(sessionStorage.getItem("employee"));
 
     if (employee != null) {
+        document.getElementById('userName').innerHTML = employee.name;
         dataTableInstance = $('#dataTable').DataTable();
         loadTableData();
     } else {

@@ -13,3 +13,7 @@
 .percentage-red{
     color: red;
 }
+
+.stock-reportCard{
+    height: 480px;
+}
