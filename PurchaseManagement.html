@@ -2,240 +2,542 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link href="Assets/Global/img/logo/logo21.png" rel="icon">
-  <title>Purchase Paddy</title>
-  <link href="Assets/Global/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="Assets/Global/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="Assets/Global/css/ruang-admin.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="Assets/Global/img/logo/logo21.png" rel="icon">
+    <title>Purchase Paddy</title>
+    <link href="Assets/Global/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="Assets/Global/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="Assets/Global/css/ruang-admin.min.css" rel="stylesheet">
+    <link href="Assets/Custom/Style/PurchasePaddy.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
 <div id="wrapper">
-  <!-- Sidebar start-->
-  <!-- Sidebar -->
-  <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-      <div class="sidebar-brand-icon">
-        <img src="Assets/Global/img/logo/logo2.png">
-      </div>
-      <div class="sidebar-brand-text mx-3">RuangAdmin</div>
-    </a>
-    <hr class="sidebar-divider my-0">
-
-    <li class="nav-item active">
-      <a class="nav-link" href="index.html">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
-    </li>
-    <hr class="sidebar-divider">
-    <!-- psc sidebar modules starting -->
-    <li class="nav-item">
-      <a class="nav-link" href="UserManagement.html">
-        <i class="fas fa-user-tie"></i>
-        <span>User Management</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="FarmerManagement.html">
-        <i class="far fa-address-book"></i>
-        <span>Farmer Management</span>
-      </a>
-    </li>
-    <li class="nav-item active">
-      <a class="nav-link" href="PurchaseManagement.html">
-        <i class="fab fa-amazon-pay"></i>
-        <span>Purchase Paddy</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="PaddyOrders.html">
-        <i class="fas fa-cash-register"></i>
-        <span>Paddy Orders</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="Finance.html">
-        <i class="fas fa-dollar-sign"></i>
-        <span>Finance</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="Stocks.html">
-        <i class="fas fa-spa"></i>
-        <span>Stocks</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="CustomerManagement.html">
-        <i class="fas fa-chalkboard-teacher"></i>
-        <span>Customer Management</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
-        aria-controls="collapseForm">
-        <i class="fas fa-chart-bar"></i>
-        <span>Reports</span>
-      </a>
-      <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-          <a class="collapse-item" href="Report-stock.html">Stock Report</a>
-          <a class="collapse-item" href="Report-buying.html">Buying Report</a>
-          <a class="collapse-item" href="Report-selling.html">Selling Report</a>
-          <a class="collapse-item" href="Report-income.html">Income Report</a>
-        </div>
-      </div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="SellPaddy.html">
-        <i class="fas fa-file-invoice"></i>
-        <span>Sell Paddy</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="PaddyDistribution.html">
-        <i class="fas fa-truck"></i>
-        <span>Paddy Distribution</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="PaddyPriceManagement.html">
-        <i class="fas fa-funnel-dollar"></i>
-        <span>Paddy Price Management</span>
-      </a>
-    </li>
-    <hr class="sidebar-divider">
-  </ul>
-  
-  <!-- Sidebar end-->
-  <div id="content-wrapper" class="d-flex flex-column">
-    <div id="content">
-      <!-- TopBar Started -->
-      <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
-        <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
-          <i class="fa fa-bars"></i>
-        </button>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown no-arrow">
-            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">
-            </a>
-          </li>
-
-          <div class="topbar-divider d-none d-sm-block"></div>
-          <li class="nav-item dropdown no-arrow">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-               aria-haspopup="true" aria-expanded="false">
-              <img class="img-profile rounded-circle" src="Assets/Global/img/boy.png" style="max-width: 60px">
-              <span class="ml-2 d-none d-lg-inline text-white small">Rabeez Mohamed</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-              <a class="dropdown-item" href="#">
-                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                Profile
-              </a>
-              <a class="dropdown-item" href="#">
-                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                Settings
-              </a>
-              <a class="dropdown-item" href="#">
-                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                Activity Log
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
-                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                Logout
-              </a>
+    <!-- Sidebar start-->
+    <!-- Sidebar -->
+    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand-icon">
+                <img src="Assets/Global/img/logo/logo21.png">
             </div>
-          </li>
-        </ul>
-      </nav>
-      <!-- Top bar End -->
+        </a>
+        <hr class="sidebar-divider my-0">
 
-      <!-- Container Fluid-->
-      <div class="container-fluid" id="container-wrapper">
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-          <h1 class="h3 mb-0 text-gray-800">Purchase Paddy</h1>
-        </div>
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+        </li>
+        <hr class="sidebar-divider">
+        <!-- psc sidebar modules starting -->
+        <li class="nav-item">
+            <a class="nav-link" href="UserManagement.html">
+                <i class="fas fa-user-tie"></i>
+                <span>User Management</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="FarmerManagement.html">
+                <i class="far fa-address-book"></i>
+                <span>Farmer Management</span>
+            </a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="PurchaseManagement.html">
+                <i class="fab fa-amazon-pay"></i>
+                <span>Purchase Paddy</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="PaddyOrders.html">
+                <i class="fas fa-cash-register"></i>
+                <span>Paddy Orders</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Finance.html">
+                <i class="fas fa-dollar-sign"></i>
+                <span>Finance</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Stocks.html">
+                <i class="fas fa-spa"></i>
+                <span>Stocks</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="CustomerManagement.html">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span>Customer Management</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm"
+               aria-expanded="true"
+               aria-controls="collapseForm">
+                <i class="fas fa-chart-bar"></i>
+                <span>Reports</span>
+            </a>
+            <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="Report-stock.html">Stock Report</a>
+                    <a class="collapse-item" href="Report-buying.html">Buying Report</a>
+                    <a class="collapse-item" href="Report-selling.html">Selling Report</a>
+                    <a class="collapse-item" href="Report-income.html">Income Report</a>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="SellPaddy.html">
+                <i class="fas fa-file-invoice"></i>
+                <span>Sell Paddy</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="PaddyDistribution.html">
+                <i class="fas fa-truck"></i>
+                <span>Paddy Distribution</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="PaddyPriceManagement.html">
+                <i class="fas fa-funnel-dollar"></i>
+                <span>Paddy Price Management</span>
+            </a>
+        </li>
+        <hr class="sidebar-divider">
+    </ul>
 
-
-
-        <!--Start here-->
-
-
-        <!---------  code here -------->
-
-        <!--End here-->
-
-
-
-        <!-- Logout Modal started -->
-
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
-             aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
+    <!-- Sidebar end-->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <!-- TopBar Started -->
+            <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+                <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
                 </button>
-              </div>
-              <div class="modal-body">
-                <p>Are you sure you want to logout?</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                <a href="login.html" class="btn btn-primary">Logout</a>
-              </div>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                           data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                        </a>
+                    </li>
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                           data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            <img class="img-profile rounded-circle" src="Assets/Global/img/boy.png"
+                                 style="max-width: 60px">
+                            <span class="ml-2 d-none d-lg-inline text-white small">Rabeez Mohamed</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                             aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Profile
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Settings
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Activity Log
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal"
+                               data-target="#logoutModal" id="btnLogout">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Top bar End -->
+
+            <!-- Container Fluid-->
+            <div class="container-fluid" id="container-wrapper">
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Purchase Paddy</h1>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="Dashboard.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Purchase Paddy</li>
+                    </ol>
+                </div>
+
+                <!--Start here-->
+
+                <div class="row mb-3">
+                    <!-- Today buying price -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-uppercase mb-1">Today Buying Price
+                                        </div>
+                                        <div class="h5 mb-0 mr-1 font-weight-bold text-gray-800 d-inline"
+                                             id="divBuyingPrice"></div>
+                                        <span class="text-lg"> LKR</span>
+                                        <div class="mt-2 mb-0 text-muted text-xs">
+                                            <span class="text-info">Buying price up to date</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-money-check-alt fa-2x text-primary"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Maximum stock -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-uppercase mb-1">Maximum Capacity</div>
+                                        <div class="h5 mb-0 mr-1 font-weight-bold text-gray-800 d-inline"
+                                             id="divMaximumCapacity"></div>
+                                        <span class="text-lg"> KG</span>
+                                        <div class="mt-2 mb-0 text-muted text-xs">
+                                            <span class="text-success">Maximum current capacity of the branch</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-warehouse fa-2x text-success"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Current stock -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-uppercase mb-1">Current Stock</div>
+                                        <div class="h5 mb-0 mr-1 font-weight-bold text-gray-800 d-inline"
+                                             id="divCurrentStock"></div>
+                                        <span class="text-lg">KG</span>
+                                        <div class="mt-2 mb-0 text-muted text-xs">
+                                            <span class="text-info">Currently available stock</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-layer-group fa-2x text-info"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Expected stock for the month -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-uppercase mb-1">Expected Stock</div>
+                                        <div class="h5 mb-0 mr-1 font-weight-bold text-gray-800 d-inline"
+                                             id="divExpectedStock"></div>
+                                        <span class="text-lg"> KG</span>
+                                        <div class="mt-2 mb-0 text-muted text-xs">
+                                            <span class="text-warning">Expected Stock for the Month</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-weight-hanging fa-2x text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--End here-->
+
+                    <!-- Logout Modal started -->
+                    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLabelLogout"
+                         aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to logout?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel
+                                    </button>
+                                    <a href="login.html" class="btn btn-primary">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Logout Modal Ended -->
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-8 col-lg-7 mb-4">
+                        <div class="card card-height" id="purchasePaddyTableCard">
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between pb-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Paddy Purchases</h6>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table align-items-center table-flush text-center" id="purchasePaddyTable">
+                                    <thead class="thead-light">
+                                    <tr>
+                                        <th>Purchase ID</th>
+                                        <th>Farmer</th>
+                                        <th>Weight</th>
+                                        <th>Date</th>
+                                        <th>Payment</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="card-footer"></div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 mb-4">
+                        <div class="card card-height">
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Make a Paddy Purchase</h6>
+                            </div>
+                            <div class="card-body">
+                                <form id="purchaseForm">
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label for="selectFarmer">Farmer</label>
+                                            <select class="form-control" id="selectFarmer" name="farmer">
+                                                <option value="">Select</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-3">
+                                            <label for="inputWeight">Weight | KG</label>
+                                            <input id="inputWeight" min="0" max="100" type="number" name="weight"
+                                                   class="form-control">
+                                        </div>
+                                        <div class="col-md-9 pt-3 pr-0">
+                                            <div class="row">
+                                                <div class="col-md-7">
+                                                    <i class="fas fa-warehouse fa-xs text-success pr-2"></i>
+                                                    <span>  Farmer's Monthly Paddy </span>
+                                                </div>
+                                                <div class="col-md-1">-</div>
+                                                <div class="col-md-4">
+                                                    <span class="text-info" id="spanFarmerMonthlyPaddy"> 0.00</span>
+                                                    <span class="text-info"> KG</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="row pt-3">
+                                                <div class="col-md-7">
+                                                    <i class="fas fa-bars text-success pr-2"></i>
+                                                    <span>  Farmer's Remaining Limit </span>
+                                                </div>
+                                                <div class="col-md-1">-</div>
+                                                <div class="col-md-4">
+                                                    <span class="text-info" id="spanFarmerAvailablePaddy"> 0.00</span>
+                                                    <span class="text-info"> KG</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="row text-lg">
+                                        <div class="col-md-6 col-sm-auto">
+                                            Total Amount
+                                        </div>
+                                        <div class="col-md-1 col-sm-auto text-right">
+                                            <span>-</span>
+                                        </div>
+                                        <div class="col-md-5 col-sm-auto text-center">
+                                            <span class="font-weight-bold" id="spanTotalAmount"> 00.00 </span>
+                                            <span> LKR </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 pt-4">
+                                            <button type="button" id="btnPurchase" class="btn btn-primary">Purchase
+                                            </button>
+                                        </div>
+                                        <div class="col-md-9 pt-4">
+                                            <div class="btn btn-danger text-left d-none" id="errorAlert" role="alert">
+                                            </div>
+                                        </div>
+
+                                        <!--   Confirmation Modal -->
+                                        <div class="modal fade" id="confirmationModel" tabindex="-1" role="dialog"
+                                             aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="confirmationModalLabel">
+                                                            <i class="fas fa-exclamation-circle fa-xs text-warning"></i>
+                                                            <span class="pt-5"> Confirm</span>
+                                                        </h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Please confirm your purchase.</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-outline-primary"
+                                                                data-dismiss="modal">Close
+                                                        </button>
+                                                        <button type="button" id="btnConfirm" class="btn btn-primary">
+                                                            Confirm
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- user not available Modal -->
+                                        <div class="modal fade" id="userModel" tabindex="-1" role="dialog"
+                                             aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="userModelLabel">
+                                                            <i class="fas fa-exclamation-triangle fa-xs text-danger"></i>
+                                                            <span class="pt-5"> Error!</span>
+                                                        </h5>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>User session is not available. Please log in.</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a href="login.html" id="btnUserModalClose"
+                                                           class="btn btn-danger">Login</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- UaAuthorized Modal -->
+                                        <div class="modal fade" id="unauthorizedModel" tabindex="-1" role="dialog"
+                                             aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="unauthorizedModelLabel">
+                                                            <i class="fas fa-exclamation-triangle fa-xs text-danger"></i>
+                                                            <span class="pt-5"> Error!</span>
+                                                        </h5>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>You are not authorized.</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a href="Dashboard.html" id="btnUnauthorizedModalClose"
+                                                           class="btn btn-danger">Okay</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- General Error Modal -->
+                                        <div class="modal fade" id="generalModal" tabindex="-1" role="dialog"
+                                             aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="generalModalLabel">
+                                                            <div id="generalModalHeaderError">
+                                                                <i class="fas fa-exclamation-triangle fa-xs text-danger"></i>
+                                                                <span class="pt-5"> Error!</span>
+                                                            </div>
+                                                            <div id="generalModalHeaderSuccess" class="d-none">
+                                                                <i class="fas fa-check-square fa-xs text-success"></i>
+                                                                <span class="pt-5"> Done!</span>
+                                                            </div>
+                                                        </h5>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p id="generalModalText"></p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-outline-primary"
+                                                                id="btnGeneralModalOkay"
+                                                                data-dismiss="modal">Okay
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---Container Fluid-->
             </div>
-          </div>
-        </div>
-        <!-- Logout Modal Ended -->
+            <!-- Footer started -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - developed by
+                          <b><a href="https://esoft.lk/" target="_blank">ProTeam</a></b>
+                        </span>
+                    </div>
+                </div>
 
-      </div>
-      <!---Container Fluid-->
+                <div class="container my-auto py-2">
+                    <div class="copyright text-center my-auto">
+                        <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - distributed by
+                          <b><a href="https://esoft.lk/" target="_blank">Paddy Storage Cooperation</a></b>
+                        </span>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer  Ended-->
+        </div>
     </div>
-    <!-- Footer started -->
-    <footer class="sticky-footer bg-white">
-      <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - developed by
-              <b><a href="https://esoft.lk/" target="_blank">ProTeam</a></b>
-            </span>
-        </div>
-      </div>
 
-      <div class="container my-auto py-2">
-        <div class="copyright text-center my-auto">
-            <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - distributed by
-              <b><a href="https://esoft.lk/" target="_blank">Paddy Storage Cooperation</a></b>
-            </span>
-        </div>
-      </div>
-    </footer>
-    <!-- Footer  Ended-->
-  </div>
-</div>
+    <!-- Scroll to top -->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- JS file links -->
 
-<!-- Scroll to top -->
-<a class="scroll-to-top rounded" href="#page-top">
-  <i class="fas fa-angle-up"></i>
-</a>
-<!-- JS file links -->
+    <script src="Assets/Global/vendor/jquery/jquery.min.js"></script>
+    <script src="Assets/Global/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Assets/Global/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="Assets/Global/js/ruang-admin.min.js"></script>
+    <script src="Assets/Global/js/sweetalert_all.js"></script>
 
-<script src="Assets/Global/vendor/jquery/jquery.min.js"></script>
-<script src="Assets/Global/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="Assets/Global/vendor/jquery-easing/jquery.easing.min.js"></script>
-<script src="Assets/Global/js/ruang-admin.min.js"></script>
-<script src="Assets/Global/vendor/chart.js/Chart.min.js"></script>
-<script src="Assets/Global/js/demo/chart-area-demo.js"></script>
+    <!-- Custom Scripts -->
+    <script src="Assets/Custom/Script/Main.js"></script>
+    <script src="Assets/Custom/Script/Common.js"></script>
+    <script src="Assets/Custom/Script/PurchasePaddy.js"></script>
 </body>
 
 </html>

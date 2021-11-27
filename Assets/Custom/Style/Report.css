@@ -1,0 +1,19 @@
+.percentage-green{
+    color: rgb(50, 168, 76);
+}
+
+.percentage-blue{
+    color: blue;
+}
+
+.percentage-orange{
+    color: orange;
+}
+
+.percentage-red{
+    color: red;
+}
+
+.stock-reportCard{
+    height: 480px;
+}

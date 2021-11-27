@@ -11,12 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f431a01f-b379-4163-b0d2-b31987ecdaca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Custom/Script/Class.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/Common.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/Common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +28,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="develop" />
@@ -76,21 +72,6 @@
       <recent name="F:\D\Computer Science room\Kingston uni. (ESoft)\Level 06\Programming III\CW1\PCS\Assets\Global" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -129,18 +110,18 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="111" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1637167274121" />
-    <state x="129" y="56" key="MergeDialog" timestamp="1637333601784">
+    <state x="129" y="56" key="MergeDialog" timestamp="1637994831418">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="129" y="56" key="MergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1637333601784" />
-    <state x="321" y="130" key="MultipleFileMergeDialog" timestamp="1637334041904">
+    <state x="129" y="56" key="MergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1637994831418" />
+    <state x="321" y="130" key="MultipleFileMergeDialog" timestamp="1637994836297">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="321" y="130" key="MultipleFileMergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1637334041904" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1637777731573">
+    <state x="321" y="130" key="MultipleFileMergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1637994836297" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1637994665173">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1637777731573" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1637994665173" />
     <state x="500" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1637767694905">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
