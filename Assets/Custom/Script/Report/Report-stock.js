@@ -78,8 +78,7 @@ var createTableBody = function (data) {
             tableRow.maximumCapacity.toFixed(2) + 'Kg',
             tableRow.stock.toFixed(2) + 'Kg',
             tableRow.totalMonthlyPaddyLimitPerFarmer.toFixed(2) + 'Kg',
-            '<p class=\" ' + percentageClass + '\">' + usedStockPercentage + '%</p>',
-            '<a href=\"#\" class=\"btn btn-sm btn-primary\">More</a>'
+            '<p class=\" ' + percentageClass + '\">' + usedStockPercentage + '%</p>'
         ]).draw(false);
     }
 
