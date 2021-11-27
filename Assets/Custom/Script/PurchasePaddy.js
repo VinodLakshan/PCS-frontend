@@ -1,4 +1,4 @@
-baseUrl = "http://localhost:8080/pcs";
+baseUrl = "http://localhost:9091/pcs";
 
 var paddyPrices = {
     id: 0,
