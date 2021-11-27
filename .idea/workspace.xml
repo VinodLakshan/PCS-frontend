@@ -11,12 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f431a01f-b379-4163-b0d2-b31987ecdaca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Custom/Script/Common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Custom/Script/Dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Custom/Script/Main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Global/js/sweetalert_all.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_19_2021_8_22_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_11_19_2021_8_22_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Custom/Script/Class.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/Common.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/Common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,13 +77,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,7 +94,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="01aef4be-b793-4eba-bd18-e57d5fb7957a" name="Default Changelist" comment="" />
+      <changelist id="f431a01f-b379-4163-b0d2-b31987ecdaca" name="Default Changelist" comment="" />
       <created>1637067059138</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -104,6 +105,7 @@
       <workItem from="1637257479040" duration="424000" />
       <workItem from="1637332868214" duration="2670000" />
       <workItem from="1637762564122" duration="1630000" />
+      <workItem from="1637847515866" duration="3107000" />
     </task>
     <servers />
   </component>
@@ -135,10 +137,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="321" y="130" key="MultipleFileMergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1637334041904" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1637334362384">
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1637777731573">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1637334362384" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1637777731573" />
     <state x="500" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1637767694905">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

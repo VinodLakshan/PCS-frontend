@@ -1,6 +1,7 @@
 //Localhost
 let _BaseURL = "http://localhost:8080/pcs/";
-let _Token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVuIiwicm9sZXMiOlsiYWRtaW4iXSwiZXhwIjoxNjM3Nzc3NDEyLCJpYXQiOjE2Mzc3NzU2MTJ9.O3X5klVplDfjF_p4e1t2NVXvIpaXvGg6gc9FCsz1F5o";
+let _Token = sessionStorage.getItem("token");
+//let _Token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVuIiwicm9sZXMiOlsiYWRtaW4iXSwiZXhwIjoxNjM3ODQ5OTIxLCJpYXQiOjE2Mzc4NDgxMjF9.CM1ti7JdW-BRGAwcloSo8Ptx-mvjJRSnGwh_suq21bs";
 
 function PostRequest(Url,Entity,SuccessFunction)
 {
