@@ -186,78 +186,14 @@
                             <tr>
                                 <th>User ID</th>
                                 <th>Name</th>
-                                <th>Email</th>
+                                <th>UserName</th>
                                 <th>Branch</th>
                                 <th>Role</th>
                                 <th colspan="2">Action</th>
                             </tr>
                             </thead>
-                            <tbody  class="text-center">
-                            <tr>
-                                <td><a href="#">U0001</a></td>
-                                <td>Udin Wayang</td>
-                                <td>Nasi Padang</td>
-                                <td>Kandy</td>
-                                <td>Manager</td>
-                                <td><a href="EditUser.html" class="btn btn-sm btn-success w-100">Edit</a></td>
-                                <td><a  href="javascript:void(0);" data-toggle="modal" data-target="#DeleteUserModal">
-                                    <button  type="submit" class="btn btn-sm btn-danger w-75">
-                                        Delete
-                                    </button>
-                                </a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">U0002</a></td>
-                                <td>Jaenab Bajigur</td>
-                                <td>Gundam 90' Edition</td>
-                                <td>Kandy</td>
-                                <td>Collection Officer</td>
-                                <td><a href="EditUser.html" class="btn btn-sm btn-success w-100">Edit</a></td>
-                                <td><a  href="javascript:void(0);" data-toggle="modal" data-target="#DeleteUserModal">
-                                    <button  type="submit" class="btn btn-sm btn-danger w-75">
-                                        Delete
-                                    </button>
-                                </a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">U0003</a></td>
-                                <td>Rivat Mahesa</td>
-                                <td>Oblong T-Shirt</td>
-                                <td>Kandy</td>
-                                <td>Paying Officer</td>
-                                <td><a href="EditUser.html" class="btn btn-sm btn-success w-100">Edit</a></td>
-                                <td><a  href="javascript:void(0);" data-toggle="modal" data-target="#DeleteUserModal">
-                                    <button  type="submit" class="btn btn-sm btn-danger w-75">
-                                        Delete
-                                    </button>
-                                </a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">U0004</a></td>
-                                <td>Indri Junanda</td>
-                                <td>Hat Rounded</td>
-                                <td>Kandy</td>
-                                <td>Clerk</td>
-                                <td><a href="EditUser.html" class="btn btn-sm btn-success w-100">Edit</a></td>
-                                <td><a  href="javascript:void(0);" data-toggle="modal" data-target="#DeleteUserModal">
-                                    <button  type="submit" class="btn btn-sm btn-danger w-75">
-                                        Delete
-                                    </button>
-                                </a></td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">U0005</a></td>
-                                <td>Udin Cilok</td>
-                                <td>Baby Powder</td>
-                                <td>Kandy</td>
-                                <td>Store Keeper</td>
-                                <td><a href="EditUser.html" class="btn btn-sm btn-success w-100">Edit</a></td>
-                                <td><a  href="javascript:void(0);" data-toggle="modal" data-target="#DeleteUserModal">
-                                    <button  type="submit" class="btn btn-sm btn-danger w-75">
-                                        Delete
-                                    </button>
-                                </a></td>
-                            </tr>
+                            <tbody  class="text-center" id="userTable">
+
                             </tbody>
                         </table>
                     </div>
@@ -349,6 +285,12 @@
         <script src="Assets/Global/js/ruang-admin.min.js"></script>
         <script src="Assets/Global/vendor/chart.js/Chart.min.js"></script>
         <script src="Assets/Global/js/demo/chart-area-demo.js"></script>
+        <script src="Assets/Global/js/sweetalert_all.js"></script>
+
+        <!-- Custom Scripts -->
+        <script src="Assets/Custom/Script/Main.js"></script>
+        <script src="Assets/Custom/Script/Common.js"></script>
+        <script src="Assets/Custom/Script/UserManagement.js"></script>
 </body>
 
 </html>

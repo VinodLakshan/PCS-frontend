@@ -5,33 +5,33 @@ $(document).ready(function ()
    // console.log(branch);
     branchID = branch.id;
     //console.log(branchID);
-    GetFarmers();
+    GetEmployee();
 //    populateTable();
 })
-function GetFarmers()
+function GetEmployee()
 {
-    GetRequest("farmer/getByBranchID/"+branchID,SuccessFarmerGet);
+    GetRequest("employee/getByBranchID/"+branchID,SuccessEmployeeGet);
 }
 
 //function populateTable(){
 //
 //}
 
-function SuccessFarmerGet(Response)
+function SuccessEmployeeGet(Response)
 {
     console.log(Response);
 }
 
-function SuccessFarmerGet(Response)
+function SuccessEmployeeGet(Response)
 {
     console.log(Response);
     for(let count = 0; count < Response.length; count++){
-        $('#farmerTable').append('<tr>'+
-                                          '<td scope="row">'+ "F0" + Response[count].id +'</td>'+
+        $('#userTable').append('<tr>'+
+                                          '<td scope="row">'+ "U0" + Response[count].id +'</td>'+
                                           '<td>'+Response[count].name+'</td>'+
-                                          '<td>'+ Response[count].address +'</td>'+
-                                          '<td>'+ Response[count].telephoneNumber+'</td>'+
-//                                          '<td>'+ Response[count].telephoneNumber+'</td>'+
+                                          '<td>'+ Response[count].userName +'</td>'+
+                                          '<td>'+ Response[count].branch.address+'</td>'+
+                                          '<td>'+ Response[count].role.roleName+'</td>'+
                                           '<td>'+
                                           '<a  href="javascript:void(0);" data-toggle="modal" data-target="#VerifyModal">'+
                                                                                            '<button  type="submit" class="btn btn-sm btn-success w-75">'+
@@ -50,7 +50,6 @@ function SuccessFarmerGet(Response)
                                       '</tr>')
     }
 }
-
 
 
 
