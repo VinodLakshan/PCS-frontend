@@ -7,7 +7,15 @@ $(document).ready(function ()
 function GetFarmersCount()
 {
     GetRequest("farmer/count",SuccessGetFarmersCount);
+
+    // let Entity = new User("testr","gfdf");
+    // PostRequest("employee/login",Entity,SuccesLogin)
 }
+
+// function SuccesLogin(Response)
+// {
+//
+// }
 
 function SuccessGetFarmersCount(Response)
 {
