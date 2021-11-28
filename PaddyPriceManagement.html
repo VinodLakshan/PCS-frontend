@@ -171,13 +171,14 @@
           <form>
             <div class="form-group">
               <label for="CurrentSellingPrice">Current Selling Price </label>
-              <input type="number" class="form-control" id="CurrentSellingPrice" value="100.00" disabled>
+              <input type="number" class="form-control" id="CurrentSellingPrice" disabled>
             </div>
             <div class="form-group">
               <label for="NewSellingPrice">New Selling Price </label>
               <input type="number" class="form-control" id="NewSellingPrice">
             </div>
-          <a  href="javascript:void(0);" data-toggle="modal" data-target="#SellingModal">
+          <a  href="javascript:void(0);" onclick="UpdateSellingPrice()" data-toggle="modal"
+              data-target="#SellingModal">
             <button type="submit" class="btn btn-primary">Update</button></a>
           </form>
 
@@ -190,14 +191,15 @@
           <hr/>
           <form>
             <div class="form-group">
-              <label for="CurrentSellingPrice">Current Buying Price </label>
-              <input type="number" class="form-control" id="CurrentBuyingPrice" value="80.00" disabled>
+              <label for="CurrentBuyingPrice">Current Buying Price </label>
+              <input type="number" class="form-control" id="CurrentBuyingPrice" disabled>
             </div>
             <div class="form-group">
-              <label for="NewSellingPrice">New Buying Price </label>
+              <label for="NewBuyingPrice">New Buying Price </label>
               <input type="number" class="form-control" id="NewBuyingPrice">
             </div>
-            <a  href="javascript:void(0);" data-toggle="modal" data-target="#BuyingModal">
+            <a  href="javascript:void(0);" onclick="UpdateBuyingPrice()" data-toggle="modal"
+                data-target="#BuyingModal">
               <button type="submit" class="btn btn-primary">Update</button></a>
           </form>
 
@@ -312,6 +314,14 @@
 <script src="Assets/Global/js/ruang-admin.min.js"></script>
 <script src="Assets/Global/vendor/chart.js/Chart.min.js"></script>
 <script src="Assets/Global/js/demo/chart-area-demo.js"></script>
+<script src="Assets/Global/js/sweetalert_all.js"></script>
+
+<!-- Custom Scripts -->
+<script src="Assets/Custom/Script/Main.js"></script>
+<script src="Assets/Custom/Script/Common.js"></script>
+<script src="Assets/Custom/Script/Dashboard.js"></script>
+<script src="Assets/Custom/Script/PaddyPriceManagement.js"></script>
+<script src="Assets/Custom/Script/Class.js"></script>
 </body>
 
 </html>
