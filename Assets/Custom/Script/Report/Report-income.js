@@ -117,7 +117,7 @@ var createCashInflowTableBody = function (data) {
     $("#dataTableCashInflows tbody").empty();
     for (const tableRow of data) {
         dataTableInstanceIn.row.add([
-            '<a href=\"#\" class=\"btn btn-success btn-sm\"><i class=\"fas fa-arrow-up\"></i></a>',
+            '<a href=\"#\" class=\"btn btn-danger btn-sm\"><i class=\"fas fa-arrow-down\"></i></a>',
             tableRow.farmer.name,
             tableRow.branch.address,
             tableRow.date,
@@ -143,13 +143,13 @@ var createCashOutflowTableBody = function (data) {
     document.getElementById('cashOutflowAmount').innerHTML = 'Rs ' + totalCashOutflows.toFixed(2);
     document.getElementById('cashOutflowTCount').innerHTML = 'Transaction Count : ' + cashOutflowTransactionCount;
 
-    document.getElementById('incomeAmount').innerHTML = 'Rs ' + (totalCashInflows - totalCashOutflows).toFixed(2);
+    document.getElementById('incomeAmount').innerHTML = 'Rs ' + (totalCashOutflows - totalCashInflows).toFixed(2);
     document.getElementById('incomeTCount').innerHTML = 'Transaction Count : ' + (cashOutflowTransactionCount + cashinflowTransactionCount);
 
     $("#dataTableCashOutflows tbody").empty();
     for (const tableRow of data) {
        dataTableInstanceOut.row.add([
-            '<a href=\"#\" class=\"btn btn-danger btn-sm\"><i class=\"fas fa-arrow-down\"></i></a>',
+            '<a href=\"#\" class=\"btn btn-success btn-sm\"><i class=\"fas fa-arrow-up\"></i></a>',
             tableRow.customer.name,
             tableRow.branch.address,
             tableRow.date,
