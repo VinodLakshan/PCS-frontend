@@ -189,20 +189,22 @@
 
                             <form action="#" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
                                   id="formCreate">
-                                <div>
-                                    <label class="block text-gray-700 text-base mb-1">Farmer ID</label>
-                                    <input
-                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
-                                         leading-tight focus:outline-none focus:shadow-outline"
-                                        type="text" name="farmerID" placeholder="Enter ID">
-                                </div>
 
                                 <div>
                                     <label class="block text-gray-700 text-base mb-1">Name</label>
                                     <input
                                         class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
                                          leading-tight focus:outline-none focus:shadow-outline"
-                                        type="text" name="name" placeholder="Enter Name">
+                                        type="text" name="inputName" placeholder="Enter Name" id="inputName">
+
+                                </div>
+
+                                <div>
+                                    <label class="block text-gray-700 text-base mb-1">NIC Number</label>
+                                    <input
+                                            class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
+                                         leading-tight focus:outline-none focus:shadow-outline"
+                                            type="text" id="nicNumber" name="nicNumber" placeholder="Enter NIC Number">
 
                                 </div>
 
@@ -211,7 +213,7 @@
                                     <input
                                         class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
                                          leading-tight focus:outline-none focus:shadow-outline"
-                                        type="text" name="telenumber" placeholder="Enter Telephone Number">
+                                        type="text" name="telephoneNumber" id="telephoneNumber" placeholder="Enter Telephone Number">
                                 </div>
 
                                 <div>
@@ -219,19 +221,23 @@
                                     <input
                                         class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
                                         leading-tight focus:outline-none focus:shadow-outline"
-                                        type="text" name="address" placeholder="Enter Address">
+                                        type="text" name="address" id="address" placeholder="Enter Address">
                                 </div>
 
                                 <div>
-                                    <label class="block text-gray-700 text-base mb-1">Branch</label>
-                                    <input
-                                            class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
-                                        leading-tight focus:outline-none focus:shadow-outline"
-                                            type="text" name="branch" placeholder="Enter Branch">
+                                    <label class="block text-gray-700 text-base mb-1" for="selectBranch">Branch</label>
+                                    <select class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
+                                        leading-tight focus:outline-none focus:shadow-outline" name="branch" id="selectBranch">
+                                        <option value="">Select Branch</option>
+                                    </select>
+                                </div>
+
+                                <div class="alert alert-danger d-none" id="errorAlert" role="alert">
+
                                 </div>
 
                                 <div class="flex items-center justify-between">
-                                    <button type="submit"
+                                    <button type="button"
                                         class="bg-blue-400 hover:bg-blue-500 border-blue-500 text-white font-bold py-2
                                         px-4 rounded focus:outline-none focus:shadow-outline" id="addFarmer">Add
                                         Farmer</button>

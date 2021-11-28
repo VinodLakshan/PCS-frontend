@@ -1,46 +1,27 @@
 baseUrl = "http://localhost:9091/pcs";
 
+
 $(document).ready(function () {
 
-    GetRequest("common/rolesAndBranches", loadRolesAndBranchesSuccess);
-    // $.ajax({
-    //     type: "GET",
-    //     url: baseUrl + "/common/rolesAndBranches",
-    //     async: true,
-    //     contentType: "application/json",
-    //     success: function (response) {
-    //         for (const role of response.roles) {
-    //             $('#selectRole').append(new Option(role.roleName, role.id));
-    //         }
-    //
-    //         for (const branch of response.branches) {
-    //             $('#selectBranch').append(new Option(branch.address, branch.id));
-    //         }
-    //     },
-    //     error: function (error) {
-    //         console.log("Error loading roles and branches");
-    //     }
-    // });
+    GetRequest("common/rolesAndBranches", farmerSuccess);
+
 });
 
-function loadRolesAndBranchesSuccess(response) {
-    for (const role of response.roles) {
-        $('#selectRole').append(new Option(role.roleName, role.id));
-    }
-
+function farmerSuccess(response) {
     for (const branch of response.branches) {
         $('#selectBranch').append(new Option(branch.address, branch.id));
     }
 }
 
-$('#btnRegister').click(function () {
+
+$('#addFarmer').click(function () {
     clearValidations();
-    var formData = $('#formRegister').serializeObject();
+    var formData = $('#formCreate').serializeObject();
     var isAnyError = registerValidation(formData);
 
     if (!isAnyError) {
         var requestData = setRequestData(formData);
-        PostRequest("employee/register", requestData, registerEmployeeSuccess);
+        PostRequest("farmer", requestData, registerFarmerSuccess);
 
     }
 });
@@ -51,24 +32,24 @@ var registerValidation = function (formData) {
     var isAnyError = false;
 
     if (formData.name == "") {
-        errorText = "Please provide a name"
+        errorText = "Please Provide a Name"
         isAnyError = setError("inputName");
 
-    } else if (formData.username == "") {
-        errorText = "Please provide a username"
-        isAnyError = setError("inputUserName");
+    } else if (formData.nicNumber == "") {
+        errorText = "Please Provide a NIC Number"
+        isAnyError = setError("inputNICNumber");
 
-    } else if (formData.role == "") {
-        errorText = "Please select a role"
-        isAnyError = setError("selectRole");
+    } else if (formData.telephoneNumber == "") {
+            errorText = "Please Provide a Telephone Number"
+            isAnyError = setError("telephoneNumber");
+
+    } else if (formData.address == "") {
+        errorText = "Please Provide a Address"
+        isAnyError = setError("address");
 
     } else if (formData.branch == "") {
-        errorText = "Please select a branch"
+        errorText = "Please select a Branch"
         isAnyError = setError("selectBranch");
-
-    } else if (formData.password !== formData.repeatPassword) {
-        errorText = "Passwords mismatched"
-        isAnyError = setError("inputRepeatPassword");
     }
 
     if (isAnyError) {
@@ -88,35 +69,30 @@ var setError = function (element) {
 var clearValidations = function () {
 
     $('#inputName').removeClass("border-danger");
-    $('#inputUserName').removeClass("border-danger");
-    $('#selectRole').removeClass("border-danger");
+    $('#nicNumber').removeClass("border-danger");
+    $('#telephoneNumber').removeClass("border-danger");
+    $('#address').removeClass("border-danger");
     $('#selectBranch').removeClass("border-danger");
-    $('#inputPassword').removeClass("border-danger");
-    $('#inputRepeatPassword').removeClass("border-danger");
     $('#errorAlert').text("");
     $('#errorAlert').addClass("d-none");
 }
 
 var setRequestData = function (formData) {
 
-    var employee = {
-        name: formData.name,
-        userName: formData.username,
-        password: formData.password,
-        role: {
-            id: formData.role
-        },
+    var farmer = {
+        name: formData.inputName,
+        nicNumber: formData.nicNumber,
+        telephoneNumber: formData.telephoneNumber,
+        address: formData.address,
         branch: {
             id: formData.branch
         }
     }
 
-    return employee;
+    return farmer;
 }
 
-function registerEmployeeSuccess(response) {
-    sessionStorage.setItem("employee", JSON.stringify(response.data));
+function registerFarmerSuccess(response) {
     sessionStorage.setItem("branch", JSON.stringify(response.data.branch));
-    sessionStorage.setItem("token", response.token);
-    window.location.href = "Dashboard.html";
+    window.location.href = "FarmerManagement.html";
 }

@@ -24,9 +24,10 @@ function SuccessEmployeeGet(Response)
 
 function SuccessEmployeeGet(Response)
 {
+    $("#employeeTable tbody").empty();
     console.log(Response);
     for(let count = 0; count < Response.length; count++){
-        $('#userTable').append('<tr>'+
+        $('#employeeTable').append('<tr>'+
                                           '<td scope="row">'+ "U0" + Response[count].id +'</td>'+
                                           '<td>'+Response[count].name+'</td>'+
                                           '<td>'+ Response[count].userName +'</td>'+
@@ -41,7 +42,7 @@ function SuccessEmployeeGet(Response)
                                           '</td>'+
                                           '<td>'+
                                               '<a  href="javascript:void(0);" data-toggle="modal" data-target="#VerifyModal">'+
-                                                 '<button  type="submit" class="btn btn-sm btn-danger w-75">'+
+                                                 '<button  type="submit" class="btn btn-sm btn-danger w-75" onClick="DeleteEmployee('+ Response[count].id +')">'+
                                                       'Delete   '+
                                                   '</button>'+
                                               '</a>'+
@@ -49,6 +50,19 @@ function SuccessEmployeeGet(Response)
 
                                       '</tr>')
     }
+}
+
+function DeleteEmployee(employeeId) {
+
+    DeleteRequest("employee/"+employeeId, {},SuccessEmployeeDelete);
+
+}
+
+function SuccessEmployeeDelete()
+{
+    console.log("Deleted");
+    GetEmployee();
+
 }
 
 

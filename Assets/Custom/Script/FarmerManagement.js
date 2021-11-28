@@ -17,13 +17,14 @@ function GetFarmers()
 //
 //}
 
-function SuccessFarmerGet(Response)
-{
-    console.log(Response);
-}
+//function SuccessFarmerGet(Response)
+//{
+//    console.log(Response);
+//}
 
 function SuccessFarmerGet(Response)
 {
+    $("#farmerTable tbody").empty();
     console.log(Response);
     for(let count = 0; count < Response.length; count++){
         $('#farmerTable').append('<tr>'+
@@ -31,7 +32,6 @@ function SuccessFarmerGet(Response)
                                           '<td>'+Response[count].name+'</td>'+
                                           '<td>'+ Response[count].address +'</td>'+
                                           '<td>'+ Response[count].telephoneNumber+'</td>'+
-//                                          '<td>'+ Response[count].telephoneNumber+'</td>'+
                                           '<td>'+
                                           '<a  href="javascript:void(0);" data-toggle="modal" data-target="#VerifyModal">'+
                                                                                            '<button  type="submit" class="btn btn-sm btn-success w-75">'+
@@ -41,16 +41,29 @@ function SuccessFarmerGet(Response)
                                           '</td>'+
                                           '<td>'+
                                               '<a  href="javascript:void(0);" data-toggle="modal" data-target="#VerifyModal">'+
-                                                 '<button  type="submit" class="btn btn-sm btn-danger w-75">'+
+                                                 '<button  type="submit" class="btn btn-sm btn-danger w-75" id="deleteBtn" onClick="DeleteFarmer('+ Response[count].id +')">'+
                                                       'Delete   '+
                                                   '</button>'+
                                               '</a>'+
                                           '</td>'+
 
                                       '</tr>')
+
     }
 }
 
+function DeleteFarmer(farmerId) {
+
+    DeleteRequest("farmer/"+farmerId, {},SuccessFarmerDelete);
+
+}
+
+function SuccessFarmerDelete()
+{
+    console.log("Deleted");
+    GetFarmers();
+
+}
 
 
 
