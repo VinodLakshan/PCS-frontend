@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f431a01f-b379-4163-b0d2-b31987ecdaca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/Main.js" afterDir="false" />
+    <list default="true" id="6b26918b-ac56-4aa8-a885-3e0b06f73de8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/Register.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,14 +13,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="develop" />
@@ -36,58 +27,112 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
-  <component name="ProjectId" id="2109Hca9UthqWtuqLcaTRkL8SqV" />
+  <component name="ProjectId" id="218qYj2BBHHU9WdW0EVrxZwdvRe" />
   <component name="ProjectViewState">
-    <option name="autoscrollToSource" value="true" />
-    <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Assets/Global/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="vcs.TFVC" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\D\Computer Science room\Kingston uni. (ESoft)\Level 06\Programming III\CW1\PCS\Assets\Global\js" />
-      <recent name="F:\D\Computer Science room\Kingston uni. (ESoft)\Level 06\Programming III\CW1\PCS" />
-      <recent name="F:\D\Computer Science room\Kingston uni. (ESoft)\Level 06\Programming III\CW1\PCS\Assets\Global" />
-    </key>
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f431a01f-b379-4163-b0d2-b31987ecdaca" name="Default Changelist" comment="" />
-      <created>1637067059138</created>
+      <changelist id="6b26918b-ac56-4aa8-a885-3e0b06f73de8" name="Changes" comment="" />
+      <created>1637333114284</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1637067059138</updated>
-      <workItem from="1637067061522" duration="8194000" />
-      <workItem from="1637167201988" duration="1109000" />
-      <workItem from="1637217669572" duration="10580000" />
-      <workItem from="1637257479040" duration="424000" />
-      <workItem from="1637332868214" duration="2670000" />
-      <workItem from="1637762564122" duration="1630000" />
-      <workItem from="1637847515866" duration="3107000" />
+      <updated>1637333114284</updated>
+      <workItem from="1637333116223" duration="57000" />
+      <workItem from="1637333203408" duration="967000" />
+      <workItem from="1637334257730" duration="58000" />
+      <workItem from="1637334351116" duration="998000" />
+      <workItem from="1637461802056" duration="15218000" />
+      <workItem from="1637501715821" duration="1556000" />
+      <workItem from="1637506334067" duration="1007000" />
+      <workItem from="1637507457883" duration="1400000" />
+      <workItem from="1637559692117" duration="12221000" />
+      <workItem from="1637595958029" duration="61000" />
+      <workItem from="1637629422248" duration="31570000" />
+      <workItem from="1637719859845" duration="23269000" />
+      <workItem from="1637807030064" duration="9291000" />
+      <workItem from="1637847284981" duration="125000" />
+      <workItem from="1637848343135" duration="932000" />
+      <workItem from="1637891991015" duration="7625000" />
+      <workItem from="1637936147232" duration="900000" />
+      <workItem from="1638108133442" duration="4004000" />
+      <workItem from="1638448321926" duration="432000" />
     </task>
+    <task id="LOCAL-00001" summary="resolving conflicts">
+      <created>1637333828058</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1637333828058</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Login implementation">
+      <created>1637473207284</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637473207284</updated>
+    </task>
+    <task id="LOCAL-00003" summary="login and registration completed">
+      <created>1637565137391</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637565137391</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Paddy Purchase completed">
+      <created>1637809269203</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637809269203</updated>
+    </task>
+    <task id="LOCAL-00005" summary="remove .idea files">
+      <created>1637810190201</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1637810190201</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixes in purchase Paddy">
+      <created>1637820473966</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1637820473967</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fixes in purchase Paddy">
+      <created>1637825015851</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1637825015851</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Changed Ajax requests to get from common.js">
+      <created>1637936453546</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1637936453546</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,41 +150,14 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="463" y="111" key="FileChooserDialogImpl" timestamp="1637167274121">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="463" y="111" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1637167274121" />
-    <state x="129" y="56" key="MergeDialog" timestamp="1637994831418">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="129" y="56" key="MergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1637994831418" />
-    <state x="321" y="130" key="MultipleFileMergeDialog" timestamp="1637994836297">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="321" y="130" key="MultipleFileMergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1637994836297" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1637994665173">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1637994665173" />
-    <state x="500" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1637767694905">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="500" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1637767694905" />
-    <state x="379" y="82" key="git4idea.branch.GitSmartOperationDialog" timestamp="1637333529880">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="379" y="82" key="git4idea.branch.GitSmartOperationDialog/0.0.1366.738@0.0.1366.738" timestamp="1637333529880" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../PCS-Backend/src/main/java/com/esoft/pcs/util/JwtUtil.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="resolving conflicts" />
+    <MESSAGE value="Login implementation" />
+    <MESSAGE value="login and registration completed" />
+    <MESSAGE value="Paddy Purchase completed" />
+    <MESSAGE value="remove .idea files" />
+    <MESSAGE value="Fixes in purchase Paddy" />
+    <MESSAGE value="Changed Ajax requests to get from common.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed Ajax requests to get from common.js" />
   </component>
 </project>

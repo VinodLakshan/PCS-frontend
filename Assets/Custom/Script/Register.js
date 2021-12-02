@@ -3,24 +3,6 @@ baseUrl = "http://localhost:8080/pcs";
 $(document).ready(function () {
 
     GetRequest("common/rolesAndBranches", loadRolesAndBranchesSuccess);
-    // $.ajax({
-    //     type: "GET",
-    //     url: baseUrl + "/common/rolesAndBranches",
-    //     async: true,
-    //     contentType: "application/json",
-    //     success: function (response) {
-    //         for (const role of response.roles) {
-    //             $('#selectRole').append(new Option(role.roleName, role.id));
-    //         }
-    //
-    //         for (const branch of response.branches) {
-    //             $('#selectBranch').append(new Option(branch.address, branch.id));
-    //         }
-    //     },
-    //     error: function (error) {
-    //         console.log("Error loading roles and branches");
-    //     }
-    // });
 });
 
 function loadRolesAndBranchesSuccess(response) {
