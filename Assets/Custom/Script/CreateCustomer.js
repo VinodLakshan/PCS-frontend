@@ -1,16 +1,25 @@
-baseUrl = "http://localhost:9091/pcs";
+//baseUrl = "http://localhost:9091/pcs";
+
 
 
 $(document).ready(function () {
 
     GetRequest("common/rolesAndBranches", customerSuccess);
 
+    var branch =  JSON.parse(sessionStorage.getItem("branch"));
+//  console.log(branch);
+    branchID = branch.id;
+
 });
 
 function customerSuccess(response) {
     for (const branch of response.branches) {
         $('#selectBranch').append(new Option(branch.address, branch.id));
+
     }
+
+    $('#selectBranch').val(branchID);
+
 }
 
 

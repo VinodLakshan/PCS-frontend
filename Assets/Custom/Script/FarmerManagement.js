@@ -94,9 +94,8 @@ function SuccessFarmerDelete()
 
 
 
-var saveFarmerId;
 
-//Delete From Here
+//Update Functions
 
 function UpdateFarmer(farmerId) {
 
@@ -180,7 +179,7 @@ var setError = function (element) {
 var clearValidations = function () {
 
     $('#inputName').removeClass("border-danger");
-    $('#nicNumber').removeClass("border-danger");
+    $('#inputUserName').removeClass("border-danger");
     $('#telephoneNumber').removeClass("border-danger");
     $('#address').removeClass("border-danger");
     $('#selectBranch').removeClass("border-danger");
@@ -191,8 +190,8 @@ var clearValidations = function () {
 var setRequestData = function (formData) {
 
     var farmer = {
-        name: formData.inputName,
-        nicNumber: formData.nicNumber,
+        name: formData.name,
+        nicNumber: formData.inputUserName,
         telephoneNumber: formData.telephoneNumber,
         address: formData.address,
         branch: {

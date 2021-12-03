@@ -158,7 +158,7 @@
             <!-- Container Fluid-->
             <div class="container-fluid" id="container-wrapper">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">User Management</h1>
+                    <h1 class="h3 mb-0 text-gray-800">Customer Management</h1>
                 </div>
 
 
@@ -169,90 +169,61 @@
 
                 <div class="admin-content">
                     <div class="button-group ml-4">
-                        <a href="CreateUser.html" class="btn bg-blue-400 border-blue-500 hover:bg-blue-500 text-white mr-2">Add User</a>
-                        <a href="UserManagement.html" class="btn bg-blue-400 border-blue-500 hover:bg-blue-500 text-white">Manage User</a>
+                        <a href="CreateCustomer.html" class="btn bg-blue-400 border-blue-500 hover:bg-blue-500 text-white mr-2">Add Customer</a>
+                        <a href="CustomerManagement.html" class="btn bg-blue-400 border-blue-500 hover:bg-blue-500 text-white">Manage Customers</a>
                     </div>
 
                     <div class="content">
-                        <h2 class="page-title text-center text-4xl my-3">Edit User</h2>
+                        <h2 class="page-title text-center text-4xl my-3">Edit Customer</h2>
 
                         <form action="#" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
                               id="formUpdate">
+
+                            <input style="display:none"
+                                   class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
+                                         leading-tight focus:outline-none focus:shadow-outline"
+                                   type="text" name="id" placeholder="Enter Name" id="id" value="7">
 
                             <div>
                                 <label class="block text-gray-700 text-base mb-1">Name</label>
                                 <input
                                         class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
                                          leading-tight focus:outline-none focus:shadow-outline"
-                                        type="text" id="inputName" name="name" placeholder="Enter Name">
+                                        type="text" name="inputName" placeholder="Enter Name" id="inputName">
 
                             </div>
 
                             <div>
-                                <label class="block text-gray-700 text-base mb-1">UserName</label>
+                                <label class="block text-gray-700 text-base mb-1">Address</label>
                                 <input
                                         class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
-                                         leading-tight focus:outline-none focus:shadow-outline"
-                                        type="text" name="username" id="inputUserName" placeholder="Enter UserName">
-
+                                        leading-tight focus:outline-none focus:shadow-outline"
+                                        type="text" name="address" id="address" placeholder="Enter Address">
                             </div>
-
-<!--                            <div>-->
-<!--                                <label class="block text-gray-700 text-base mb-1">Telephone Number</label>-->
-<!--                                <input-->
-<!--                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700-->
-<!--                                         leading-tight focus:outline-none focus:shadow-outline"-->
-<!--                                        type="text" name="telephoneNumber" id="telephoneNumber" placeholder="Enter Telephone Number">-->
-<!--                            </div>-->
-
-<!--                            <div>-->
-<!--                                <label class="block text-gray-700 text-base mb-1">Address</label>-->
-<!--                                <input-->
-<!--                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700-->
-<!--                                        leading-tight focus:outline-none focus:shadow-outline"-->
-<!--                                        type="text" name="address" id="address" placeholder="Enter Address">-->
-<!--                            </div>-->
 
                             <div>
                                 <label class="block text-gray-700 text-base mb-1" for="selectBranch">Branch</label>
-                                <select class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
+                                <select disabled class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
                                         leading-tight focus:outline-none focus:shadow-outline" name="branch" id="selectBranch">
                                     <option value="">Select Branch</option>
                                 </select>
-                            </div>
-
-                            <div>
-                                <label class="block text-gray-700 text-base mb-1" for="selectRole">Role</label>
-                                <select class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
-                                        leading-tight focus:outline-none focus:shadow-outline" id="selectRole" name="role">
-                                    <option value="">Select Role</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label class="block text-gray-700 text-base mb-1">Password</label>
-                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
-                                        leading-tight focus:outline-none focus:shadow-outline" type="password" class="form-control" id="inputPassword" name="password"
-                                       placeholder="Password">
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 text-base mb-1">Repeat Password</label>
-                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
-                                        leading-tight focus:outline-none focus:shadow-outline" type="password" class="form-control" id="inputRepeatPassword"
-                                       name="repeatPassword"
-                                       placeholder="Repeat Password">
                             </div>
 
                             <div class="alert alert-danger d-none" id="errorAlert" role="alert">
 
                             </div>
 
-                            <div class="flex items-center justify-between">
+                            <div class="flex items-center">
                                 <button type="button"
                                         class="bg-blue-400 hover:bg-blue-500 border-blue-500 text-white font-bold py-2
-                                        px-4 rounded focus:outline-none focus:shadow-outline" id="updateEmployee">Update
-                                    Employee</button>
-                        </div>
+                                        px-4 rounded focus:outline-none focus:shadow-outline mr-3" id="updateCustomer">Update
+                                    Customer</button>
+
+                                <button type="button"
+                                        class="bg-blue-400 hover:bg-blue-500 border-blue-500 text-white font-bold py-2
+                                        px-4 rounded focus:outline-none focus:shadow-outline" id="cancelUpdate">Cancel
+                                </button>
+                            </div>
                         </form>
 
                     </div>
@@ -330,7 +301,9 @@
 <!-- Custom Scripts -->
 <script src="Assets/Custom/Script/Main.js"></script>
 <script src="Assets/Custom/Script/Common.js"></script>
-<script src="Assets/Custom/Script/UserManagement.js"></script>
+<script src="Assets/Custom/Script/CustomerManagement.js"></script>
+
+
 </body>
 
 </html>

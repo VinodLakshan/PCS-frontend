@@ -1,5 +1,3 @@
-//baseUrl = "http://localhost:9091/pcs";
-
 var branchID;
 
 $(document).ready(function () {
@@ -9,13 +7,18 @@ $(document).ready(function () {
     var branch =  JSON.parse(sessionStorage.getItem("branch"));
    // console.log(branch);
     branchID = branch.id;
+    //console.log(branchID);
+
+//    populateTable();
 
 });
+
 
 
 function farmerSuccess(response) {
     for (const branch of response.branches) {
         $('#selectBranch').append(new Option(branch.address, branch.id));
+
     }
 
     $('#selectBranch').val(branchID);
