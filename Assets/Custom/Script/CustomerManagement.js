@@ -28,7 +28,7 @@ function SuccessCustomerGet(Response)
     console.log(Response);
     for(let count = 0; count < Response.length; count++){
         $('#customerTable').append('<tr>'+
-                                          '<td scope="row">'+ "F0" + Response[count].id +'</td>'+
+                                          '<td scope="row">'+ "C0" + Response[count].id +'</td>'+
                                           '<td>'+Response[count].name+'</td>'+
                                           '<td>'+ Response[count].address +'</td>'+
                                           '<td>'+ Response[count].branch.address+'</td>'+
@@ -62,7 +62,7 @@ function SuccessCustomerDelete()
 {
     console.log("Deleted");
     GetCustomers();
-
+    alert("Customer Deleted");
 }
 
 

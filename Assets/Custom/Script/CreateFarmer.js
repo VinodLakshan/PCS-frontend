@@ -1,16 +1,25 @@
-baseUrl = "http://localhost:9091/pcs";
+//baseUrl = "http://localhost:9091/pcs";
 
+var branchID;
 
 $(document).ready(function () {
 
     GetRequest("common/rolesAndBranches", farmerSuccess);
 
+    var branch =  JSON.parse(sessionStorage.getItem("branch"));
+   // console.log(branch);
+    branchID = branch.id;
+
 });
+
 
 function farmerSuccess(response) {
     for (const branch of response.branches) {
         $('#selectBranch').append(new Option(branch.address, branch.id));
     }
+
+    $('#selectBranch').val(branchID);
+
 }
 
 
@@ -31,7 +40,7 @@ var registerValidation = function (formData) {
     var errorText = "";
     var isAnyError = false;
 
-    if (formData.name == "") {
+    if (formData.inputName == "") {
         errorText = "Please Provide a Name"
         isAnyError = setError("inputName");
 
@@ -95,4 +104,5 @@ var setRequestData = function (formData) {
 function registerFarmerSuccess(response) {
     sessionStorage.setItem("branch", JSON.stringify(response.data.branch));
     window.location.href = "FarmerManagement.html";
+    alert("New Farmer Created");
 }

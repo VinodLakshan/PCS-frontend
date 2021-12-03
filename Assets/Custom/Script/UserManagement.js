@@ -54,15 +54,19 @@ function SuccessEmployeeGet(Response)
 
 function DeleteEmployee(employeeId) {
 
-    DeleteRequest("employee/"+employeeId, {},SuccessEmployeeDelete);
 
+if (confirm("Are you sure to delete this farmer with ID F0" + farmerId + "?")) {
+
+        DeleteRequest("employee/"+employeeId, {},SuccessEmployeeDelete);
+
+    }
 }
 
 function SuccessEmployeeDelete()
 {
     console.log("Deleted");
     GetEmployee();
-
+    alert("Employee Deleted");
 }
 
 

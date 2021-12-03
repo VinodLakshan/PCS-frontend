@@ -83,4 +83,5 @@ var setRequestData = function (formData) {
 function registerCustomerSuccess(response) {
     sessionStorage.setItem("branch", JSON.stringify(response.data.branch));
     window.location.href = "CustomerManagement.html";
+        alert("New Customer Created");
 }

@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f431a01f-b379-4163-b0d2-b31987ecdaca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/Main.js" afterDir="false" />
+    <list default="true" id="604e4927-33c0-4f59-82aa-8541abc49619" name="Changes" comment="Commit">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Custom/Script/EditUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/CreateCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/CreateCustomer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/CreateFarmer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/CreateFarmer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/CreateUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/CreateUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/CustomerManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/CustomerManagement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/EditFarmer.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/EditFarmer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/FarmerManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/FarmerManagement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/UserManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/UserManagement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateFarmer.html" beforeDir="false" afterPath="$PROJECT_DIR$/CreateFarmer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/CreateUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EditFarmer.html" beforeDir="false" afterPath="$PROJECT_DIR$/EditFarmer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EditUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/EditUser.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,14 +27,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="develop" />
@@ -36,62 +39,42 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2109Hca9UthqWtuqLcaTRkL8SqV" />
+  <component name="ProjectId" id="21Y6GT5hIKQluGe00NEqQxiHsHn" />
   <component name="ProjectViewState">
-    <option name="autoscrollToSource" value="true" />
-    <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Assets/Global/js" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="vcs.TFVC" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\D\Computer Science room\Kingston uni. (ESoft)\Level 06\Programming III\CW1\PCS\Assets\Global\js" />
-      <recent name="F:\D\Computer Science room\Kingston uni. (ESoft)\Level 06\Programming III\CW1\PCS" />
-      <recent name="F:\D\Computer Science room\Kingston uni. (ESoft)\Level 06\Programming III\CW1\PCS\Assets\Global" />
-    </key>
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f431a01f-b379-4163-b0d2-b31987ecdaca" name="Default Changelist" comment="" />
-      <created>1637067059138</created>
+      <changelist id="604e4927-33c0-4f59-82aa-8541abc49619" name="Changes" comment="" />
+      <created>1638105578405</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1637067059138</updated>
-      <workItem from="1637067061522" duration="8194000" />
-      <workItem from="1637167201988" duration="1109000" />
-      <workItem from="1637217669572" duration="10580000" />
-      <workItem from="1637257479040" duration="424000" />
-      <workItem from="1637332868214" duration="2670000" />
-      <workItem from="1637762564122" duration="1630000" />
-      <workItem from="1637847515866" duration="3107000" />
+      <updated>1638105578405</updated>
     </task>
+    <task id="LOCAL-00001" summary="Commit">
+      <created>1638131665558</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638131665558</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Commit">
+      <created>1638136077153</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638136077153</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -105,41 +88,8 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="463" y="111" key="FileChooserDialogImpl" timestamp="1637167274121">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="463" y="111" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1637167274121" />
-    <state x="129" y="56" key="MergeDialog" timestamp="1637994831418">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="129" y="56" key="MergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1637994831418" />
-    <state x="321" y="130" key="MultipleFileMergeDialog" timestamp="1637994836297">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="321" y="130" key="MultipleFileMergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1637994836297" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1637994665173">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1637994665173" />
-    <state x="500" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1637767694905">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="500" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1637767694905" />
-    <state x="379" y="82" key="git4idea.branch.GitSmartOperationDialog" timestamp="1637333529880">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="379" y="82" key="git4idea.branch.GitSmartOperationDialog/0.0.1366.738@0.0.1366.738" timestamp="1637333529880" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../PCS-Backend/src/main/java/com/esoft/pcs/util/JwtUtil.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
 </project>

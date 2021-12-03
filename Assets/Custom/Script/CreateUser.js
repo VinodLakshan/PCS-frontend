@@ -115,4 +115,5 @@ function registerEmployeeSuccess(response) {
     sessionStorage.setItem("branch", JSON.stringify(response.data.branch));
     sessionStorage.setItem("token", response.token);
     window.location.href = "UserManagement.html";
+    alert("New Employee Created");
 }
