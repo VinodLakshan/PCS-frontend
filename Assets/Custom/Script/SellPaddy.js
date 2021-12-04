@@ -73,10 +73,21 @@ $('#btn-add').click(function () {
         document.getElementById("errorAddress").innerHTML = "This is a required field.";
     }else{
         // do the addition
+        let ObjTosave = {
+            "id": 0,
+            "name": cname,
+            "paddySaleList": [],
+            "address": cAddress
+        }
+        PostRequest("customer" , ObjTosave, customerAddResponse);
     }
-
-    console.log(cname + " -  " + cAddress);
 });
+
+function customerAddResponse(response){
+    $('#addCustomerModel').modal('hide');
+    swal.fire("Success!", "Customer Added Successfully!", "success");
+    GetRequest("customer", loadAllCustomers);
+}
 
 $('#inputCName').click(function () {
     document.getElementById("errorName").innerHTML = "";

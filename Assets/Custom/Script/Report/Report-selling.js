@@ -23,40 +23,46 @@ $(document).ready(function () {
 
 var loadTableData = function () {
 
-    $.ajax({
-        type: "GET",
-        url: baseUrl + "/report/selling-report",
-        contentType: "application/json",
-        headers: {
-            'Authorization': `Bearer ` + sessionStorage.getItem("token"),
-        },
-        success: function (response) {
-            console.log(response);
-            createTableBody(response);
-            createTopSellersTableBody(response);
-        },
-        error: function (error) {
-            console.log(error);
-            console.log("Error occured while getting stock report.");
-            if (error.status == 401) {
-                $('#userModel').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                })
+    // $.ajax({
+    //     type: "GET",
+    //     url: baseUrl + "/report/selling-report",
+    //     contentType: "application/json",
+    //     headers: {
+    //         'Authorization': `Bearer ` + sessionStorage.getItem("token"),
+    //     },
+    //     success: function (response) {
+    //         console.log(response);
+    //         createTableBody(response);
+    //         createTopSellersTableBody(response);
+    //     },
+    //     error: function (error) {
+    //         console.log(error);
+    //         console.log("Error occured while getting stock report.");
+    //         if (error.status == 401) {
+    //             $('#userModel').modal({
+    //                 backdrop: 'static',
+    //                 keyboard: false
+    //             })
 
-            } else if (error.status == 403) {
-                $('#userSessionExpiredModel').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                });
-            } else {
-                $('#generalError').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                });
-            }
-        }
-    });
+    //         } else if (error.status == 403) {
+    //             $('#userSessionExpiredModel').modal({
+    //                 backdrop: 'static',
+    //                 keyboard: false
+    //             });
+    //         } else {
+    //             $('#generalError').modal({
+    //                 backdrop: 'static',
+    //                 keyboard: false
+    //             });
+    //         }
+    //     }
+    // });
+    GetRequest("report/selling-report", loadSellingReportSuccess);
+}
+
+function loadSellingReportSuccess(response){
+    createTableBody(response);
+    createTopSellersTableBody(response);
 }
 
 var createTableBody = function (data) {
