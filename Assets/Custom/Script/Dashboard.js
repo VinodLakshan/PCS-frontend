@@ -1,7 +1,7 @@
 $(document).ready(function ()
 {
     GetPaddyPrice();
-    GetFarmersCount();
+    //GetFarmersCount();
 })
 
 function GetFarmersCount()
@@ -29,10 +29,15 @@ function SuccessPaddyPriceGet(Response)
     {
         $('#SellingPrice').html(Response.sellingPrice);
         $('#PurchasePrice').html(Response.buyingPrice);
+        $('#CurrentBuyingPrice').val(Response.buyingPrice);
+        $('#CurrentSellingPrice').val(Response.sellingPrice);
+
     }
     else
     {
         $('#SellingPrice').html("---");
         $('#PurchasePrice').html("---");
+        $('#CurrentBuyingPrice').val(0);
+        $('#CurrentSellingPrice').val(0);
     }
 }
