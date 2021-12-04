@@ -106,6 +106,12 @@ var setRequestData = function (formData) {
 
 function registerFarmerSuccess(response) {
     sessionStorage.setItem("branch", JSON.stringify(response.data.branch));
-    window.location.href = "FarmerManagement.html";
-    alert("New Farmer Created");
+
+    PopUpWithTitleAndText("Success","New Farmer Created","success");
+
+    setTimeout(function()
+    {
+        window.location.href = "FarmerManagement.html";
+    }, 2000);
+
 }

@@ -87,7 +87,12 @@ function DeleteFarmer(farmerId) {
 function SuccessFarmerDelete()
 {
     console.log("Deleted");
-    alert("Farmer Deleted")
+    PopUpWithTitleAndText("Success","Farmer Deleted","success");
+
+    setTimeout(function()
+    {
+        window.location.href = "FarmerManagement.html";
+    },2000);
     GetFarmers();
 
 }
