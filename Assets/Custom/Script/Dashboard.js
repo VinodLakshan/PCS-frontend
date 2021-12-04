@@ -1,7 +1,7 @@
 $(document).ready(function ()
 {
     GetPaddyPrice();
-    GetFarmersCount();
+    //GetFarmersCount();
 })
 
 function GetFarmersCount()

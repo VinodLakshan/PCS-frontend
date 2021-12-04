@@ -20,6 +20,7 @@ function SuccessStockDetailsGet(Response)
 
         $('#TotalCurrentStock').html(Response.data.stock);
         $('#AvailableStockCapacity').html((Response.data.maximumCapacity)-(Response.data.stock));
+        $('#BranchId').val(Response.data.address);
 
     }
     else
