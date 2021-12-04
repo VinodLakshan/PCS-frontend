@@ -63,9 +63,8 @@ var createTableBody = function (data) {
     $("#dataTable tbody").empty();
 
     for (const tableRow of data) {
-    
         dataTableInstance.row.add([
-            tableRow.farmer.registrationNumber,
+            tableRow.farmer.id,
             tableRow.farmer.name,
             tableRow.branch.address,
             tableRow.date,
@@ -73,6 +72,7 @@ var createTableBody = function (data) {
             tableRow.weight.toFixed(2) + 'Kg' ,
             'Rs' + tableRow.payment.amount.toFixed(2)
         ]).draw(false);
+       
     }
 
     if (data.length == 0) {

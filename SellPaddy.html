@@ -12,6 +12,7 @@
   <link href="Assets/Global/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="Assets/Global/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="Assets/Global/css/ruang-admin.min.css" rel="stylesheet">
+  <link href="Assets/Global/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
   <link href="Assets/Custom/Style/SellPaddy.css" rel="stylesheet">
 </head>
 
@@ -177,12 +178,12 @@
                 <div class="card-body">
                   <div class="row align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">Today Buying Price
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">Today Selling Price
                       </div>
                       <div class="h5 mb-0 mr-1 font-weight-bold text-gray-800 d-inline" id="divBuyingPrice"></div>
                       <span class="text-lg"> LKR</span>
                       <div class="mt-2 mb-0 text-muted text-xs">
-                        <span class="text-info">Buying price up to date</span>
+                        <span class="text-info">Selling price up to date</span>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -238,11 +239,11 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">Expected Stock</div>
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">Total No of Customers</div>
                       <div class="h5 mb-0 mr-1 font-weight-bold text-gray-800 d-inline" id="divExpectedStock"></div>
-                      <span class="text-lg"> KG</span>
+                      <span class="text-lg" id="totCustomers"> 00</span>
                       <div class="mt-2 mb-0 text-muted text-xs">
-                        <span class="text-warning">Expected Stock for the Month</span>
+                        <span class="text-warning">No of customers in the system</span>
                       </div>
                     </div>
                     <div class="col-auto">
@@ -278,24 +279,62 @@
               </div>
             </div>
             <!-- Logout Modal Ended -->
+
+            <!-- / add customer popup -->
+            <div class="modal fade" id="addCustomerModel" tabindex="-1" role="dialog"
+              aria-labelledby="exampleModalLabelLogout" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabelLogout">Add New Cusomer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-5 ">Customer Name : </div>
+                      <div class="col-md-7">
+                        <input id="inputCName" type="text" name="cName" class="form-control">
+                        <p style="color: red;" id="errorName"></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-5">Customer Address : </div>
+                      <div class="col-md-7">
+                        <input id="inputCAddress" type="text" name="cAddress" class="form-control">
+                        <p style="color: red;" id="errorAddress"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel
+                    </button>
+                    <button type="button" class="btn btn-primary"  id="btn-add">Add
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ............................. -->
+
           </div>
 
           <div class="row">
             <div class="col-xl-8 col-lg-7 mb-4">
               <div class="card card-height" id="purchasePaddyTableCard">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between pb-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Paddy Purchases</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Paddy Sell Orders</h6>
                 </div>
-                <div class="table-responsive">
-                  <table class="table align-items-center table-flush text-center" id="purchasePaddyTable">
+                <div class="table-responsive p-3">
+                  <table class="table align-items-center table-flush text-center" id="tableSellOrders">
                     <thead class="thead-light">
                       <tr>
-                        <th>Purchase ID</th>
-                        <th>Farmer</th>
+                        <th>Customer</th>
+                        <th>Branch</th>
                         <th>Weight</th>
                         <th>Date</th>
                         <th>Payment</th>
-                        <th>Status</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -309,50 +348,64 @@
             <div class="col-xl-4 col-lg-5 mb-4">
               <div class="card card-height">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Make a Paddy Purchase</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Make a Paddy Sell Order</h6>
                 </div>
                 <div class="card-body">
                   <form id="purchaseForm">
                     <div class="row form-group">
                       <div class="col-md-12">
-                        <label for="selectFarmer">Farmer</label>
-                        <select class="form-control" id="selectFarmer" name="farmer">
+                        <div class="row">
+                          <div class="col-md-6"><label for="selectFarmer">Customer</label></div>
+                          <div class="col-md-6 d-flex justify-content-end">
+                            <button type="button" id="btnSell" class="btn btn-sm btn-info btn-add-customer">Add
+                              Customer</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <!-- <label for="selectFarmer">Customer</label> -->
+                        <select class="form-control" id="selectCustomer" name="customer">
                           <option value="">Select</option>
                         </select>
                       </div>
 
                     </div>
-                    <div class="row form-group">
-                      <div class="col-md-3">
-                        <label for="inputWeight">Weight | KG</label>
-                        <input id="inputWeight" min="0" max="100" type="number" name="weight" class="form-control">
-                      </div>
-                      <div class="col-md-9 pt-3 pr-0">
-                        <div class="row">
-                          <div class="col-md-7">
-                            <i class="fas fa-warehouse fa-xs text-success pr-2"></i>
-                            <span> Farmer's Monthly Paddy </span>
-                          </div>
-                          <div class="col-md-1">-</div>
-                          <div class="col-md-4">
-                            <span class="text-info" id="spanFarmerMonthlyPaddy"> 0.00</span>
-                            <span class="text-info"> KG</span>
-                          </div>
-                        </div>
 
-                        <div class="row pt-3">
-                          <div class="col-md-7">
-                            <i class="fas fa-bars text-success pr-2"></i>
-                            <span> Farmer's Remaining Limit </span>
-                          </div>
-                          <div class="col-md-1">-</div>
-                          <div class="col-md-4">
-                            <span class="text-info" id="spanFarmerAvailablePaddy"> 0.00</span>
-                            <span class="text-info"> KG</span>
-                          </div>
-                        </div>
+                    <div class="row">
+                      <div class="col-md-6 d-flex align-items-center">
+                        <i class="fas fa-warehouse fa-xs text-success pr-2"></i>
+                        <span> Current Selling Price (Rs) : </span>
+                      </div>
+                      <div class="col-md-1 d-flex align-items-center">-</div>
+                      <div class="col-md-5">
+                        <input id="inputWeight" type="number" name="weight" class="form-control">
+                      </div>
+                    </div><br>
+
+                    <div class="row">
+                      <div class="col-md-6 d-flex align-items-center">
+                        <i class="fas fa-bars text-success pr-2"></i>
+                        <span> Stock in hand (Kg) : </span>
+                      </div>
+                      <div class="col-md-1 d-flex align-items-center">-</div>
+                      <div class="col-md-5">
+                        <input id="inputWeight" type="number" name="weight" class="form-control">
+                      </div>
+                    </div><br>
+
+                    <div class="row">
+                      <div class="col-md-6 d-flex align-items-center">
+                        <i class="fas fa-truck text-success pr-2"></i>
+                        <span> Order Quantity (Kg) : </span>
+                      </div>
+                      <div class="col-md-1 d-flex align-items-center">-</div>
+                      <div class="col-md-5">
+                        <input id="inputWeight" type="number" name="weight" class="form-control">
                       </div>
                     </div>
+
+
+
                     <hr />
                     <div class="row text-lg">
                       <div class="col-md-6 col-sm-auto">
@@ -367,14 +420,15 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-3 pt-4">
-                        <button type="button" id="btnPurchase" class="btn btn-primary">Purchase
-                        </button>
-                      </div>
-                      <div class="col-md-9 pt-4">
+                      <div class="col-md-7 pt-4">
                         <div class="btn btn-danger text-left d-none" id="errorAlert" role="alert">
                         </div>
                       </div>
+                      <div class="col-md-5 pt-4 d-flex justify-content-end">
+                        <button type="button" id="btnPurchase" class="btn btn-primary">Make Sell Order
+                        </button>
+                      </div>
+
 
                       <!--   Confirmation Modal -->
                       <div class="modal fade" id="confirmationModel" tabindex="-1" role="dialog" aria-hidden="true">
@@ -519,6 +573,9 @@
   <script src="Assets/Global/vendor/chart.js/Chart.min.js"></script>
   <script src="Assets/Global/js/demo/chart-area-demo.js"></script>
 
+  <script src="Assets/Global/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="Assets/Global/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="Assets/Custom/Script/Main.js"></script>
   <script src="Assets/Custom/Script/SellPaddy.js"></script>
 </body>
 
