@@ -10,3 +10,15 @@ function PaddyPrice(date, buyingPrice , sellingPrice)
     this.sellingPrice = sellingPrice;
 
 }
+function PaddySaleUpdate(id , status)
+{
+    this.id = id;
+    this.status = status;
+
+}
+function PaddyOrderUpdate(id , status)
+{
+    this.id = id;
+    this.status = status;
+
+}

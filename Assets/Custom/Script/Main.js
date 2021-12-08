@@ -34,3 +34,20 @@ function GetRequest(Url,SuccessFunction)
         }
     });
 }
+function PutRequest(Url,Entity,SuccessFunction)
+{
+    $.ajax(
+    {
+        type: "PUT",
+        url: _BaseURL + Url,
+        contentType: "application/json", // NOT dataType!
+        headers: { 'Authorization': "Bearer " + _Token },
+        data: JSON.stringify(Entity),
+        success: SuccessFunction,
+        error: function(xhr, status, error)
+        {
+            alert(xhr.status + " " +xhr.responseText);
+        }
+    });
+}
+

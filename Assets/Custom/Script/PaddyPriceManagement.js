@@ -8,7 +8,7 @@ function UpdateSellingPrice(){
     if(parseInt(newSellingPrice)>0 && newSellingPrice!=="" && newSellingPrice!==null)
         PostRequest("paddyPrice/PaddyPriceSave",entity,SuccessPaddySellingPriceSave)
     else
-        PopUpWithTitleAndText("Warning","Invelid Input","warning");
+        PopUpWithTitleAndText("Warning","Invalid Input","warning");
 }
 function SuccessPaddySellingPriceSave(Response){
     console.log(Response);
@@ -31,7 +31,10 @@ function UpdateBuyingPrice(){
     let sellingPrice = $('#CurrentSellingPrice').val();
     let entity = new PaddyPrice( date, newBuyingPrice, sellingPrice );
 
+     if(parseInt(newBuyingPrice)>0 && newBuyingPrice!=="" && newBuyingPrice!==null)
     PostRequest("paddyPrice/PaddyPriceSave",entity,SuccessPaddyBuyingPriceSave)
+     else
+            PopUpWithTitleAndText("Warning","Invalid Input","warning");
 }
 function SuccessPaddyBuyingPriceSave(Response){
     console.log(Response);

@@ -12,10 +12,11 @@
     <link href="Assets/Global/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="Assets/Global/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="Assets/Global/css/ruang-admin.min.css" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
-<div id="wrapper">
+<div  id="wrapper">
     <!-- Sidebar start-->
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
@@ -169,6 +170,7 @@
                     <hr/>
                 </div>
 
+
                 <table class="table table-hover">
                     <thead>
                     <tr>
@@ -206,7 +208,8 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                                <a href="PaddyOrders.html" class="btn btn-success">Print Pay Order</a>
+                                <button onclick="generatePDF()"  class="btn btn-primary">Print</button>
+                                <button onclick="ConfirmPayOrder()"  class="btn btn-success">CONFIRM</button>
                             </div>
                         </div>
                     </div>
@@ -261,6 +264,11 @@
         <!-- Footer  Ended-->
     </div>
 </div>
+<!--
+<div style="display:none">
+    <h2>PDF</h2>
+    <button>click</button>
+</div> -->
 
 <!-- Scroll to top -->
 <a class="scroll-to-top rounded" href="#page-top">
@@ -275,11 +283,14 @@
 <script src="Assets/Global/vendor/chart.js/Chart.min.js"></script>
 <script src="Assets/Global/js/demo/chart-area-demo.js"></script>
 <script src="Assets/Global/js/sweetalert_all.js"></script>
+<script src="Assets/Global/js/jsPDF/jspdf.min.js"></script>
+
 
 <!-- Custom Scripts -->
 <script src="Assets/Custom/Script/Main.js"></script>
 <script src="Assets/Custom/Script/Common.js"></script>
 <script src="Assets/Custom/Script/PaddyOrders.js"></script>
+<script src="Assets/Custom/Script/Class.js"></script>
 </body>
 
 </html>
