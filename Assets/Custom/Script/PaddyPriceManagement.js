@@ -3,7 +3,7 @@ function UpdateSellingPrice(){
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     let newSellingPrice = $('#NewSellingPrice').val();
     let buyingPrice = $('#CurrentBuyingPrice').val();
-    let entity = new PaddyPrice( date, buyingPrice, newSellingPrice);
+    let entity = new PaddyPrice1( date, buyingPrice, newSellingPrice);
 
     if(parseInt(newSellingPrice)>0 && newSellingPrice!=="" && newSellingPrice!==null)
         PostRequest("paddyPrice/PaddyPriceSave",entity,SuccessPaddySellingPriceSave)
@@ -29,7 +29,7 @@ function UpdateBuyingPrice(){
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     let newBuyingPrice = $('#NewBuyingPrice').val();
     let sellingPrice = $('#CurrentSellingPrice').val();
-    let entity = new PaddyPrice( date, newBuyingPrice, sellingPrice );
+    let entity = new PaddyPrice1( date, newBuyingPrice, sellingPrice );
 
      if(parseInt(newBuyingPrice)>0 && newBuyingPrice!=="" && newBuyingPrice!==null)
     PostRequest("paddyPrice/PaddyPriceSave",entity,SuccessPaddyBuyingPriceSave)
