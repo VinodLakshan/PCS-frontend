@@ -114,5 +114,13 @@ function registerEmployeeSuccess(response) {
     sessionStorage.setItem("employee", JSON.stringify(response.data));
     sessionStorage.setItem("branch", JSON.stringify(response.data.branch));
     sessionStorage.setItem("token", response.token);
-    window.location.href = "UserManagement.html";
+
+    PopUpWithTitleAndText("Success","New User Created","success");
+
+    setTimeout(function()
+    {
+        window.location.href = "UserManagement.html";
+    }, 2000);
+
+
 }

@@ -4,7 +4,7 @@ var branchID;
 
 $(document).ready(function () {
 
-    GetRequest("common/rolesAndBranches", farmerSuccess);
+    GetRequest("common/rolesAndBranches", employeeSuccess);
 
     var branch =  JSON.parse(sessionStorage.getItem("branch"));
     // console.log(branch);
@@ -12,28 +12,28 @@ $(document).ready(function () {
 
 });
 
-function farmerSuccess(response) {
+function employeeSuccess(response) {
     for (const branch of response.branches) {
         $('#selectBranch').append(new Option(branch.address, branch.id));
     }
 }
 
 
-$('#updateFarmer').click(function () {
+$('#updateEmployee').click(function () {
     clearValidations();
     var formData = $('#formUpdate').serializeObject();
     var isAnyError = updateValidation(formData);
 
     if (!isAnyError) {
         var requestData = setRequestData(formData);
-        UpdateRequest("farmer/getByBranchID/"+branchID, requestData, updateFarmerSuccess);
+        UpdateRequest("employee/getByBranchID/"+branchID, requestData, updateEmployeeSuccess);
 
     }
 });
 
 $('#cancelUpdate').click(function () {
 
-        window.location.href = "FarmerManagement.html";
+        window.location.href = "UserManagement.html";
 
 });
 
@@ -90,7 +90,7 @@ var clearValidations = function () {
 
 var setRequestData = function (formData) {
 
-    var farmer = {
+    var employee = {
         name: formData.inputName,
         nicNumber: formData.nicNumber,
         telephoneNumber: formData.telephoneNumber,
@@ -100,11 +100,11 @@ var setRequestData = function (formData) {
         }
     }
 
-    return farmer;
+    return employee;
 }
 
-function updateFarmerSuccess(response) {
+function updateEmployeeSuccess(response) {
     sessionStorage.setItem("branch", JSON.stringify(response.data.branch));
-    window.location.href = "FarmerManagement.html";
-    alert("Farmer Details Updated");
+    window.location.href = "UserManagement.html";
+    alert("Employee Details Updated");
 }

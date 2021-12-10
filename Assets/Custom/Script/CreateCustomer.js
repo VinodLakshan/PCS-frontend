@@ -1,16 +1,25 @@
-baseUrl = "http://localhost:9091/pcs";
+//baseUrl = "http://localhost:9091/pcs";
+
 
 
 $(document).ready(function () {
 
     GetRequest("common/rolesAndBranches", customerSuccess);
 
+    var branch =  JSON.parse(sessionStorage.getItem("branch"));
+//  console.log(branch);
+    branchID = branch.id;
+
 });
 
 function customerSuccess(response) {
     for (const branch of response.branches) {
         $('#selectBranch').append(new Option(branch.address, branch.id));
+
     }
+
+    $('#selectBranch').val(branchID);
+
 }
 
 
@@ -82,5 +91,13 @@ var setRequestData = function (formData) {
 
 function registerCustomerSuccess(response) {
     sessionStorage.setItem("branch", JSON.stringify(response.data.branch));
-    window.location.href = "CustomerManagement.html";
+
+
+    PopUpWithTitleAndText("Success","New Customer Created","success");
+
+        setTimeout(function()
+        {
+        window.location.href = "CustomerManagement.html";
+        }, 2000);
+
 }

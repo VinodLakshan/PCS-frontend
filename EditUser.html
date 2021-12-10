@@ -158,7 +158,7 @@
             <!-- Container Fluid-->
             <div class="container-fluid" id="container-wrapper">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Farmer Management</h1>
+                    <h1 class="h3 mb-0 text-gray-800">User Management</h1>
                 </div>
 
 
@@ -176,57 +176,83 @@
                     <div class="content">
                         <h2 class="page-title text-center text-4xl my-3">Edit User</h2>
 
-                        <form action="#" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                            <div>
-                                <label class="block text-gray-700 text-base mb-1">User ID</label>
-                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="userid" placeholder="Enter UserID">
-                            </div>
+                        <form action="#" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+                              id="formUpdate">
 
                             <div>
                                 <label class="block text-gray-700 text-base mb-1">Name</label>
-                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="name" placeholder="Enter Name">
+                                <input
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
+                                         leading-tight focus:outline-none focus:shadow-outline"
+                                        type="text" id="inputName" name="name" placeholder="Enter Name">
 
                             </div>
 
                             <div>
-                                <label class="block text-gray-700 text-base mb-1">Email</label>
-                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="email" name="email" placeholder="Enter Email">
+                                <label class="block text-gray-700 text-base mb-1">UserName</label>
+                                <input
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
+                                         leading-tight focus:outline-none focus:shadow-outline"
+                                        type="text" name="username" id="inputUserName" placeholder="Enter UserName">
+
                             </div>
+
+<!--                            <div>-->
+<!--                                <label class="block text-gray-700 text-base mb-1">Telephone Number</label>-->
+<!--                                <input-->
+<!--                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700-->
+<!--                                         leading-tight focus:outline-none focus:shadow-outline"-->
+<!--                                        type="text" name="telephoneNumber" id="telephoneNumber" placeholder="Enter Telephone Number">-->
+<!--                            </div>-->
+
+<!--                            <div>-->
+<!--                                <label class="block text-gray-700 text-base mb-1">Address</label>-->
+<!--                                <input-->
+<!--                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700-->
+<!--                                        leading-tight focus:outline-none focus:shadow-outline"-->
+<!--                                        type="text" name="address" id="address" placeholder="Enter Address">-->
+<!--                            </div>-->
 
                             <div>
-                                <label class="block text-gray-700 text-base mb-1">Collection Center (Branch)</label>
-                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="text" name="branch" placeholder="Regional Center">
-                            </div>
-
-                            <label class="block text-gray-700 text-base mb-1">Job Role</label>
-                            <div class="inline-block relative w-64">
-                                <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 py-2 px-3 pr-8 mb-3 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-                                    <option>Manager</option>
-                                    <option>Finance Officer</option>
-                                    <option>Collection Officer</option>
-                                    <option>Store Keeper</option>
-                                    <option>Clerk</option>
-                                    <option>Paying Officer</option>
+                                <label class="block text-gray-700 text-base mb-1" for="selectBranch">Branch</label>
+                                <select class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
+                                        leading-tight focus:outline-none focus:shadow-outline" name="branch" id="selectBranch">
+                                    <option value="">Select Branch</option>
                                 </select>
-                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 text-base mb-1" for="selectRole">Role</label>
+                                <select class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
+                                        leading-tight focus:outline-none focus:shadow-outline" id="selectRole" name="role">
+                                    <option value="">Select Role</option>
+                                </select>
                             </div>
 
                             <div>
                                 <label class="block text-gray-700 text-base mb-1">Password</label>
-                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="password" name="password" placeholder="Enter Password">
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
+                                        leading-tight focus:outline-none focus:shadow-outline" type="password" class="form-control" id="inputPassword" name="password"
+                                       placeholder="Password">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-base mb-1">Repeat Password</label>
+                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
+                                        leading-tight focus:outline-none focus:shadow-outline" type="password" class="form-control" id="inputRepeatPassword"
+                                       name="repeatPassword"
+                                       placeholder="Repeat Password">
                             </div>
 
-                            <div>
-                                <label class="block text-gray-700 text-base mb-1">Confirm Password</label>
-                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  type="password" name="passwordconfig" placeholder="Confirm Password">
+                            <div class="alert alert-danger d-none" id="errorAlert" role="alert">
+
                             </div>
 
                             <div class="flex items-center justify-between">
-                                <button type="submit" class="bg-blue-400 hover:bg-blue-500 border-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >Update User</button>
-                            </div>
-
+                                <button type="button"
+                                        class="bg-blue-400 hover:bg-blue-500 border-blue-500 text-white font-bold py-2
+                                        px-4 rounded focus:outline-none focus:shadow-outline" id="updateEmployee">Update
+                                    Employee</button>
+                        </div>
                         </form>
 
                     </div>
@@ -299,6 +325,12 @@
 <script src="Assets/Global/js/ruang-admin.min.js"></script>
 <script src="Assets/Global/vendor/chart.js/Chart.min.js"></script>
 <script src="Assets/Global/js/demo/chart-area-demo.js"></script>
+<script src="Assets/Global/js/sweetalert_all.js"></script>
+
+<!-- Custom Scripts -->
+<script src="Assets/Custom/Script/Main.js"></script>
+<script src="Assets/Custom/Script/Common.js"></script>
+<script src="Assets/Custom/Script/UserManagement.js"></script>
 </body>
 
 </html>
