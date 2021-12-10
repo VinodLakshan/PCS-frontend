@@ -84,8 +84,16 @@ if (confirm("Are you sure to delete this employee with ID U0" + employeeId + "?"
 function SuccessEmployeeDelete()
 {
     console.log("Deleted");
+
+    PopUpWithTitleAndText("Success","User Deleted","success");
+
+    setTimeout(function()
+    {
+        window.location.href = "UserManagement.html";
+    },2000);
+
     GetEmployee();
-    alert("Employee Deleted");
+
 }
 
 

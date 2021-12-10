@@ -69,7 +69,13 @@ function SuccessCustomerGet(Response)
 
 function DeleteCustomer(customerId) {
 
-    DeleteRequest("customer/"+customerId, {},SuccessCustomerDelete);
+
+    if (confirm("Are you sure to delete this farmer with ID C0" + customerId + "?")) {
+
+        DeleteRequest("customer/"+customerId, {},SuccessCustomerDelete);
+
+    }
+
 
 }
 
