@@ -172,11 +172,11 @@
                     <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                         <div class="card-body">
                             <div>
-                                <h5 class="card-title" align="center">Total Current Stocks</h5>
+                                <h5 class="card-title" align="center" >Total Current Stocks[KG]</h5>
                             </div>
                             <hr/>
                             <div  style="background-color:#031a6e; height:40px; ">
-                                <H4 class="card-text" align="center" style="padding-top: 0.5rem;">7000KG</H4>
+                                <H4 class="card-text" align="center" style="padding-top: 0.5rem;" id="TotalCurrentStock"></H4>
                             </div>
 
                         </div>
@@ -186,11 +186,11 @@
                     <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                         <div class="card-body">
                             <div>
-                                <h5 class="card-title" align="center">Available Stock Capacity</h5>
+                                <h5 class="card-title" align="center">Available Stock Capacity[KG]</h5>
                             </div>
                             <hr/>
                             <div  style="background-color:#031a6e; height:40px; ">
-                                <H4 class="card-text" align="center" style="padding-top: 0.5rem;">3000KG</H4>
+                                <H4 class="card-text" align="center" style="padding-top: 0.5rem;"  id="AvailableStockCapacity"></H4>
                             </div>
 
                         </div>
@@ -202,29 +202,14 @@
                 <hr/>
                 <!--form started-->
                 <form>
-                    <div class="form-group col-md-6">
-                        <label >Regional center </label>
-                        <select class="form-control">
-                            <option>Select Here </option>
-                            <option>Colombo</option>
-                            <option>Kandy</option>
-                            <option>Galle</option>
-                            <option>Ampara</option>
-                            <option>Matara</option>
-                            <option>Polanaruva</option>
+                    <div class="form-group col-md-6" >
+                        <label for="BranchId" >Regional center </label>
+                        <input type="text" class="form-control" id="BranchId" disabled>
 
-                        </select>
                     </div>
+
                     <div class="form-group col-md-6">
-                        <label for="ReqDate">Date</label>
-                        <input type="Date" class="form-control" id="ReqDate">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="TotalStock"> Total Stocks </label>
-                        <input type="text" class="form-control" id="TotalStock">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="AvailableCapacity">Available Capacity</label>
+                        <label for="AvailableCapacity">Transfer Capacity</label>
                         <input type="text" class="form-control" id="AvailableCapacity">
                     </div>
 
@@ -318,6 +303,12 @@
 <script src="Assets/Global/js/ruang-admin.min.js"></script>
 <script src="Assets/Global/vendor/chart.js/Chart.min.js"></script>
 <script src="Assets/Global/js/demo/chart-area-demo.js"></script>
+<script src="Assets/Global/js/sweetalert_all.js"></script>
+
+<!-- Custom Scripts -->
+<script src="Assets/Custom/Script/Main.js"></script>
+<script src="Assets/Custom/Script/Common.js"></script>
+<script src="Assets/Custom/Script/stock.js"></script>
 </body>
 
 </html>

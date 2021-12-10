@@ -39,8 +39,26 @@ function Vehicles(id)
     this.id = id;
 }
 
-function DateRange(startDate, endDate)
-{
+function DateRange(startDate, endDate) {
     this.startDate = startDate;
     this.endDate = endDate;
+}
+function PaddyPrice1(date, buyingPrice , sellingPrice)
+{
+    this.date = date;
+    this.buyingPrice = buyingPrice;
+    this.sellingPrice = sellingPrice;
+
+}
+function PaddySaleUpdate(id , status)
+{
+    this.id = id;
+    this.status = status;
+
+}
+function PaddyOrderUpdate(id , status)
+{
+    this.id = id;
+    this.status = status;
+
 }
