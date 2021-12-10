@@ -30,75 +30,86 @@ $(document).ready(function () {
 
 var loadTableData = function () {
 
-    $.ajax({
-        type: "GET",
-        url: baseUrl + "/report/buying-report",
-        contentType: "application/json",
-        headers: {
-            'Authorization': `Bearer ` + sessionStorage.getItem("token"),
-        },
-        success: function (response) {
-            console.log(response);
-            createCashInflowTableBody(response);
-        },
-        error: function (error) {
-            console.log(error);
-            console.log("Error occured while getting stock report.");
-            if (error.status == 401) {
-                $('#userModel').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                })
+    // $.ajax({
+    //     type: "GET",
+    //     url: baseUrl + "/report/buying-report",
+    //     contentType: "application/json",
+    //     headers: {
+    //         'Authorization': `Bearer ` + sessionStorage.getItem("token"),
+    //     },
+    //     success: function (response) {
+    //         console.log(response);
+    //         createCashInflowTableBody(response);
+    //     },
+    //     error: function (error) {
+    //         console.log(error);
+    //         console.log("Error occured while getting stock report.");
+    //         if (error.status == 401) {
+    //             $('#userModel').modal({
+    //                 backdrop: 'static',
+    //                 keyboard: false
+    //             })
 
-            } else if (error.status == 403) {
-                $('#userSessionExpiredModel').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                });
-            } else {
-                $('#generalError').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                });
-            }
-        }
-    });
+    //         } else if (error.status == 403) {
+    //             $('#userSessionExpiredModel').modal({
+    //                 backdrop: 'static',
+    //                 keyboard: false
+    //             });
+    //         } else {
+    //             $('#generalError').modal({
+    //                 backdrop: 'static',
+    //                 keyboard: false
+    //             });
+    //         }
+    //     }
+    // });
 
-    $.ajax({
-        type: "GET",
-        url: baseUrl + "/report/selling-report",
-        contentType: "application/json",
-        headers: {
-            'Authorization': `Bearer ` + sessionStorage.getItem("token"),
-        },
-        success: function (response) {
-            console.log(response);
-            createCashOutflowTableBody(response);
-        },
-        error: function (error) {
-            console.log(error);
-            console.log("Error occured while getting stock report.");
-            if (error.status == 401) {
-                $('#userModel').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                })
+    GetRequest("report/buying-report", loadCashInflowSuccess);
 
-            } else if (error.status == 403) {
-                $('#userSessionExpiredModel').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                });
-            } else {
-                $('#generalError').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                });
-            }
-        }
-    });
+    // $.ajax({
+    //     type: "GET",
+    //     url: baseUrl + "/report/selling-report",
+    //     contentType: "application/json",
+    //     headers: {
+    //         'Authorization': `Bearer ` + sessionStorage.getItem("token"),
+    //     },
+    //     success: function (response) {
+    //         console.log(response);
+    //         createCashOutflowTableBody(response);
+    //     },
+    //     error: function (error) {
+    //         console.log(error);
+    //         console.log("Error occured while getting stock report.");
+    //         if (error.status == 401) {
+    //             $('#userModel').modal({
+    //                 backdrop: 'static',
+    //                 keyboard: false
+    //             })
 
+    //         } else if (error.status == 403) {
+    //             $('#userSessionExpiredModel').modal({
+    //                 backdrop: 'static',
+    //                 keyboard: false
+    //             });
+    //         } else {
+    //             $('#generalError').modal({
+    //                 backdrop: 'static',
+    //                 keyboard: false
+    //             });
+    //         }
+    //     }
+    // });
+
+    GetRequest("report/selling-report", loadCashOutFlowSuccess);
     GetRequest("paddyPrice/TodayPaddyPriceGet", getTodayPaddyPricesSuccess);
+}
+
+function loadCashInflowSuccess(response){
+    createCashInflowTableBody(response);
+}
+
+function loadCashOutFlowSuccess(response){
+    createCashOutflowTableBody(response);
 }
 
 var totalCashInflows = 0;
@@ -117,7 +128,7 @@ var createCashInflowTableBody = function (data) {
     $("#dataTableCashInflows tbody").empty();
     for (const tableRow of data) {
         dataTableInstanceIn.row.add([
-            '<a href=\"#\" class=\"btn btn-success btn-sm\"><i class=\"fas fa-arrow-up\"></i></a>',
+            '<a href=\"#\" class=\"btn btn-danger btn-sm\"><i class=\"fas fa-arrow-down\"></i></a>',
             tableRow.farmer.name,
             tableRow.branch.address,
             tableRow.date,
@@ -143,13 +154,13 @@ var createCashOutflowTableBody = function (data) {
     document.getElementById('cashOutflowAmount').innerHTML = 'Rs ' + totalCashOutflows.toFixed(2);
     document.getElementById('cashOutflowTCount').innerHTML = 'Transaction Count : ' + cashOutflowTransactionCount;
 
-    document.getElementById('incomeAmount').innerHTML = 'Rs ' + (totalCashInflows - totalCashOutflows).toFixed(2);
+    document.getElementById('incomeAmount').innerHTML = 'Rs ' + (totalCashOutflows - totalCashInflows).toFixed(2);
     document.getElementById('incomeTCount').innerHTML = 'Transaction Count : ' + (cashOutflowTransactionCount + cashinflowTransactionCount);
 
     $("#dataTableCashOutflows tbody").empty();
     for (const tableRow of data) {
        dataTableInstanceOut.row.add([
-            '<a href=\"#\" class=\"btn btn-danger btn-sm\"><i class=\"fas fa-arrow-down\"></i></a>',
+            '<a href=\"#\" class=\"btn btn-success btn-sm\"><i class=\"fas fa-arrow-up\"></i></a>',
             tableRow.customer.name,
             tableRow.branch.address,
             tableRow.date,
