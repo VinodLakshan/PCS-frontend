@@ -311,3 +311,8 @@ function kioppp()
         }
     })
 }
+
+function ValidateName(Name)
+{
+    return /^[A-Za-z\s]+$/.test(Name);
+}
