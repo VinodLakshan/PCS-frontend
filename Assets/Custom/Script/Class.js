@@ -62,3 +62,9 @@ function PaddyOrderUpdate(id , status)
     this.status = status;
 
 }
+
+function PaddyTransfer(Branch, Stock)
+{
+    this.branch = Branch;
+    this.stock = Stock;
+}
