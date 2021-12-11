@@ -19,42 +19,11 @@ $(document).ready(function () {
 
 });
 
+function roleBasedAuthenticator(val){
+    return "none";
+}
+
 var loadTableData = function () {
-
-    // $.ajax({
-    //     type: "GET",
-    //     url: baseUrl + "/report/stock-report",
-    //     contentType: "application/json",
-    //     headers: {
-    //         'Authorization': `Bearer ` + sessionStorage.getItem("token"),
-    //     },
-    //     success: function (response) {
-    //         createTableBody(response);
-    //         createCharts(response);
-    //     },
-    //     error: function (error) {
-    //         console.log(error);
-    //         console.log("Error occured while getting stock report.");
-    //         if (error.status == 401) {
-    //             $('#userModel').modal({
-    //                 backdrop: 'static',
-    //                 keyboard: false
-    //             })
-
-    //         } else if (error.status == 403) {
-    //             $('#userSessionExpiredModel').modal({
-    //                 backdrop: 'static',
-    //                 keyboard: false
-    //             });
-    //         } else {
-    //             $('#generalError').modal({
-    //                 backdrop: 'static',
-    //                 keyboard: false
-    //             });
-    //         }
-    //     }
-    // });
-
     GetRequest("report/stock-report", dataLoadSuccesss);
 }
 
