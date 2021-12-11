@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -167,18 +168,18 @@
         <div>
           <h2><span class="badge badge-secondary" >Selling Price</span></h2>
           <hr/>
-          <form>
+
             <div class="form-group">
               <label for="CurrentSellingPrice">Current Selling Price </label>
-              <input type="number" class="form-control" id="CurrentSellingPrice" value="100.00" disabled>
+              <input type="number" class="form-control" id="CurrentSellingPrice" disabled>
             </div>
             <div class="form-group">
               <label for="NewSellingPrice">New Selling Price </label>
               <input type="number" class="form-control" id="NewSellingPrice">
             </div>
-          <a  href="javascript:void(0);" data-toggle="modal" data-target="#SellingModal">
-            <button type="submit" class="btn btn-primary">Update</button></a>
-          </form>
+
+            <button type="button" onclick="UpdateSellingPrice()" class="btn btn-primary">Update</button>
+
 
         </div>
         <!--End Selling Price-->
@@ -187,69 +188,21 @@
         <div>
           <h2><span class="badge badge-secondary" >Buying Price</span></h2>
           <hr/>
-          <form>
             <div class="form-group">
-              <label for="CurrentSellingPrice">Current Buying Price </label>
-              <input type="number" class="form-control" id="CurrentBuyingPrice" value="80.00" disabled>
+              <label for="CurrentBuyingPrice">Current Buying Price </label>
+              <input type="number" class="form-control" id="CurrentBuyingPrice" disabled>
             </div>
             <div class="form-group">
-              <label for="NewSellingPrice">New Buying Price </label>
+              <label for="NewBuyingPrice">New Buying Price </label>
               <input type="number" class="form-control" id="NewBuyingPrice">
             </div>
-            <a  href="javascript:void(0);" data-toggle="modal" data-target="#BuyingModal">
-              <button type="submit" class="btn btn-primary">Update</button></a>
-          </form>
+              <button type="submit" onclick="UpdateBuyingPrice()"  class="btn btn-primary">Update</button>
+
 
         </div>
         <!--End buying Price-->
 
-        <!-- selling price Modal started -->
 
-        <div class="modal fade" id="SellingModal" tabindex="-1" role="dialog" aria-labelledby="SellingModalLabel"
-             aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="SellingModalLabel">Ohh No!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <p>Are you sure you want to Update New Selling Price ?</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                <a href="PaddyPriceManagement.html" class="btn btn-primary">Update</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Selling Price Modal Ended -->
-        <!-- buying price Modal started -->
-
-        <div class="modal fade" id="BuyingModal" tabindex="-1" role="dialog" aria-labelledby="BuyingModalLabel"
-             aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="BuyingModalLabel">Ohh No!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <p>Are you sure you want to Update New Buying Price ?</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                <a href="PaddyPriceManagement.html" class="btn btn-primary">Update</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Buying Price Modal Ended -->
         <!-- Logout Modal started -->
 
         <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
@@ -311,6 +264,14 @@
 <script src="Assets/Global/js/ruang-admin.min.js"></script>
 <script src="Assets/Global/vendor/chart.js/Chart.min.js"></script>
 <script src="Assets/Global/js/demo/chart-area-demo.js"></script>
+<script src="Assets/Global/js/sweetalert_all.js"></script>
+
+<!-- Custom Scripts -->
+<script src="Assets/Custom/Script/Main.js"></script>
+<script src="Assets/Custom/Script/Common.js"></script>
+<script src="Assets/Custom/Script/Dashboard.js"></script>
+<script src="Assets/Custom/Script/PaddyPriceManagement.js"></script>
+<script src="Assets/Custom/Script/Class.js"></script>
 </body>
 
 </html>
