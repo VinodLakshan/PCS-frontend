@@ -1,58 +1,48 @@
-baseUrl = "http://localhost:9091/pcs";
+//baseUrl = "http://localhost:9091/pcs";
 
-var branchID;
+
 
 $(document).ready(function () {
 
-    GetRequest("common/rolesAndBranches", farmerSuccess);
+    GetRequest("common/rolesAndBranches", customerSuccess);
 
     var branch =  JSON.parse(sessionStorage.getItem("branch"));
-    // console.log(branch);
+//  console.log(branch);
     branchID = branch.id;
 
 });
 
-function farmerSuccess(response) {
+function customerSuccess(response) {
     for (const branch of response.branches) {
         $('#selectBranch').append(new Option(branch.address, branch.id));
+
     }
+
+    $('#selectBranch').val(branchID);
+
 }
 
 
-$('#updateFarmer').click(function () {
+$('#addCustomer').click(function () {
     clearValidations();
-    var formData = $('#formUpdate').serializeObject();
-    var isAnyError = updateValidation(formData);
+    var formData = $('#formCreate').serializeObject();
+    var isAnyError = registerValidation(formData);
 
     if (!isAnyError) {
         var requestData = setRequestData(formData);
-        UpdateRequest("farmer/getByBranchID/"+branchID, requestData, updateFarmerSuccess);
+        PostRequest("customer", requestData, registerCustomerSuccess);
 
     }
 });
 
-$('#cancelUpdate').click(function () {
-
-        window.location.href = "FarmerManagement.html";
-
-});
-
-var updateValidation = function (formData) {
+var registerValidation = function (formData) {
 
     var errorText = "";
     var isAnyError = false;
 
-    if (formData.inputName == "") {
+    if (formData.name == "") {
         errorText = "Please Provide a Name"
         isAnyError = setError("inputName");
-
-    } else if (formData.nicNumber == "") {
-        errorText = "Please Provide a NIC Number"
-        isAnyError = setError("inputNICNumber");
-
-    } else if (formData.telephoneNumber == "") {
-            errorText = "Please Provide a Telephone Number"
-            isAnyError = setError("telephoneNumber");
 
     } else if (formData.address == "") {
         errorText = "Please Provide a Address"
@@ -80,8 +70,6 @@ var setError = function (element) {
 var clearValidations = function () {
 
     $('#inputName').removeClass("border-danger");
-    $('#nicNumber').removeClass("border-danger");
-    $('#telephoneNumber').removeClass("border-danger");
     $('#address').removeClass("border-danger");
     $('#selectBranch').removeClass("border-danger");
     $('#errorAlert').text("");
@@ -90,21 +78,26 @@ var clearValidations = function () {
 
 var setRequestData = function (formData) {
 
-    var farmer = {
+    var customer = {
         name: formData.inputName,
-        nicNumber: formData.nicNumber,
-        telephoneNumber: formData.telephoneNumber,
         address: formData.address,
         branch: {
             id: formData.branch
         }
     }
 
-    return farmer;
+    return customer;
 }
 
-function updateFarmerSuccess(response) {
+function registerCustomerSuccess(response) {
     sessionStorage.setItem("branch", JSON.stringify(response.data.branch));
-    window.location.href = "FarmerManagement.html";
-    alert("Farmer Details Updated");
+
+
+    PopUpWithTitleAndText("Success","New Customer Created","success");
+
+        setTimeout(function()
+        {
+        window.location.href = "CustomerManagement.html";
+        }, 2000);
+
 }

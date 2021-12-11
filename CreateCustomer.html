@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <meta content="" name="description">
-    <meta content="" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <link href="Assets/Global/img/logo/logo21.png" rel="icon">
-    <title>Farmer Management</title>
+    <title>Customer Management</title>
     <link href="Assets/Global/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="Assets/Global/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="Assets/Global/css/ruang-admin.min.css" rel="stylesheet">
@@ -19,13 +19,17 @@
 <body id="page-top">
 <div id="wrapper">
     <!-- Sidebar start-->
+
+    <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
             <div class="sidebar-brand-icon">
-                <img src="Assets/Global/img/logo/logo21.png">
+                <img src="Assets/Global/img/logo/logo2.png">
             </div>
+            <div class="sidebar-brand-text mx-3">RuangAdmin</div>
         </a>
         <hr class="sidebar-divider my-0">
+
         <li class="nav-item active">
             <a class="nav-link" href="index.html">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -33,113 +37,107 @@
         </li>
         <hr class="sidebar-divider">
         <!-- psc sidebar modules starting -->
-        <li class="nav-item" id="USER_MANAGEMENT">
+        <li class="nav-item">
             <a class="nav-link" href="UserManagement.html">
                 <i class="fas fa-user-tie"></i>
                 <span>User Management</span>
             </a>
         </li>
-        <li class="nav-item" id="FARMER_MANAGEMENT">
+        <li class="nav-item">
             <a class="nav-link" href="FarmerManagement.html">
                 <i class="far fa-address-book"></i>
                 <span>Farmer Management</span>
             </a>
         </li>
-        <li class="nav-item" id="PADDY_PURCHASE">
+        <li class="nav-item">
             <a class="nav-link" href="PurchaseManagement.html">
                 <i class="fab fa-amazon-pay"></i>
                 <span>Purchase Paddy</span>
             </a>
         </li>
-        <li class="nav-item" id="PADDY_ORDERS">
+        <li class="nav-item">
             <a class="nav-link" href="PaddyOrders.html">
                 <i class="fas fa-cash-register"></i>
                 <span>Paddy Orders</span>
             </a>
         </li>
-        <li class="nav-item" id="FINANCE">
+        <li class="nav-item">
             <a class="nav-link" href="Finance.html">
                 <i class="fas fa-dollar-sign"></i>
                 <span>Finance</span>
             </a>
         </li>
-        <li class="nav-item" id="STOCKS">
+        <li class="nav-item">
             <a class="nav-link" href="Stocks.html">
                 <i class="fas fa-spa"></i>
                 <span>Stocks</span>
             </a>
         </li>
-        <li class="nav-item" id="CUSTOMER_MANAGEMENT">
+        <li class="nav-item active">
             <a class="nav-link" href="CustomerManagement.html">
                 <i class="fas fa-chalkboard-teacher"></i>
                 <span>Customer Management</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm"
-                aria-expanded="true" aria-controls="collapseForm">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
+               aria-controls="collapseForm">
                 <i class="fas fa-chart-bar"></i>
                 <span>Reports</span>
             </a>
             <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="Report-stock.html" id="STOCK_REPORT">Stock Report</a>
-                    <a class="collapse-item" href="Report-buying.html" id="BUYING_REPORT">Buying Report</a>
-                    <a class="collapse-item" href="Report-selling.html" id="SELLING_REPORT">Selling Report</a>
-                    <a class="collapse-item" href="Report-income.html" id="INCOME_REPORT">Income Report</a>
+                    <a class="collapse-item" href="Report-stock.html">Stock Report</a>
+                    <a class="collapse-item" href="Report-buying.html">Buying Report</a>
+                    <a class="collapse-item" href="Report-selling.html">Selling Report</a>
+                    <a class="collapse-item" href="Report-income.html">Income Report</a>
                 </div>
             </div>
         </li>
-        <li class="nav-item" id="SELL_PADDY">
+        <li class="nav-item">
             <a class="nav-link" href="SellPaddy.html">
                 <i class="fas fa-file-invoice"></i>
                 <span>Sell Paddy</span>
             </a>
         </li>
-        <li class="nav-item" id="PADDY_DISTRIBUTION">
+        <li class="nav-item">
             <a class="nav-link" href="PaddyDistribution.html">
                 <i class="fas fa-truck"></i>
                 <span>Paddy Distribution</span>
             </a>
         </li>
-        <li class="nav-item" id="PADDY_PRICE_MANAGEMENT">
+        <li class="nav-item">
             <a class="nav-link" href="PaddyPriceManagement.html">
                 <i class="fas fa-funnel-dollar"></i>
                 <span>Paddy Price Management</span>
             </a>
         </li>
         <hr class="sidebar-divider">
-
-        <!-- psc sidebar modules end-->
-
     </ul>
+
     <!-- Sidebar end-->
-    <div class="d-flex flex-column" id="content-wrapper">
+    <div id="content-wrapper" class="d-flex flex-column">
         <div id="content">
             <!-- TopBar Started -->
             <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
-                <button class="btn btn-link rounded-circle mr-3" id="sidebarToggleTop">
+                <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
                     <i class="fa fa-bars"></i>
                 </button>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown no-arrow">
-                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
-                           data-toggle="dropdown" href="#"
-                           id="searchDropdown" role="button">
+                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
                         </a>
                     </li>
 
                     <div class="topbar-divider d-none d-sm-block"></div>
                     <li class="nav-item dropdown no-arrow">
-                        <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
-                           data-toggle="dropdown" href="#"
-                           id="userDropdown" role="button">
-                            <img class="img-profile rounded-circle" src="Assets/Global/img/boy.png"
-                                 style="max-width: 60px">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            <img class="img-profile rounded-circle" src="Assets/Global/img/boy.png" style="max-width: 60px">
                             <span class="ml-2 d-none d-lg-inline text-white small">Rabeez Mohamed</span>
                         </a>
-                        <div aria-labelledby="userDropdown"
-                             class="dropdown-menu dropdown-menu-right shadow animated--grow-in">
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                             <a class="dropdown-item" href="#">
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Profile
@@ -153,8 +151,7 @@
                                 Activity Log
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" data-target="#logoutModal" data-toggle="modal"
-                               href="javascript:void(0);">
+                            <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Logout
                             </a>
@@ -167,60 +164,45 @@
             <!-- Container Fluid-->
             <div class="container-fluid" id="container-wrapper">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">User Management</h1>
+                    <h1 class="h3 mb-0 text-gray-800">Customer Management</h1>
                 </div>
+
 
 
                 <!--Start here-->
 
-                <!---------  code here -------->
-
-
                 <div class="admin-content">
                     <div class="button-group ml-4">
-                        <a href="CreateUser.html" class="btn bg-blue-400 border-blue-500 hover:bg-blue-500 text-white mr-2">Add User</a>
-                        <a href="UserManagement.html" class="btn bg-blue-400 border-blue-500 hover:bg-blue-500 text-white">Manage User</a>
+                        <a href="CreateCustomer.html"
+                           class="btn bg-blue-400 border-blue-500 hover:bg-blue-500 text-white mr-2">Add Customer</a>
+                        <a href="CustomerManagement.html"
+                           class="btn bg-blue-400 border-blue-500 hover:bg-blue-500 text-white">Manage Customers</a>
                     </div>
 
+                    <div></div>
+
                     <div class="content">
-                        <h2 class="page-title text-center text-4xl my-3">Edit User</h2>
+                        <h2 class="page-title text-center text-4xl my-3">Add Customer</h2>
 
                         <form action="#" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
-                              id="formUpdate">
+                              id="formCreate">
 
                             <div>
                                 <label class="block text-gray-700 text-base mb-1">Name</label>
                                 <input
                                         class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
                                          leading-tight focus:outline-none focus:shadow-outline"
-                                        type="text" id="inputName" name="name" placeholder="Enter Name">
+                                        type="text" name="inputName" placeholder="Enter Name" id="inputName">
 
                             </div>
 
                             <div>
-                                <label class="block text-gray-700 text-base mb-1">UserName</label>
+                                <label class="block text-gray-700 text-base mb-1">Address</label>
                                 <input
                                         class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
-                                         leading-tight focus:outline-none focus:shadow-outline"
-                                        type="text" name="username" id="inputUserName" placeholder="Enter UserName">
-
+                                        leading-tight focus:outline-none focus:shadow-outline"
+                                        type="text" name="address" id="address" placeholder="Enter Address">
                             </div>
-
-<!--                            <div>-->
-<!--                                <label class="block text-gray-700 text-base mb-1">Telephone Number</label>-->
-<!--                                <input-->
-<!--                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700-->
-<!--                                         leading-tight focus:outline-none focus:shadow-outline"-->
-<!--                                        type="text" name="telephoneNumber" id="telephoneNumber" placeholder="Enter Telephone Number">-->
-<!--                            </div>-->
-
-<!--                            <div>-->
-<!--                                <label class="block text-gray-700 text-base mb-1">Address</label>-->
-<!--                                <input-->
-<!--                                        class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700-->
-<!--                                        leading-tight focus:outline-none focus:shadow-outline"-->
-<!--                                        type="text" name="address" id="address" placeholder="Enter Address">-->
-<!--                            </div>-->
 
                             <div>
                                 <label class="block text-gray-700 text-base mb-1" for="selectBranch">Branch</label>
@@ -230,28 +212,6 @@
                                 </select>
                             </div>
 
-                            <div>
-                                <label class="block text-gray-700 text-base mb-1" for="selectRole">Role</label>
-                                <select class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
-                                        leading-tight focus:outline-none focus:shadow-outline" id="selectRole" name="role">
-                                    <option value="">Select Role</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label class="block text-gray-700 text-base mb-1">Password</label>
-                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
-                                        leading-tight focus:outline-none focus:shadow-outline" type="password" class="form-control" id="inputPassword" name="password"
-                                       placeholder="Password">
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 text-base mb-1">Repeat Password</label>
-                                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700
-                                        leading-tight focus:outline-none focus:shadow-outline" type="password" class="form-control" id="inputRepeatPassword"
-                                       name="repeatPassword"
-                                       placeholder="Repeat Password">
-                            </div>
-
                             <div class="alert alert-danger d-none" id="errorAlert" role="alert">
 
                             </div>
@@ -259,9 +219,9 @@
                             <div class="flex items-center justify-between">
                                 <button type="button"
                                         class="bg-blue-400 hover:bg-blue-500 border-blue-500 text-white font-bold py-2
-                                        px-4 rounded focus:outline-none focus:shadow-outline" id="updateEmployee">Update
-                                    Employee</button>
-                        </div>
+                                        px-4 rounded focus:outline-none focus:shadow-outline" id="addCustomer">Add
+                                    Customer</button>
+                            </div>
                         </form>
 
                     </div>
@@ -271,16 +231,18 @@
                 <!--End here-->
 
 
+
+
+
                 <!-- Logout Modal started -->
 
-                <div aria-hidden="true" aria-labelledby="exampleModalLabelLogout" class="modal fade" id="logoutModal"
-                     role="dialog"
-                     tabindex="-1">
+                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
+                     aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
-                                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
@@ -288,9 +250,8 @@
                                 <p>Are you sure you want to logout?</p>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-outline-primary" data-dismiss="modal" type="button">Cancel
-                                </button>
-                                <a class="btn btn-primary" href="login.html">Logout</a>
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                                <a href="login.html" class="btn btn-primary">Logout</a>
                             </div>
                         </div>
                     </div>
@@ -304,7 +265,8 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-            <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - developed by
+            <span>copyright &copy;
+              <script> document.write(new Date().getFullYear());</script> - developed by
               <b><a href="https://esoft.lk/" target="_blank">ProTeam</a></b>
             </span>
                 </div>
@@ -312,7 +274,8 @@
 
             <div class="container my-auto py-2">
                 <div class="copyright text-center my-auto">
-            <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - distributed by
+            <span>copyright &copy;
+              <script> document.write(new Date().getFullYear());</script> - distributed by
               <b><a href="https://esoft.lk/" target="_blank">Paddy Storage Cooperation</a></b>
             </span>
                 </div>
@@ -334,14 +297,12 @@
 <script src="Assets/Global/js/ruang-admin.min.js"></script>
 <script src="Assets/Global/vendor/chart.js/Chart.min.js"></script>
 <script src="Assets/Global/js/demo/chart-area-demo.js"></script>
-
-<script src="Assets/Custom/Script/RoleBasedAuthenticator.js"></script>
 <script src="Assets/Global/js/sweetalert_all.js"></script>
 
 <!-- Custom Scripts -->
 <script src="Assets/Custom/Script/Main.js"></script>
 <script src="Assets/Custom/Script/Common.js"></script>
-<script src="Assets/Custom/Script/UserManagement.js"></script>
+<script src="Assets/Custom/Script/CreateCustomer.js"></script>
 </body>
 
 </html>

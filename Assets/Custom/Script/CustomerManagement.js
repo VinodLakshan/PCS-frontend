@@ -1,56 +1,52 @@
-let selectedFarmer = sessionStorage.getItem("selectedFarmer");
+let selectedCustomer = sessionStorage.getItem("selectedCustomer");
 
 var branchID;
-var farmers = [];
+var customers = [];
 
 $(document).ready(function ()
 {
-
-    GetRequest("common/rolesAndBranches", farmerSuccess);
+    GetRequest("common/rolesAndBranches", customerSuccess);
     var branch =  JSON.parse(sessionStorage.getItem("branch"));
    // console.log(branch);
     branchID = branch.id;
     //console.log(branchID);
-    GetFarmers();
+    GetCustomers();
 //    populateTable();
-
-
 })
-function GetFarmers()
+function GetCustomers()
 {
-    GetRequest("farmer/getByBranchID/"+branchID,SuccessFarmerGet);
-
+    GetRequest("customer/getByBranchID/"+branchID,SuccessCustomerGet);
 }
 
 //function populateTable(){
 //
 //}
 
-//function SuccessFarmerGet(Response)
+
 //{
 //    console.log(Response);
 //}
 
-function SuccessFarmerGet(Response)
+function SuccessCustomerGet(Response)
 {
-    $("#farmerTable tbody").empty();
+    $("#customerTable tbody").empty();
     console.log(Response);
     for(let count = 0; count < Response.length; count++){
-        $('#farmerTable').append('<tr>'+
-                                          '<td scope="row">'+ "F0" + Response[count].id +'</td>'+
+        $('#customerTable').append('<tr>'+
+                                          '<td scope="row">'+ "C0" + Response[count].id +'</td>'+
                                           '<td>'+Response[count].name+'</td>'+
                                           '<td>'+ Response[count].address +'</td>'+
-                                          '<td>'+ Response[count].telephoneNumber+'</td>'+
+                                          '<td>'+ Response[count].branch.address+'</td>'+
                                           '<td>'+
                                           '<a  href="javascript:void(0);" data-toggle="modal" data-target="#VerifyModal">'+
-                                                                                           '<button type="button" class="btn btn-sm btn-success w-75" onClick="UpdateFarmer('+ Response[count].id +')">'+
+                                                                                           '<button  type="submit" class="btn btn-sm btn-success w-75" onClick="UpdateCustomer('+ Response[count].id +')">'+
                                                                                                 'Edit'+
                                                                                             '</button>'+
                                                                                         '</a>'+
                                           '</td>'+
                                           '<td>'+
                                               '<a  href="javascript:void(0);" data-toggle="modal" data-target="#VerifyModal">'+
-                                                 '<button  type="submit" class="btn btn-sm btn-danger w-75" id="deleteBtn" onClick="DeleteFarmer('+ Response[count].id +')">'+
+                                                 '<button  type="submit" class="btn btn-sm btn-danger w-75" id="deleteBtn" onClick="DeleteCustomer('+ Response[count].id +')">'+
                                                       'Delete   '+
                                                   '</button>'+
                                               '</a>'+
@@ -60,57 +56,46 @@ function SuccessFarmerGet(Response)
 
     }
 
-    farmers = Response;
-    if (Response.length > 0 && selectedFarmer != undefined) {
-        let Index = farmers.findIndex(Farm => Farm.id === parseInt(selectedFarmer));
+    customers = Response;
+    if (Response.length > 0 && selectedCustomer != undefined) {
+        let Index = customers.findIndex(Cus => Cus.id === parseInt(selectedCustomer));
         if (Index > -1) {
-            $('#inputName').val(farmers[Index].name);
-            $('#nicNumber').val(farmers[Index].nicNumber);
-            $('#telephoneNumber').val(farmers[Index].telephoneNumber);
-            $('#address').val(farmers[Index].address);
+            $('#inputName').val(customers[Index].name);
+            $('#address').val(customers[Index].address);
         }
     }
 
 }
 
-function DeleteFarmer(farmerId) {
+function DeleteCustomer(customerId) {
 
-    if (confirm("Are you sure to delete this farmer with ID F0" + farmerId + "?")) {
 
-        DeleteRequest("farmer/"+farmerId, {},SuccessFarmerDelete);
+    if (confirm("Are you sure to delete this farmer with ID C0" + customerId + "?")) {
+
+        DeleteRequest("customer/"+customerId, {},SuccessCustomerDelete);
 
     }
 
+
 }
 
-
-function SuccessFarmerDelete()
+function SuccessCustomerDelete()
 {
     console.log("Deleted");
-    PopUpWithTitleAndText("Success","Farmer Deleted","success");
-
-    setTimeout(function()
-    {
-        window.location.href = "FarmerManagement.html";
-    },2000);
-    GetFarmers();
-
+    GetCustomers();
 }
-
-
 
 
 //Update Functions
 
-function UpdateFarmer(farmerId) {
+function UpdateCustomer(customerId) {
 
-//    DeleteRequest("farmer/"+farmerId, {},SuccessFarmerDelete);
-    sessionStorage.setItem("selectedFarmer", farmerId);
-    window.location.href = "EditFarmer.html";
+    sessionStorage.setItem("selectedCustomer", customerId);
+    window.location.href = "EditCustomer.html";
 
 }
 
-function farmerSuccess(response) {
+function customerSuccess(response) {
     for (const branch of response.branches) {
         $('#selectBranch').append(new Option(branch.address, branch.id));
     }
@@ -119,7 +104,7 @@ function farmerSuccess(response) {
 }
 
 
-$('#updateFarmer').click(function () {
+$('#updateCustomer').click(function () {
     clearValidations();
     var formData = $('#formUpdate').serializeObject();
     var isAnyError = updateValidation(formData);
@@ -128,16 +113,16 @@ $('#updateFarmer').click(function () {
         let requestData = setRequestData(formData);
 
         requestData.branch.id = branchID;
-        requestData.id = selectedFarmer;
+        requestData.id = selectedCustomer;
         console.log(requestData);
-        UpdateRequest("farmer", requestData, updateFarmerSuccess);
+        UpdateRequest("customer", requestData, updateCustomerSuccess);
 
     }
 });
 
 $('#cancelUpdate').click(function () {
 
-        window.location.href = "FarmerManagement.html";
+        window.location.href = "CustomerManagement.html";
 
 });
 
@@ -149,14 +134,6 @@ var updateValidation = function (formData) {
     if (formData.inputName == "") {
         errorText = "Please Provide a Name"
         isAnyError = setError("inputName");
-
-    } else if (formData.nicNumber == "") {
-        errorText = "Please Provide a NIC Number"
-        isAnyError = setError("inputNICNumber");
-
-    } else if (formData.telephoneNumber == "") {
-            errorText = "Please Provide a Telephone Number"
-            isAnyError = setError("telephoneNumber");
 
     } else if (formData.address == "") {
         errorText = "Please Provide a Address"
@@ -184,8 +161,6 @@ var setError = function (element) {
 var clearValidations = function () {
 
     $('#inputName').removeClass("border-danger");
-    $('#inputUserName').removeClass("border-danger");
-    $('#telephoneNumber').removeClass("border-danger");
     $('#address').removeClass("border-danger");
     $('#selectBranch').removeClass("border-danger");
     $('#errorAlert').text("");
@@ -194,29 +169,32 @@ var clearValidations = function () {
 
 var setRequestData = function (formData) {
 
-    var farmer = {
-        name: formData.name,
-        nicNumber: formData.inputUserName,
-        telephoneNumber: formData.telephoneNumber,
+    var customer = {
+        name: formData.inputName,
         address: formData.address,
         branch: {
             id: formData.branch
         }
     }
 
-    return farmer;
+    return customer;
 }
 
-function updateFarmerSuccess(response) {
+function updateCustomerSuccess(response) {
     sessionStorage.setItem("branch", JSON.stringify(response.data.branch));
 
-    PopUpWithTitleAndText("Success","Farmer Details Updated","success");
+    PopUpWithTitleAndText("Success","Customer Details Updated","success");
 
     setTimeout(function()
     {
-        window.location.href = "FarmerManagement.html";
+        window.location.href = "CustomerManagement.html";
     },2000);
 
 }
+
+
+
+
+
 
 
