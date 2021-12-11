@@ -19,6 +19,10 @@ $(document).ready(function () {
 
 });
 
+function roleBasedAuthenticator(val){
+    return "none";
+}
+
 var loadTableData = function () {
 
     // $.ajax({
