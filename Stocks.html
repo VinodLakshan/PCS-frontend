@@ -209,12 +209,12 @@
                     </div>
 
                     <div class="form-group col-md-6">
-                        <label for="AvailableCapacity">Transfer Capacity</label>
-                        <input type="text" class="form-control" id="AvailableCapacity">
+                        <label for="Capacity">Transfer Capacity</label>
+                        <input type="number" class="form-control" id="Capacity">
                     </div>
 
                     <a  href="javascript:void(0);" data-toggle="modal" data-target="#SendStockCapacity">
-                        <button type="submit" class="btn btn-primary">Send Request</button></a>
+                        <button type="button" class="btn btn-primary">Send Request</button></a>
                 </form>
 
                 <!--Ended  Stock-->
@@ -235,7 +235,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                                <a href="Stocks.html" class="btn btn-primary">send</a>
+                                <button onclick="CmdTransferRequest()" class="btn btn-primary">send</button>
                             </div>
                         </div>
                     </div>
@@ -308,6 +308,7 @@
 <!-- Custom Scripts -->
 <script src="Assets/Custom/Script/Main.js"></script>
 <script src="Assets/Custom/Script/Common.js"></script>
+<script src="Assets/Custom/Script/Class.js"></script>
 <script src="Assets/Custom/Script/stock.js"></script>
 </body>
 

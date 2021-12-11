@@ -3,20 +3,27 @@ $(document).ready(function ()
     GetPaddyPrice();
     GetFarmersCount();
     GetAllBranch();
+    GetCustomerCount();
 })
 
 function GetFarmersCount()
 {
     GetRequest("farmer/count",SuccessGetFarmersCount);
-
-    // let Entity = new User("testr","gfdf");
-    // PostRequest("employee/login",Entity,SuccesLogin)
 }
 
-// function SuccesLogin(Response)
-// {
-//
-// }
+function GetCustomerCount()
+{
+    GetRequest("customer/Count",SuccessGetCustomersCount);
+}
+
+function SuccessGetCustomersCount(Response)
+{
+    if(Response.status === "OK")
+        $('#CustomerCount').html(Response.data);
+    else
+        $('#CustomerCount').html("---");
+}
+
 function GetAllBranch()
 {
     GetRequest("branch",SuccessAllBranchGet);

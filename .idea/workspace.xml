@@ -7,6 +7,11 @@
   <component name="ChangeListManager">
     <list default="true" id="22b11560-4c6f-4f38-93e0-d7a4f3a7d5b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/Class.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/Class.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/stock.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/stock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stocks.html" beforeDir="false" afterPath="$PROJECT_DIR$/Stocks.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +28,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectId" id="227lSMfJ9vDYew8RLOQgfVdWvpe" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="flattenPackages" value="true" />
@@ -30,7 +36,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="D:/Mobios/EVOKE/Evoke-Backend" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Assets/Global/js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -39,8 +48,20 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="vcs.TFVC" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="22b11560-4c6f-4f38-93e0-d7a4f3a7d5b7" name="Default Changelist" comment="" />
+      <created>1639196585873</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639196585873</updated>
+      <workItem from="1639196631668" duration="4282000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -63,10 +84,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="321" y="130" key="MultipleFileMergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1639145235381" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1639145357777">
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1639147224879">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1639145357777" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1639147224879" />
     <state x="500" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1639146700545">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
