@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/PCS.iml" filepath="$PROJECT_DIR$/.idea/PCS.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/.idea/PCS-frontend.iml" filepath="$PROJECT_DIR$/.idea/PCS-frontend.iml" />
->>>>>>> origin/zaid-dev
     </modules>
   </component>
 </project>
