@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand />
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22b11560-4c6f-4f38-93e0-d7a4f3a7d5b7" name="Default Changelist" comment="">
+    <list default="true" id="0bd8ed39-64db-425f-94d2-8d23451d6c5e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/Class.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/Class.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/stock.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/stock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/Dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stocks.html" beforeDir="false" afterPath="$PROJECT_DIR$/Stocks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/UserManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/UserManagement.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +29,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="zaid-dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -76,18 +91,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="129" y="56" key="MergeDialog" timestamp="1639145228122">
+    <state x="129" y="56" key="MergeDialog" timestamp="1639232188464">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="129" y="56" key="MergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1639145228121" />
-    <state x="321" y="130" key="MultipleFileMergeDialog" timestamp="1639145235381">
+    <state x="129" y="56" key="MergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1639232188464" />
+    <state x="321" y="130" key="MultipleFileMergeDialog" timestamp="1639232192750">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="321" y="130" key="MultipleFileMergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1639145235381" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1639147224879">
+    <state x="321" y="130" key="MultipleFileMergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1639232192750" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1639232204584">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1639147224879" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1639232204584" />
     <state x="500" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1639146700545">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

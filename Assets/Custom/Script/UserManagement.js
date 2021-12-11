@@ -39,13 +39,6 @@ function SuccessEmployeeGet(Response)
                                           '<td>'+ Response[count].branch.address+'</td>'+
                                           '<td>'+ Response[count].role.roleName+'</td>'+
                                           '<td>'+
-                                          '<a  href="javascript:void(0);" data-toggle="modal" data-target="#VerifyModal">'+
-                                                                                           '<button  type="submit" class="btn btn-sm btn-success w-75">'+
-                                                                                                'Edit'+
-                                                                                            '</button>'+
-                                                                                        '</a>'+
-                                          '</td>'+
-                                          '<td>'+
                                               '<a  href="javascript:void(0);" data-toggle="modal" data-target="#VerifyModal">'+
                                                  '<button  type="submit" class="btn btn-sm btn-danger w-75" onClick="DeleteEmployee('+ Response[count].id +')">'+
                                                       'Delete   '+
