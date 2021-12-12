@@ -5,10 +5,16 @@ function UpdateSellingPrice(){
     let buyingPrice = $('#CurrentBuyingPrice').val();
     let entity = new PaddyPrice1( date, buyingPrice, newSellingPrice);
 
-    if(parseInt(newSellingPrice)>0 && newSellingPrice!=="" && newSellingPrice!==null)
-        PostRequest("paddyPrice/PaddyPriceSave",entity,SuccessPaddySellingPriceSave)
-    else
-        PopUpWithTitleAndText("Warning","Invalid Input","warning");
+    if(parseInt(newSellingPrice)>0 && newSellingPrice!=="" && newSellingPrice!==null){
+     PostRequest("paddyPrice/PaddyPriceSave",entity,SuccessPaddySellingPriceSave)
+    }
+    else if(newSellingPrice=="" ){
+     PopUpWithTitleAndText("Warning","Selling Price Cannot be Empty","warning");
+    }
+    else{
+     PopUpWithTitleAndText("Warning","Invalid Input!!! Selling Price Should be a Positive Number","warning");
+    }
+
 }
 function SuccessPaddySellingPriceSave(Response){
     console.log(Response);
@@ -31,10 +37,16 @@ function UpdateBuyingPrice(){
     let sellingPrice = $('#CurrentSellingPrice').val();
     let entity = new PaddyPrice1( date, newBuyingPrice, sellingPrice );
 
-     if(parseInt(newBuyingPrice)>0 && newBuyingPrice!=="" && newBuyingPrice!==null)
-    PostRequest("paddyPrice/PaddyPriceSave",entity,SuccessPaddyBuyingPriceSave)
-     else
-            PopUpWithTitleAndText("Warning","Invalid Input","warning");
+     if(parseInt(newBuyingPrice)>0 && newBuyingPrice!=="" && newBuyingPrice!==null){
+           PostRequest("paddyPrice/PaddyPriceSave",entity,SuccessPaddyBuyingPriceSave)
+     } else if(newBuyingPrice=="" ){
+           PopUpWithTitleAndText("Warning","Buying Price Cannot be Empty","warning");
+     }
+     else {
+     PopUpWithTitleAndText("Warning","Invalid Input!!! Buying Price Should be a Positive Number","warning");
+     }
+
+
 }
 function SuccessPaddyBuyingPriceSave(Response){
     console.log(Response);

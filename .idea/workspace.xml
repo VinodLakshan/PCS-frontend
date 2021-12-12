@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0bd8ed39-64db-425f-94d2-8d23451d6c5e" name="Default Changelist" comment="last">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/PaddyOrders.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/PaddyOrders.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/PaddyPriceManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/PaddyPriceManagement.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639234886446</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="last">
+      <created>1639287532286</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639287532286</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,23 +109,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="last" />
     <option name="LAST_COMMIT_MESSAGE" value="last" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="129" y="56" key="MergeDialog" timestamp="1639232188464">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="129" y="56" key="MergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1639232188464" />
-    <state x="321" y="130" key="MultipleFileMergeDialog" timestamp="1639232192750">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="321" y="130" key="MultipleFileMergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1639232192750" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1639285013897">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1639285013897" />
-    <state x="500" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1639146700545">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="500" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1639146700545" />
   </component>
 </project>
