@@ -19,41 +19,17 @@ $(document).ready(function () {
 
 });
 
+function roleBasedAuthenticator(val){
+    return "none";
+}
+
 var loadTableData = function () {
+    GetRequest("report/stock-report", dataLoadSuccesss);
+}
 
-    $.ajax({
-        type: "GET",
-        url: baseUrl + "/report/stock-report",
-        contentType: "application/json",
-        headers: {
-            'Authorization': `Bearer ` + sessionStorage.getItem("token"),
-        },
-        success: function (response) {
-            createTableBody(response);
-            createCharts(response);
-        },
-        error: function (error) {
-            console.log(error);
-            console.log("Error occured while getting stock report.");
-            if (error.status == 401) {
-                $('#userModel').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                })
-
-            } else if (error.status == 403) {
-                $('#userSessionExpiredModel').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                });
-            } else {
-                $('#generalError').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                });
-            }
-        }
-    });
+function dataLoadSuccesss(response) {
+    createTableBody(response);
+    createCharts(response);
 }
 
 var createTableBody = function (data) {
@@ -78,8 +54,7 @@ var createTableBody = function (data) {
             tableRow.maximumCapacity.toFixed(2) + 'Kg',
             tableRow.stock.toFixed(2) + 'Kg',
             tableRow.totalMonthlyPaddyLimitPerFarmer.toFixed(2) + 'Kg',
-            '<p class=\" ' + percentageClass + '\">' + usedStockPercentage + '%</p>',
-            '<a href=\"#\" class=\"btn btn-sm btn-primary\">More</a>'
+            '<p class=\" ' + percentageClass + '\">' + usedStockPercentage + '%</p>'
         ]).draw(false);
     }
 
@@ -185,13 +160,13 @@ var createCharts = function (data) {
         return b.percentageStock - a.percentageStock;
     });
 
-    for(let i = 0 ; i < data.length ; i++ ){
+    for (let i = 0; i < data.length; i++) {
         barChartDataSet[i].branch = data[i].address;
         barChartDataSet[i].percentage = parseFloat(data[i].percentageStock);
         barChartDataSet[i].capacity = data[i].maximumCapacity;
         barChartDataSet[i].stock = data[i].stock;
 
-        if(i == 6){
+        if (i == 6) {
             break;
         }
     }
@@ -244,7 +219,7 @@ var createCharts = function (data) {
                         padding: 10,
                         // Include a dollar sign in the ticks
                         callback: function (value, index, values) {
-                            return  (value)+ '%';
+                            return (value) + '%';
                         }
                     },
                     gridLines: {

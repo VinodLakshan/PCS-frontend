@@ -17,3 +17,8 @@
 .stock-reportCard{
     height: 480px;
 }
+
+.sellingReportCard{
+    height: 100%;
+    min-height: 400px;
+}

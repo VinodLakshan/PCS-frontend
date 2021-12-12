@@ -13,6 +13,7 @@
   <link href="Assets/Global/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="Assets/Global/css/ruang-admin.min.css" rel="stylesheet">
   <link href="Assets/Global/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="Assets/Custom/Style/Report.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -33,43 +34,43 @@
       </li>
       <hr class="sidebar-divider">
       <!-- psc sidebar modules starting -->
-      <li class="nav-item">
+      <li class="nav-item" id="USER_MANAGEMENT">
         <a class="nav-link" href="UserManagement.html">
           <i class="fas fa-user-tie"></i>
           <span>User Management</span>
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" id="FARMER_MANAGEMENT">
         <a class="nav-link" href="FarmerManagement.html">
           <i class="far fa-address-book"></i>
           <span>Farmer Management</span>
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" id="PADDY_PURCHASE">
         <a class="nav-link" href="PurchaseManagement.html">
           <i class="fab fa-amazon-pay"></i>
           <span>Purchase Paddy</span>
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" id="PADDY_ORDERS">
         <a class="nav-link" href="PaddyOrders.html">
           <i class="fas fa-cash-register"></i>
           <span>Paddy Orders</span>
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" id="FINANCE">
         <a class="nav-link" href="Finance.html">
           <i class="fas fa-dollar-sign"></i>
           <span>Finance</span>
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" id="STOCKS">
         <a class="nav-link" href="Stocks.html">
           <i class="fas fa-spa"></i>
           <span>Stocks</span>
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" id="CUSTOMER_MANAGEMENT">
         <a class="nav-link" href="CustomerManagement.html">
           <i class="fas fa-chalkboard-teacher"></i>
           <span>Customer Management</span>
@@ -83,26 +84,26 @@
         </a>
         <div id="collapseForm" class="collapse show" aria-labelledby="headingForm" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="Report-stock.html">Stock Report</a>
-            <a class="collapse-item" href="Report-buying.html">Buying Report</a>
-            <a class="collapse-item active" href="Report-selling.html">Selling Report</a>
-            <a class="collapse-item" href="Report-income.html">Income Report</a>
+            <a class="collapse-item" href="Report-stock.html" id="STOCK_REPORT">Stock Report</a>
+            <a class="collapse-item" href="Report-buying.html" id="BUYING_REPORT">Buying Report</a>
+            <a class="collapse-item active" href="Report-selling.html" id="SELLING_REPORT">Selling Report</a>
+            <a class="collapse-item" href="Report-income.html"id="INCOME_REPORT">Income Report</a>
           </div>
         </div>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" id="SELL_PADDY">
         <a class="nav-link" href="SellPaddy.html">
           <i class="fas fa-file-invoice"></i>
           <span>Sell Paddy</span>
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" id="PADDY_DISTRIBUTION">
         <a class="nav-link" href="PaddyDistribution.html">
           <i class="fas fa-truck"></i>
           <span>Paddy Distribution</span>
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" id="PADDY_PRICE_MANAGEMENT">
         <a class="nav-link" href="PaddyPriceManagement.html">
           <i class="fas fa-funnel-dollar"></i>
           <span>Paddy Price Management</span>
@@ -124,7 +125,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="Assets/Global/img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small" id="userName" ></span>
+                <span class="ml-2 d-none d-lg-inline text-white small" id="userName"></span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#">
@@ -149,27 +150,32 @@
           </ul>
         </nav>
         <!-- Topbar -->
+
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
 
-          <!-- Row -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Selling Report</h1>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="Dashboard.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Selling Report</li>
+            </ol>
+          </div>
+
           <div class="row">
-            <!-- Datatables -->
-            <div class="col-lg-12">
-              <div class="card mb-4">
+            <div class="col-xl-8 col-lg-8">
+              <div class="card sellingReportCard">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Selling Report</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Cumulative values of Sellers</h6>
                 </div>
                 <div class="table-responsive p-3">
-                  <table class="table align-items-center table-flush" id="dataTable">
+                  <table class="table align-items-center table-flush" id="topSellersTable">
                     <thead class="thead-light">
                       <tr>
                         <th>Customer Name</th>
-                        <th>Bramch</th>
-                        <th>&nbsp;&nbsp; Date &nbsp;&nbsp;</th>
-                        <th>Paddy Selling Price (Rs)</th>
-                        <th>Weight (Kg)</th>
-                        <th>Payment (Rs)</th>
+                        <th>Branch</th>
+                        <th>Cumulative Weight (Kg)</th>
+                        <th>Cumulative Payment (Rs)</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -177,124 +183,196 @@
                     </tbody>
                   </table>
                 </div>
+                <div class="card-footer"></div>
               </div>
             </div>
-
-            <!-- Modal Logout -->
-            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
-              aria-labelledby="exampleModalLabelLogout" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+            <!-- Message From Customer-->
+            <div class="col-xl-4 col-lg-5 ">
+              <div class="card sellingReportCard">
+                <div class="card-header py-4 bg-primary d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-light">General Indicators</h6>
+                </div>
+                <div>
+                  <div class="customer-message align-items-center">
+                    <a class="font-weight-bold" href="#">
+                      <div class="text-truncate message-title">Rs 150.00 - Current Buying Price</div>
+                      <div class="small text-gray-500 message-time font-weight-bold">Updated · 01m</div>
+                    </a>
                   </div>
-                  <div class="modal-body">
-                    <p>Are you sure you want to logout?</p>
+                  <div class="customer-message align-items-center">
+                    <a class="font-weight-bold" href="#">
+                      <div class="text-truncate message-title">Rs 200.00 - Current Selling Price</div>
+                      <div class="small text-gray-500 message-time font-weight-bold">Updated · 01m</div>
+                    </a>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                    <a href="login.html" class="btn btn-primary">Logout</a>
+                  <div class="customer-message align-items-center">
+                    <a class="font-weight-bold" href="#">
+                      <div class="text-truncate message-title" id="totFarmers">
+                      </div>
+                      <div class="small text-gray-500 message-time font-weight-bold">Updated · 01m</div>
+                    </a>
+                  </div>
+                  <div class="customer-message align-items-center">
+                    <a class="font-weight-bold" href="#">
+                      <div class="text-truncate message-title"  id="totCustomer"> 
+                      </div>
+                      <div class="small text-gray-500 message-time font-weight-bold">Updated · 01m</div>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- user not available Modal -->
-            <div class="modal fade" id="userModel" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="userModelLabel">
-                      <i class="fas fa-exclamation-triangle fa-xs text-danger"></i>
-                      <span class="pt-5"> Error!</span>
-                    </h5>
-                  </div>
-                  <div class="modal-body">
-                    <p>User session is not available. Please log in.</p>
-                  </div>
-                  <div class="modal-footer">
-                    <a href="login.html" id="btnUserModalClose" class="btn btn-danger">Login</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- user not available Modal -->
-            <div class="modal fade" id="userSessionExpiredModel" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="userModelLabel">
-                      <i class="fas fa-exclamation-triangle fa-xs text-danger"></i>
-                      <span class="pt-5"> Error!</span>
-                    </h5>
-                  </div>
-                  <div class="modal-body">
-                    <p>User session has expired. Please log in.</p>
-                  </div>
-                  <div class="modal-footer">
-                    <a href="login.html" id="btnUserModalClose" class="btn btn-danger">Login</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="modal fade" id="generalError" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="userModelLabel">
-                      <i class="fas fa-exclamation-triangle fa-xs text-danger"></i>
-                      <span class="pt-5"> Error!</span>
-                    </h5>
-                  </div>
-                  <div class="modal-body">
-                    <p>Something went wrong with the transaction.</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">OK</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
-          <!---Container Fluid-->
         </div>
+      </div><br><br><br>
 
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span>copyright &copy;
-                <script> document.write(new Date().getFullYear());</script> - developed by
-                <b>Team PCS</a></b>
-              </span>
+
+      <div class="container-fluid" id="container-wrapper">
+        <!-- Row -->
+        <div class="row">
+          <!-- Datatables -->
+          <div class="col-lg-12">
+            <div class="card mb-4">
+              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Selling Report</h6>
+              </div>
+              <div class="table-responsive p-3">
+                <table class="table align-items-center table-flush" id="dataTable">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Customer Name</th>
+                      <th>Bramch</th>
+                      <th>&nbsp;&nbsp; Date &nbsp;&nbsp;</th>
+                      <th>Paddy Selling Price (Rs)</th>
+                      <th>Weight (Kg)</th>
+                      <th>Payment (Rs)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-        </footer>
-        <!-- Footer -->
+
+          <!-- Modal Logout -->
+          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Are you sure you want to logout?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                  <a href="login.html" class="btn btn-primary">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- user not available Modal -->
+          <div class="modal fade" id="userModel" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="userModelLabel">
+                    <i class="fas fa-exclamation-triangle fa-xs text-danger"></i>
+                    <span class="pt-5"> Error!</span>
+                  </h5>
+                </div>
+                <div class="modal-body">
+                  <p>User session is not available. Please log in.</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="login.html" id="btnUserModalClose" class="btn btn-danger">Login</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- user not available Modal -->
+          <div class="modal fade" id="userSessionExpiredModel" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="userModelLabel">
+                    <i class="fas fa-exclamation-triangle fa-xs text-danger"></i>
+                    <span class="pt-5"> Error!</span>
+                  </h5>
+                </div>
+                <div class="modal-body">
+                  <p>User session has expired. Please log in.</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="login.html" id="btnUserModalClose" class="btn btn-danger">Login</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="generalError" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="userModelLabel">
+                    <i class="fas fa-exclamation-triangle fa-xs text-danger"></i>
+                    <span class="pt-5"> Error!</span>
+                  </h5>
+                </div>
+                <div class="modal-body">
+                  <p>Something went wrong with the transaction.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-primary" data-dismiss="modal">OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!---Container Fluid-->
       </div>
 
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>copyright &copy;
+              <script> document.write(new Date().getFullYear());</script> - developed by
+              <b>Team PCS</a></b>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer -->
+    </div>
 
 
-      <!-- Scroll to top -->
-      <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-      </a>
 
-      <script src="Assets/Global/vendor/jquery/jquery.min.js"></script>
-      <script src="Assets/Global/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="Assets/Global/vendor/jquery-easing/jquery.easing.min.js"></script>
-      <script src="Assets/Global/js/ruang-admin.min.js"></script>
+    <!-- Scroll to top -->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
 
-      <!-- Page level plugins -->
-      <script src="Assets/Global/vendor/datatables/jquery.dataTables.min.js"></script>
-      <script src="Assets/Global/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-      <script src="Assets/Custom/Script/Report/Report-selling.js"></script>
+    <script src="Assets/Global/vendor/jquery/jquery.min.js"></script>
+    <script src="Assets/Global/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Assets/Global/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="Assets/Global/js/ruang-admin.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="Assets/Custom/Script/RoleBasedAuthenticator.js"></script>
+    <script src="Assets/Global/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="Assets/Global/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="Assets/Custom/Script/Main.js"></script>
+    <script src="Assets/Custom/Script/Report/Report-selling.js"></script>
 </body>
 
 </html>

@@ -47,5 +47,5 @@ function loginSeccess(response) {
     sessionStorage.setItem("employee", JSON.stringify(response.data));
     sessionStorage.setItem("branch", JSON.stringify(response.data.branch));
     sessionStorage.setItem("token", response.token);
-    window.location.href = "Dashboard.html";
+    window.location.href = "index.html";
 }
