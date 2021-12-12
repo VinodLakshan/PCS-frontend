@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bd8ed39-64db-425f-94d2-8d23451d6c5e" name="Default Changelist" comment="last">
-      <change beforePath="$PROJECT_DIR$/PurchaseManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/PurchaseManagement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/PaddyOrders.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/PaddyOrders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/PaddyPriceManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/PaddyPriceManagement.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

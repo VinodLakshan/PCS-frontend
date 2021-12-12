@@ -102,8 +102,8 @@ if(Response.status === "OK"){
      doc.line(10, 105, 600, 105, style='FD');
 
       doc.setFontSize(12);
-          doc.setTextColor(255,0,0);
-          doc.text(90, 111, 'TOTAL PAYABLE AMOUNT '+_Orders[index].weight *_Orders[index].paddyPrice.buyingPrice+'RS');
+      doc.setTextColor(255,0,0);
+      doc.text(90, 111, 'TOTAL PAYABLE AMOUNT '+_Orders[index].weight *_Orders[index].paddyPrice.buyingPrice+'RS');
       doc.line(85, 115, 600, 115, style='FD');
 
 
@@ -111,7 +111,7 @@ if(Response.status === "OK"){
 
 
     // Save the PDF
-    doc.save('document.pdf');
+    doc.save('PayOrder.pdf');
 }
 
 

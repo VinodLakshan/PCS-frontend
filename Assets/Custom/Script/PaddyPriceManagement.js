@@ -21,7 +21,7 @@ function SuccessPaddySellingPriceSave(Response){
     }
     else
     {
-         PopUpWithTitleAndText("Error","Paddy Selling Price Updated Successfully","error");
+         PopUpWithTitleAndText("Error","Paddy Selling Price Not Updated","error");
     }
 }
 function UpdateBuyingPrice(){
@@ -42,10 +42,10 @@ function SuccessPaddyBuyingPriceSave(Response){
         {
              $('#NewBuyingPrice').val("");
              $('#CurrentBuyingPrice').val(Response. buyingPrice);
-            PopUpWithTitleAndText("Success","Paddy Selling Price Updated Successfully","success");
+            PopUpWithTitleAndText("Success","Paddy Buying Price Updated Successfully","success");
         }
         else
         {
-             PopUpWithTitleAndText("Error","Paddy Selling Price Updated Successfully","error");
+             PopUpWithTitleAndText("Error","Paddy Buying Price Not Updated","error");
         }
 }
