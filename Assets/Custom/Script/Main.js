@@ -7,6 +7,13 @@ if(_Token == null || _Token === "")
     PopUpWithTitleAndText("Unauthorized","","error");
     location.href = "index.html";
 }
+
+var employee = JSON.parse(sessionStorage.getItem("employee"));
+
+if (employee != null)
+{
+    document.getElementById('userName').innerHTML = employee.name;
+}
 //let _Token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnVuIiwicm9sZXMiOlsiYWRtaW4iXSwiZXhwIjoxNjM3ODQ5OTIxLCJpYXQiOjE2Mzc4NDgxMjF9.CM1ti7JdW-BRGAwcloSo8Ptx-mvjJRSnGwh_suq21bs";
 
 function PostRequest(Url,Entity,SuccessFunction)

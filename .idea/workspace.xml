@@ -19,9 +19,29 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bd8ed39-64db-425f-94d2-8d23451d6c5e" name="Default Changelist" comment="">
+    <list default="true" id="0bd8ed39-64db-425f-94d2-8d23451d6c5e" name="Default Changelist" comment="last">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/UserManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/UserManagement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom/Script/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom/Script/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Global/img/logo/logo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Global/img/logo/logo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateCustomer.html" beforeDir="false" afterPath="$PROJECT_DIR$/CreateCustomer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateFarmer.html" beforeDir="false" afterPath="$PROJECT_DIR$/CreateFarmer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/CreateUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CustomerManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerManagement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EditCustomer.html" beforeDir="false" afterPath="$PROJECT_DIR$/EditCustomer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EditFarmer.html" beforeDir="false" afterPath="$PROJECT_DIR$/EditFarmer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EditUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/EditUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FarmerManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/FarmerManagement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Finance.html" beforeDir="false" afterPath="$PROJECT_DIR$/Finance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PaddyDistribution.html" beforeDir="false" afterPath="$PROJECT_DIR$/PaddyDistribution.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PaddyOrders.html" beforeDir="false" afterPath="$PROJECT_DIR$/PaddyOrders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PaddyPriceManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/PaddyPriceManagement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PurchaseManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/PurchaseManagement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SellPaddy.html" beforeDir="false" afterPath="$PROJECT_DIR$/SellPaddy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stocks.html" beforeDir="false" afterPath="$PROJECT_DIR$/Stocks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,13 +86,22 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="22b11560-4c6f-4f38-93e0-d7a4f3a7d5b7" name="Default Changelist" comment="" />
+      <changelist id="0bd8ed39-64db-425f-94d2-8d23451d6c5e" name="Default Changelist" comment="last" />
       <created>1639196585873</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1639196585873</updated>
       <workItem from="1639196631668" duration="4282000" />
+      <workItem from="1639280216960" duration="3835000" />
     </task>
+    <task id="LOCAL-00001" summary="last">
+      <created>1639234886446</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639234886446</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,6 +119,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="last" />
+    <option name="LAST_COMMIT_MESSAGE" value="last" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="129" y="56" key="MergeDialog" timestamp="1639232188464">
       <screen x="0" y="0" width="1366" height="738" />
@@ -99,10 +132,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="321" y="130" key="MultipleFileMergeDialog/0.0.1366.738@0.0.1366.738" timestamp="1639232192750" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1639232204584">
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1639234899098">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1639232204584" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1639234899098" />
     <state x="500" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1639146700545">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
