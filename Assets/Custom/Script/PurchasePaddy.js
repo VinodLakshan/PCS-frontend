@@ -182,7 +182,8 @@ function validateFields(formData) {
         errorText = "Please insert the weight."
         isAnyError = setError("inputWeight");
 
-    } else if (branchDetails.totalMonthlyPaddyLimitPerFarmer != 0 && formData.weight > farmerRemainingLimit) {
+    } else if (branchDetails.totalMonthlyPaddyLimitPerFarmer != 0 &&
+        (Number(formData.weight) > Number(farmerRemainingLimit))) {
         errorText = "Weight should not exceed Farmer's Remaining limit."
         isAnyError = setError("inputWeight");
     }
