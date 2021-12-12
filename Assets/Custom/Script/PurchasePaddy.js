@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     if (employee != null) {
 
-        if (employee.role.roleName == "Collection_Officer") {
+        if (employee.role.roleName == "Collection_Officer" || employee.role.roleName == "Admin") {
             loadDetails();
 
         } else {
